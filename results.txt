@@ -1,0 +1,39 @@
+50 iteration RRT_star ->
+cov_trace (mean) - 16.967027231356656
+cov_traces (std) - 6.176107931643282
+Avg time taken - 14.985820555686951
+
+60 iteration RRT_star ->
+    cov_trace (mean)    16.99749730706983
+    cov_traces (std)    7.453141681215547
+    Avg time taken      21.981468057632448
+
+75 iteration RRT_star ->
+cov_trace (mean) - 13.760757472017175
+cov_traces (std) - 5.264718216276138
+Avg time taken - 31.515081143379213
+
+90 iteration RRT_star ->
+    cov_trace (mean)    11.867329312311705
+    cov_traces (std)    4.358384305245298
+    Avg time taken      45.20541877746582
+
+95 iteration RRT_star ->
+    cov_trace (mean)    16.547675060799264
+    cov_traces (std)    7.1414238233002125
+    Avg time taken      51.096039986610414
+
+100 iteration RRT_star ->
+    cov_trace (mean)    12.842701308220914
+    cov_traces (std)    6.810854296108658
+    Avg time taken      54.30602114200592
+
+125 iteration RRT_star ->
+    cov_trace (mean)    13.100833591457118
+    cov_traces (std)    8.608955674289795
+    Avg time taken      87.15653731822968
+
+175 iteration RRT_star ->
+    cov_trace (mean)    13.65
+    cov_trace (std)     6.96
+    time_taken          148.6

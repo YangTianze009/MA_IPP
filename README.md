@@ -1,2 +1,5 @@
-# MA_IPP
-multi agent informative path planning
+# MAExploration
+
+Baseline - RRT* for IPP
+
+Run RIG_tree_planner.py
