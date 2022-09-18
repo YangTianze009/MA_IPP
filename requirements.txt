@@ -1,0 +1,9 @@
+imageio==2.15.0
+matplotlib==3.3.4
+numpy==1.19.5
+pandas==1.4.1
+ray==1.10.0
+scikit-learn==1.0.2
+scipy==1.5.4
+Shapely==1.8.0
+torch==1.8.1+cu101
