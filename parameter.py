@@ -50,7 +50,7 @@ train_path = f'train/{FOLDER_NAME}'
 gifs_path = f'gifs/{FOLDER_NAME}'
 SAVE_IMG_GAP = 1000
 
-NUM_THREADS = 10  # default 3
+NUM_THREADS = 3  # default 3
 steps = 256
 
 SAMPLING = True
