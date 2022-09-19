@@ -191,8 +191,7 @@ class RIG_planner:
         return covariance_trace
         
     def agent_planner(self):
-        self.plot_num = 0 
-
+        self.plot_num = 0
         self.measurement_points = dict()
         for agent_i in range(NUM_AGENTS):
             self.measurement_points[f"{agent_i}"] = []
@@ -226,17 +225,15 @@ class RIG_planner:
         
         self.agent_done = dict()
         for agent_i in range(NUM_AGENTS):
-            self.agent_done[f"{agent_i}"] =  False
+            self.agent_done[f"{agent_i}"] = False
             
         self.all_done = False
         
         ti = time.time()
          
         while self.all_done == False:
-            
             print(f"current budget is {self.agent_budget}")
             agent_ID = max(self.agent_budget, key=self.agent_budget.get)
-            
             covariance_trace = self.agent_replan(agent_ID=agent_ID)
             
             ## 改
@@ -245,7 +242,7 @@ class RIG_planner:
                 
             for agent_ID in range(NUM_AGENTS):
                 if self.agent_done[f"{agent_ID}"] == True:
-                    self.all_done =  True
+                    self.all_done = True
                 else:
                     self.all_done = False
                     break
@@ -311,7 +308,6 @@ class RIG_planner:
         
 #        self.current_node_index = int(each_step)
         return cov_trace #done, self.node_info, self.node_std, self.budget #reward, done, self.node_info, self.node_std, self.budget
-
 
     def get_ground_truth(self):
         x1 = np.linspace(0, 1)
