@@ -191,7 +191,6 @@ class RIG_planner:
         return covariance_trace
         
     def agent_planner(self):
-        
         self.plot_num = 0 
 
         self.measurement_points = dict()
@@ -357,9 +356,6 @@ class RIG_planner:
         #plt.savefig('{}/{}.png'.format(path, n), dpi=150)
         #plt.savefig('./gifs/{agent_ID}.png')
         plt.savefig('./gifs/{}.png'.format(plot_num), dpi=150)
-
-
-
 
 if __name__ == '__main__':
     NUM_REPEAT = 1 ## 10
