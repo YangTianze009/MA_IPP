@@ -123,10 +123,11 @@ class RIG_planner:
             #print(f"start node index is {self.start_node_index}")
             connected_edges = graph.edges[str(self.start_node_index[f"{agent_ID}"])]          
             
+            old_cov_trace = pred_copy.cov_trace
+            
             for node, edge in connected_edges.items():
                 if edge.length != 0.0 and node not in path:
                     pred_copy = deepcopy(Predictor)
-                    old_cov_trace = pred_copy.cov_trace
                     
                     cov_new, dist = pred_copy.prediction(node, int(self.start_node_index[f"{agent_ID}"]), self.high_info_area)
                     

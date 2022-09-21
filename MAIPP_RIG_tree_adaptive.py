@@ -3,6 +3,7 @@ Adaptive implementation of RRT_star
 Replans after every budget expenditure of ~0.4
 
 '''
+
 from cgi import print_directory
 import csv
 import os
@@ -67,6 +68,7 @@ class RIG_planner:
         for agent_ID in range(NUM_AGENTS):
             self.agent_budget[f"{agent_ID}"] = np.array(BUDGET_SIZE)
         
+        self.step_used_budget = 0
 
     def global_planner(self):
         self.Tree = Graph()
@@ -77,9 +79,6 @@ class RIG_planner:
     def agent_replan(self, agent_ID):
     
         self.added_node_coord = self.start
-            
-        self.node_coords = np.array([[]])
-        self.updated_node_coords = np.array([[]])
             
         best_node = None
         length = 0
@@ -108,31 +107,35 @@ class RIG_planner:
     
         self.updated_node_coords = np.array(np.append(self.updated_node_coords, self.node_coords))
         
-        distance = BUDGET_SIZE - self.agent_budget[f"{agent_ID}"]
-        sample_number = distance // self.step_sample
-        
         gp = deepcopy(self.gp)
         # Generating graph & predictor
-        Predictor = predictor(self.node_coords, self.step_sample, self.gaussian, gp, sample_number, self.measurement_points, agent_ID)
+        Predictor = predictor(self.node_coords, self.step_sample, self.gaussian, gp, self.measurement_points, agent_ID)
         graph = self.generator.create_graph(self.node_coords)
 
         cost = 0.0
         path = []
-        while cost < 0.3:
+        while cost < REPLAN_LENGTH:
 
            #print(f"graph edge is {graph.edges}")
             #print(f"start node index is {self.start_node_index}")
             connected_edges = graph.edges[str(self.start_node_index[f"{agent_ID}"])]          
             
+            pred_copy = deepcopy(Predictor)
+            #old_cov_trace = pred_copy.cov_trace
+            old_cov_trace = self.cov_trace
+            #m = 0
+            
             for node, edge in connected_edges.items():
                 if edge.length != 0.0 and node not in path:
-                    pred_copy = deepcopy(Predictor)
-                    old_cov_trace = pred_copy.cov_trace
-                    
+                       
                     cov_new, dist = pred_copy.prediction(node, int(self.start_node_index[f"{agent_ID}"]), self.high_info_area)
                     
+                    #if cov_new < old_cov_trace:
                     if cov_new < old_cov_trace:
+                        #if (old_cov_trace - cov_new) / dist > m:
+                            #m = (old_cov_trace - cov_new) / dist
                         old_cov_trace = cov_new
+                            
                         #print(f"node is {node}")
                         best_node = node
                         length = dist
@@ -147,7 +150,7 @@ class RIG_planner:
             
             cost += length
 
-        start_index = 0
+        #start_index = 0
 
         #print(f"path of agent is {path}")
 
@@ -155,27 +158,24 @@ class RIG_planner:
             if self.agent_budget[f"{agent_ID}"] < 0.0:
                 break
             
-            gp = deepcopy(self.gp)
-            distance = BUDGET_SIZE - self.agent_budget[f"{agent_ID}"]
-            sample_number = distance // self.step_sample
             self.added_node_coord = np.append(self.added_node_coord, self.node_coords[int(each_step)])
+
+            current_pos = self.global_agent_pos[f"{agent_ID}"][-1]
+            each_step_pos = self.node_coords[int(each_step)]
+            covariance_trace = self.execute_path(each_step_pos, current_pos, agent_ID)
             
-            
-            #print(f"measurepoint_points is {self.measurement_points}")
-            
-            #print(len(self.measurement_points[f"{agent_ID}"]))
-            covariance_trace = self.execute_path(each_step, start_index,agent_ID, sample_number, gp)
-            
-            start_index = int(each_step)
+            #start_index = int(each_step)
             
             ## record global agent position
+            print(f"current pos of agent {agent_ID}")
+            print(self.node_coords[int(each_step)])
             
             self.global_agent_pos[f"{agent_ID}"].append(self.node_coords[int(each_step)])
             #print(len(self.global_agent_pos))
             
             if USE_PLOT == True:
                 self.plot_num += 1
-                self.plot(plot_num=self.plot_num, global_agent_pos=self.global_agent_pos)
+                self.plot(plot_num=self.plot_num, global_agent_pos=self.global_agent_pos,agent_ID=agent_ID)
 
         print(f"current cov_trace of agent {agent_ID} is {covariance_trace}")
         
@@ -185,8 +185,14 @@ class RIG_planner:
         
     def agent_planner(self):
         
+        # Start node & init RRT
+        self.start = np.array([START_X, START_Y]) 
+        
         self.plot_num = 0 
 
+        self.node_coords = np.array([[]])
+        self.updated_node_coords = np.array([[]])
+        
         self.measurement_points = dict()
         for agent_i in range(NUM_AGENTS):
             self.measurement_points[f"{agent_i}"] = []
@@ -194,9 +200,10 @@ class RIG_planner:
         self.global_agent_pos = dict()
         for agent_i in range(NUM_AGENTS):
             self.global_agent_pos[f"{agent_i}"] = []
+            self.global_agent_pos[f"{agent_i }"].append(self.start)
+            
 
         # Start node & init RRT
-
         self.start = np.array([START_X, START_Y]) 
 
         # Find tree, initially all infos = 0.0
@@ -257,10 +264,11 @@ class RIG_planner:
         
         return covariance_trace, tf-ti
 
-    def execute_path(self, each_step, prev_step, agent_ID, sample_number, gp, index_input=True):
+    def execute_path(self, each_step_pos, current_pos, agent_ID, index_input=True):
 #        print('steping from ' + str(prev_step) + ' to ' + str(each_step))
-        current_node_index = int(prev_step)
-        dist = np.linalg.norm(self.node_coords[current_node_index] - self.node_coords[int(each_step)])#next_node_index])
+        #current_node_index = int(prev_step)
+        #dist = np.linalg.norm(self.node_coords[current_node_index] - self.node_coords[int(each_step)])#next_node_index])
+        dist = np.linalg.norm(each_step_pos - current_pos)#next_node_index])
         remain_length = dist
         next_length = self.step_sample - self.dist_residual[f"{agent_ID}"]
 #        reward = 0
@@ -268,22 +276,14 @@ class RIG_planner:
         no_sample = True
         while remain_length > next_length:
             if no_sample:
-                self.sample = (self.node_coords[int(each_step)] - self.node_coords[
-                    current_node_index]) * next_length / dist + self.node_coords[current_node_index]
+                self.sample = (each_step_pos - current_pos) * next_length / dist + current_pos
             else:
-                self.sample = (self.node_coords[int(each_step)] - self.node_coords[
-                    current_node_index]) * next_length / dist + self.sample
+                self.sample = (each_step_pos - current_pos) * next_length / dist + self.sample
             
-            for agent_i in range(NUM_AGENTS):
-                if self.measurement_points[f"{agent_i}"] != []:
-                    for j, sample in enumerate(self.measurement_points[f"{agent_i}"]):
-                        #if j < sample_number:
-                        observed_value = self.underlying_distribution.distribution_function(
-                            sample.reshape(-1, 2)) + np.random.normal(0, 1e-10)
-                        #else:
-                            #observed_value = np.array([0])
-            
-                        gp.add_observed_point(sample, observed_value)
+            observed_value = self.underlying_distribution.distribution_function(
+                self.sample.reshape(-1, 2)) + np.random.normal(0, 1e-10)
+                        
+            self.gp.add_observed_point(self.sample, observed_value)
             
             self.measurement_points[f"{agent_ID}"].append(self.sample)
             #print(np.array(gp.observed_points).shape)
@@ -292,12 +292,16 @@ class RIG_planner:
             next_length = self.step_sample
             no_sample = False
 
-        gp.update_gp()
-        high_info_area = gp.get_high_info_area()# if ADAPTIVE_AREA else None
-        cov_trace = gp.evaluate_cov_trace(high_info_area)
+        self.gp.update_gp()
+        self.high_info_area = self.gp.get_high_info_area()# if ADAPTIVE_AREA else None
+        cov_trace = self.gp.evaluate_cov_trace(self.high_info_area)
+        
+        self.cov_trace = cov_trace
 
         self.dist_residual[f"{agent_ID}"] = self.dist_residual[f"{agent_ID}"] + remain_length if no_sample else remain_length
         self.agent_budget[f"{agent_ID}"] -= dist
+        
+        self.step_used_budget = dist
         
 #        self.current_node_index = int(each_step)
         return cov_trace #done, self.node_info, self.node_std, self.budget #reward, done, self.node_info, self.node_std, self.budget
@@ -310,7 +314,7 @@ class RIG_planner:
         ground_truth = self.underlying_distribution.distribution_function(x1x2)
         return ground_truth
     
-    def plot(self, plot_num, global_agent_pos):
+    def plot(self, plot_num, global_agent_pos, agent_ID):
         # def plot(self, route, n, path, ground_truth, remain_budget, agent_ID, CMAES_route=False):
             # Plotting shorest path
         plt.switch_backend('agg')
@@ -341,7 +345,10 @@ class RIG_planner:
         plt.hist2d(x, y, bins=30, vmin=0, vmax=1)
 
 
-        plt.suptitle('Cov trace: {:.4g}'.format(self.cov_trace))
+        #plt.suptitle('Cov trace: {:.4g} of with budget {:.4g} '.format(self.cov_trace, BUDGET_SIZE-self.agent_budget[f"{agent_ID}"] ))
+        
+        plt.suptitle('Cov trace: {:.4g} of with step used budget {:.4g} '.format(self.cov_trace, self.step_used_budget))
+        
         # plt.tight_layout()
         #plt.savefig('{}/{}.png'.format(path, n), dpi=150)
         #plt.savefig('./gifs/{agent_ID}.png')
