@@ -268,13 +268,13 @@ class Worker:
             relative_node_coords.append([])
         for i in range(0, self.sample_size + 2):
             relative_node_coords[i] = self.cal_relative_coord(i, current_index)
-
+        # print(f"relative_node_coords is {np.shape(relative_node_coords)}")
         if USE_INTENT:
-            node_inputs = np.concatenate((relative_node_coords, node_info_inputs, node_std_inputs, intent_input),
+            node_inputs = np.concatenate((self.node_coords, node_info_inputs, node_std_inputs, intent_input),
                                          axis=1)
 
         else:
-            node_inputs = np.concatenate((relative_node_coords, node_info_inputs, node_std_inputs), axis=1)
+            node_inputs = np.concatenate((self.node_coords, node_info_inputs, node_std_inputs), axis=1)
 
         node_inputs = torch.FloatTensor(node_inputs).unsqueeze(0).to(self.device)  # (1, sample_size+2, 5)
 
@@ -397,7 +397,7 @@ class Worker:
                         relative_node_coords_sampling[t] = self.cal_relative_coord(t, current_index_sampling)
 
                     node_inputs_sampling = np.concatenate(
-                        (relative_node_coords_sampling, node_info_inputs_sampling, node_std_inputs_sampling,
+                        (self.node_coords, node_info_inputs_sampling, node_std_inputs_sampling,
                          intent_input_sampling),
                         axis=1)
                     node_inputs_sampling = torch.FloatTensor(node_inputs_sampling).unsqueeze(0).to(
@@ -542,10 +542,10 @@ class Worker:
                 relative_node_coords[i] = self.cal_relative_coord(i, current_index)
 
             if USE_INTENT:
-                node_inputs = np.concatenate((relative_node_coords, node_info_inputs, node_std_inputs, intent_input),
+                node_inputs = np.concatenate((self.node_coords, node_info_inputs, node_std_inputs, intent_input),
                                              axis=1)
             else:
-                node_inputs = np.concatenate((relative_node_coords, node_info_inputs, node_std_inputs), axis=1)
+                node_inputs = np.concatenate((self.node_coords, node_info_inputs, node_std_inputs), axis=1)
 
             node_inputs = torch.FloatTensor(node_inputs).unsqueeze(0).to(self.device)  # (1, sample_size+2, 5)
 
@@ -679,7 +679,7 @@ class Worker:
                             relative_node_coords_sampling[t] = self.cal_relative_coord(t, current_index_sampling)
 
                         node_inputs_sampling = np.concatenate(
-                            (relative_node_coords_sampling, node_info_inputs_sampling, node_std_inputs_sampling,
+                            (self.node_coords, node_info_inputs_sampling, node_std_inputs_sampling,
                              intent_input_sampling),
                             axis=1)
                         node_inputs_sampling = torch.FloatTensor(node_inputs_sampling).unsqueeze(0).to(
@@ -766,11 +766,6 @@ class Worker:
                 cov_trace = copy.deepcopy(cov_trace_first_step[best_trajectory])
                 overall_delta_cov_trace[self.agent_ID - 1] += cov_trace_before - cov_trace
                 overall_reward[self.agent_ID - 1] += reward
-                # print(f"reward is {reward}", f"agentID is {self.agent_ID}", "\n")
-                # print(f"all samples is {all_samples}", "\n")
-                # print(f"sampling_end_nodes is {sampling_end_nodes}")
-                # print(f"agent id is {self.agent_ID}")
-                # print(f"route is {route}", "\n")
 
             episode_buffer[3] += action_index.unsqueeze(0).unsqueeze(0)
             episode_buffer[4] += value

@@ -275,7 +275,7 @@ class AttentionNet(nn.Module):
         self.decoder = Decoder(embedding_dim=embedding_dim, n_head=8, n_layer=1)
         self.pointer = SingleHeadAttention(embedding_dim)
         self.LSTM = nn.LSTM(embedding_dim, embedding_dim, batch_first=True)
-
+        self.embedding_dim = embedding_dim
         # agent embedding
         self.agent_embedding = nn.Linear(2, embedding_dim)
 
@@ -294,6 +294,7 @@ class AttentionNet(nn.Module):
         embedding_feature = embedding_feature + pos_encoding
 
         aggregated_embedding, node_embedding = self.encoder(embedding_feature)
+        # print(f"shape of node_embedding is {node_embedding.shape}")
 
         return aggregated_embedding, node_embedding
 
@@ -330,7 +331,8 @@ class AttentionNet(nn.Module):
 
         # print(embedding_feature)
         # print(connected_nodes_feature)
-
+        aggregated_embedding = torch.gather(node_embedding, 1, current_index.repeat(1, 1, self.embedding_dim))
+        # print(f"aggregated_embedding is {aggregated_embedding.shape}")
         current_node_feature, (LSTM_h, LSTM_c) = self.LSTM(aggregated_embedding, (LSTM_h, LSTM_c))
 
         current_node_feature = self.current_embedding(current_node_feature)
