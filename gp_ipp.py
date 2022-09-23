@@ -103,33 +103,31 @@ class GaussianProcessForIPP():
         return high_measurement_area
 
 
-
-
     def plot(self, y_true):
-        x1 = np.linspace(0, 1)
-        x2 = np.linspace(0, 1)
+        x1 = np.linspace(0, 1, 30)
+        x2 = np.linspace(0, 1, 30)
 
         x1x2 = np.array(list(product(x1, x2)))
         y_pred, std = self.gp.predict(x1x2, return_std=True)
 
-        X0p, X1p = x1x2[:, 0].reshape(50, 50), x1x2[:, 1].reshape(50, 50)
-        y_pred = np.reshape(y_pred, (50, 50))
-        std = std.reshape(50,50)
+        X0p, X1p = x1x2[:, 0].reshape(30, 30), x1x2[:, 1].reshape(30, 30)
+        y_pred = np.reshape(y_pred, (30, 30))
+        std = std.reshape(30, 30)
 
         X = np.array(self.observed_points)
 
-        fig = plt.figure(figsize=(15,5))
-        #if self.observed_points:
-        #    plt.scatter(X[:, 0].reshape(1, -1), X[:, 1].reshape(1, -1), s=10, c='r')
-        plt.subplot(1, 3, 2) # ground truth
-        plt.pcolormesh(X0p, X1p, y_true.reshape(50, 50), shading='auto', vmin=0, vmax=1)
-        plt.subplot(1, 3, 3) # stddev
-        plt.pcolormesh(X0p, X1p, std, shading='auto', vmin=0, vmax=1)
-        plt.subplot(1, 3, 1) # mean
-        plt.pcolormesh(X0p, X1p, y_pred, shading='auto', vmin=0, vmax=1)
+        fig = plt.figure(figsize=(10, 10))
         # if self.observed_points:
-        #     plt.scatter(X[:, 0].reshape(1, -1), X[:, 1].reshape(1, -1), s=2, c='r')
-        # plt.show()
+        #    plt.scatter(X[:, 0].reshape(1, -1), X[:, 1].reshape(1, -1), s=10, c='r')
+        plt.subplot(2, 2, 2)  # ground truth
+        plt.title('Ground truth')
+        plt.pcolormesh(X0p, X1p, y_true.reshape(30, 30), shading='auto', vmin=0, vmax=1)
+        plt.subplot(2, 2, 3)  # stddev
+        plt.title('Predict std')
+        plt.pcolormesh(X0p, X1p, std, shading='auto', vmin=0, vmax=1)
+        plt.subplot(2, 2, 1)  # mean
+        plt.title('Predict mean')
+        plt.pcolormesh(X0p, X1p, y_pred, shading='auto', vmin=0, vmax=1)
 
 if __name__ == '__main__':
     example = Gaussian2D()

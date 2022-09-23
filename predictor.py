@@ -1,3 +1,4 @@
+import copy
 from random import sample
 from turtle import distance
 import numpy as np
@@ -8,39 +9,42 @@ from RIG_parameter import *
 from classes.Gaussian2D import *
 from gp_ipp import *
 
+
 class predictor:
-    def __init__(self, updated_node_coords, sample_size, gaussian, gp, measurement_points, agent_ID, sample_number, high_info_area):
-        
-        #self.gp = gp
+    def __init__(self, updated_node_coords, sample_size, gaussian, gp, measurement_points, agent_ID, sample_number,
+                 high_info_area):
+
+        # self.gp = gp
         self.gp = GaussianProcessForIPP()
-        
+        self.sample_numbers = sample_number
         self.node_coords = updated_node_coords
         self.step_sample = sample_size
-        self.dist_residual = 0
+
         self.underlying_distribution = deepcopy(gaussian)
         self.ground_truth = self.get_ground_truth()
-        
+
         self.agent_ID = agent_ID
-        
-        #high_info_area = self.gp.get_high_info_area()
-        #self.cov_trace = self.gp.evaluate_cov_trace(high_info_area)
-        
+
+        # high_info_area = self.gp.get_high_info_area()
+        # self.cov_trace = self.gp.evaluate_cov_trace(high_info_area)
+
         for agent_i in range(NUM_AGENTS):
             if measurement_points[f"{agent_i}"] != []:
-                for j,sample in enumerate(measurement_points[f"{agent_i}"]):
+                for j, sample in enumerate(measurement_points[f"{agent_i}"]):
                     if j < sample_number:
                         observed_value = self.underlying_distribution.distribution_function(
                             sample.reshape(-1, 2)) + np.random.normal(0, 1e-10)
-                    #else:
-                        #observed_value = np.array([0])
+                    else:
+                        observed_value = np.array([0])
 
-                        self.gp.add_observed_point(sample, observed_value)
-                
-        self.gp.update_gp()     
-        
-        #high_info_area = self.gp.get_high_info_area() # if ADAPTIVE_AREA else None
-        self.cov_trace =self.gp.evaluate_cov_trace(high_info_area)
-        
+                    self.gp.add_observed_point(sample, observed_value)
+
+        self.gp.update_gp()
+
+        high_info_area = self.gp.get_high_info_area() # if ADAPTIVE_AREA else None
+        self.cov_trace = self.gp.evaluate_cov_trace(high_info_area)
+        # print(f"cov_trace in prediction is {self.cov_trace}")
+
     def get_ground_truth(self):
         x1 = np.linspace(0, 1)
         x2 = np.linspace(0, 1)
@@ -48,16 +52,18 @@ class predictor:
         ground_truth = self.underlying_distribution.distribution_function(x1x2)
         return ground_truth
 
-    def prediction(self, each_step, start, high_info_area):
-    
+    def prediction(self, each_step, start, dis_residual, predict_measurements, high_info_area):
+        self.predict_measurements = copy.deepcopy(predict_measurements)
         gp = deepcopy(self.gp)
-        
+        self.dist_residual = copy.deepcopy(dis_residual)
         self.current_node_index = start
-        dist = np.linalg.norm(self.node_coords[self.current_node_index] - self.node_coords[int(each_step)])#next_node_index])
+        dist = np.linalg.norm(
+            self.node_coords[self.current_node_index] - self.node_coords[int(each_step)])  # next_node_index])
         remain_length = dist
         next_length = self.step_sample - self.dist_residual
 
         no_sample = True
+
         while remain_length > next_length:
             if no_sample:
                 self.sample = (self.node_coords[int(each_step)] - self.node_coords[
@@ -65,29 +71,22 @@ class predictor:
             else:
                 self.sample = (self.node_coords[int(each_step)] - self.node_coords[
                     self.current_node_index]) * next_length / dist + self.sample
-            
-            observed_value = np.array([0])
-            
-            gp.add_observed_point(self.sample, observed_value)        
-            
-            ###### observed_value = 0
-            #observed_value = self.underlying_distribution.distribution_function(
-                #self.sample.reshape(-1, 2)) + np.random.normal(0, 1e-10)
+
+            self.predict_measurements.append(self.sample)
             remain_length -= next_length
             next_length = self.step_sample
             no_sample = False
-        
-        #print(f"observed point is {gp.observed_points}")
 
+        for i in self.predict_measurements:
+            observed_value = np.array([0])
+            gp.add_observed_point(i, observed_value)
+        # print(f"observed point is {gp.observed_points}")
+        a = len(gp.observed_points)
         gp.update_gp()
-
         # bug is here
         # high_info_area = gp.get_high_info_area()# if ADAPTIVE_AREA else None
-        # cov_trace = gp.evaluate_cov_trace(high_info_area)
-        cov_trace = 0
 
-        # high_info_area = gp.get_high_info_area()# if ADAPTIVE_AREA else None
         cov_trace = gp.evaluate_cov_trace(high_info_area)
         self.dist_residual = self.dist_residual + remain_length if no_sample else remain_length
- #       print(cov_trace)
-        return cov_trace, dist #done, self.node_info, self.node_std, self.budget #reward, done, self.node_info, self.node_std, self.budget
+        #       print(cov_trace)
+        return cov_trace, dist, self.dist_residual, self.predict_measurements  # done, self.node_info, self.node_std, self.budget #reward, done, self.node_info, self.node_std, self.budget

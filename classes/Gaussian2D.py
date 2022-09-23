@@ -5,17 +5,14 @@ from itertools import product
 
 
 class Gaussian2D():
-    def __init__(self, i):
-        self.rangeDistribs = (8,12)
+    def __init__(self):
+        self.rangeDistribs = (8, 12)
+        # self.rangeDistribs = (4, 6)
         self.mean = []
         self.sigma_x = []
         self.sigma_y = []
         self.cov = []
         self.max_value = None
-
-        seed_num = 1+100*(i+1)
-        np.random.seed(seed_num)
-
         self.createProbability()
 
     def addGaussian(self):
@@ -32,6 +29,7 @@ class Gaussian2D():
 
     def createProbability(self):
         numDistribs = np.random.randint(self.rangeDistribs[0], self.rangeDistribs[1] + 1)
+        # print(numDistribs)
         for _ in range(numDistribs):
             self.addGaussian()
 
@@ -47,8 +45,11 @@ class Gaussian2D():
             pxy = 2 * r * (row_mat - gaussian_mean[0]) * (col_mat - gaussian_mean[1]) / (SigmaX1 * SigmaX2)
             distribution_matrix = coefficients * np.exp(p1 * (px - pxy + py))
             y += distribution_matrix
+        # y /= np.max(y)
+        # print(y)
         if self.max_value is None:
-            assert y.shape == (2500,)
+            # print(y.shape)
+            #assert y.shape == (2500,)
             self.max_value = np.max(y)
             y /= self.max_value
         else:
