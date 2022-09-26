@@ -4,4 +4,4 @@ from parameter import *
 
 t = np.zeros((202, 2))
 a = np.random.rand(202, 1)
-print(a.shape)
+print(3.01 // 0.2)

@@ -24,6 +24,10 @@ class GaussianProcessForIPP():
         # print(f"observation points are {len(self.observed_points)}")
         # print(f"observation values are {len(self.observed_value)}")
 
+    def flexi_updates(self, node_coord):
+        y_pred, std = self.gp.predict(node_coord, return_std=True)
+        return y_pred, std
+
     def clear_observed_point(self):
         self.observed_points = []
         self.observed_value = []
