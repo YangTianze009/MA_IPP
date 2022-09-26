@@ -800,10 +800,11 @@ class Worker:
                 print(f"agent ID is {self.agent_ID}")
 
                 agent1 = len(agent_route["1"])
-                n = agent1
-                # agent2 = len(agent_route["2"])
-                # agent3 = len(agent_route["3"])
-                # n = agent1 + agent2 + agent3
+                # n = agent1
+                agent2 = len(agent_route["2"])
+                agent3 = len(agent_route["3"])
+                n = agent1 + agent2 + agent3
+                print(f"n is {n}")
                 self.gifs_path = '{}/{}'.format(gifs_path, self.global_step)
                 if self.save_image:
                     if not os.path.exists(self.gifs_path):

@@ -33,7 +33,7 @@ LOAD_MODEL = True  # default False
 GAUSSIAN_NUM = (8, 12)
 K_SIZE = 20
 # BUDGET_RANGE = (2.999, 3)
-BUDGET_RANGE = (7.999, 8)
+BUDGET_RANGE = (2.999, 3)
 SAMPLE_LENGTH = 0.2
 ADAPTIVE_AREA = True
 ADAPTIVE_TH = 0.4
@@ -50,7 +50,7 @@ train_path = f'train/{FOLDER_NAME}'
 gifs_path = f'gifs/{FOLDER_NAME}'
 SAVE_IMG_GAP = 1000
 
-NUM_THREADS = 1  # default 3
+NUM_THREADS = 3  # default 3
 steps = 256
 
 SAMPLING = True
