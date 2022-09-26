@@ -2,7 +2,7 @@ import numpy as np
 
 
 def analysis_cov_trace():
-    cov_trace = np.load("3 agents/rig_tree/cov_budget_4.npz")
+    cov_trace = np.load("1 agents/rig_tree/cov_budget_8.npz")
     # cov_trace = cov_trace["arr_0"]
     cov_trace = cov_trace["arr_0"]
     print(f"cov_trace is {cov_trace}")
