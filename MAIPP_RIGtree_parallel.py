@@ -454,10 +454,10 @@ if __name__ == '__main__':
         results_10 = []
         time_10 = []
 
-    if not os.path.exists("ma_ipp_results/1 agents/rig_tree"):
-        os.makedirs(f"ma_ipp_results/1 agents/rig_tree")
-    np.savez(f"ma_ipp_results/1 agents/rig_tree/cov_budget_12", results_30)
-    np.savez(f"ma_ipp_results/1 agents/rig_tree/time_budget_12", time_30)
+    if not os.path.exists("ma_ipp_results/10 agents/rig_tree"):
+        os.makedirs(f"ma_ipp_results/10 agents/rig_tree")
+    np.savez(f"ma_ipp_results/10 agents/rig_tree/cov_budget_3", results_30)
+    np.savez(f"ma_ipp_results/10 agents/rig_tree/time_budget_3", time_30)
 
     print(f"save the result, cov is {results_30}")
     # budget_history = np.array(rig.budget_history)
