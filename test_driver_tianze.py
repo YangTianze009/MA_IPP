@@ -260,10 +260,10 @@ def main():
             #
             if save_results:
                 trainingData = []
-                if curr_episode > 299:
-                    if not os.path.exists("ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 9)*"):
-                        os.makedirs(f"ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 9)*")
-                    np.savez(f"ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 9)*/diff_graph_budget_3",
+                if curr_episode > 99:
+                    if not os.path.exists("ma_ipp_results/1 agents/no sampling"):
+                        os.makedirs(f"ma_ipp_results/1 agents/no sampling")
+                    np.savez(f"ma_ipp_results/1 agents/no sampling/budget_8",
                              cov_trace_final_30)
                     print(f"save the result, cov is {cov_trace_final_30}")
                     for a in meta_agents:
