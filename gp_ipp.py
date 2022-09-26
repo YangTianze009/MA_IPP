@@ -13,7 +13,7 @@ class GaussianProcessForIPP():
     def __init__(self):
         # self.kernel = C(1.0, (1e-3, 1e3)) * RBF([5,5], (1e-2, 1e2))
         # self.kernel = RBF(0.2)
-        self.kernel = Matern(length_scale=0.25)     # default 0.45
+        self.kernel = Matern(length_scale=0.45)     # default 0.45
         self.gp = GaussianProcessRegressor(kernel=self.kernel, optimizer=None, n_restarts_optimizer=0)
         self.observed_points = []
         self.observed_value = []

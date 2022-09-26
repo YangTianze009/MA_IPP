@@ -520,7 +520,7 @@ class Worker:
             sampling_finish[self.agent_ID] = False
             agent_step += 1
             # print(f"agent_step is {agent_step}")
-            print(f"agent route is {agent_route}")
+            # print(f"agent route is {agent_route}")
             # print(f"cov_trace is {cov_trace}")
             self.curren_step += 1
 
@@ -800,17 +800,20 @@ class Worker:
                 print(f"agent ID is {self.agent_ID}")
 
                 agent1 = len(agent_route["1"])
-                agent2 = len(agent_route["2"])
-                agent3 = len(agent_route["3"])
-                n = agent1 + agent2 + agent3
+                n = agent1
+                # agent2 = len(agent_route["2"])
+                # agent3 = len(agent_route["3"])
+                # n = agent1 + agent2 + agent3
                 self.gifs_path = '{}/{}'.format(gifs_path, self.global_step)
                 if self.save_image:
                     if not os.path.exists(self.gifs_path):
                         os.makedirs(self.gifs_path)
-                    self.env.plot_each(gaussian_mean, gaussian_cov, sampling_end_nodes, agent_route, n, self.gifs_path,
-                                  all_samples=all_samples, sample_numbers=sample_numbers,
-                                  remain_budget=remain_budget, agent_ID=self.agent_ID)
-
+                    # self.env.plot_each(gaussian_mean, gaussian_cov, sampling_end_nodes, agent_route, n, self.gifs_path,
+                    #               all_samples=all_samples, sample_numbers=sample_numbers,
+                    #               remain_budget=remain_budget, agent_ID=self.agent_ID)
+                    self.env.plot(gaussian_mean, gaussian_cov, sampling_end_nodes, agent_route, n, self.gifs_path,
+                                                     all_samples=all_samples, sample_numbers=sample_numbers,
+                                                     remain_budget=remain_budget, agent_ID=self.agent_ID)
             # store the next_node_index in a global variable
             agent_route[f"{self.agent_ID}"].append(next_node_index.item())
 

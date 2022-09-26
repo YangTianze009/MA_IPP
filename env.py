@@ -60,6 +60,7 @@ class Env():
             prm[f"{i}"] = []
 
         start_pos = np.random.rand(1, 2)
+        # start_pos = np.array([0, 0])
         # coordinates = np.random.rand(self.sample_size, 2)
         # different graph is a random seed to ensure that all the agents start at the same node
         for i in range(1, NUM_THREADS + 1):
