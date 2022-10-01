@@ -203,7 +203,7 @@ class Env():
                     intent_info[i] += Gaussian.pdf(d) / 124.8
         return intent_info
 
-    def get_node_information(self, all_samples, sample_numbers, agent_ID):
+    def get_node_information(self, all_samples, sample_numbers, agent_ID, agent_position):
         gp_ipp_info = GaussianProcessForIPP()
         if not PARTIAL_GP:
             for i in range(1, NUM_THREADS + 1):
@@ -228,11 +228,22 @@ class Env():
                         observed_value = np.array([0])
                     # print(f"sample is {sample}", f"observed value is {observed_value}")
                     gp_ipp_info.add_observed_point(sample, observed_value)
-        # print(f"observation points are {len(gp_ipp_info.observed_points)}")
-        # print(f"agent_ID is {agent_ID}", "\n")
+
         gp_ipp_info.update_gp()
-    # try:
+        # cov1 = gp_ipp_info.evaluate_cov_trace()
+        # print(f"cov1 is {cov1}")
         node_info, node_std = gp_ipp_info.update_node(self.node_coords[f"{agent_ID}"])
+
+        for agent_ID in range(1, NUM_THREADS + 1):
+            if agent_position[f"{agent_ID}"] != []:
+                for j, sample in enumerate(agent_position[f"{agent_ID}"]):
+                    observed_value = np.array([0])
+                    gp_ipp_info.add_observed_point(sample, observed_value)
+
+        gp_ipp_info.update_gp()
+        # _, node_std = gp_ipp_info.update_node(self.node_coords[f"{agent_ID}"])
+        # cov2 = gp_ipp_info.evaluate_cov_trace()
+        # print(f"cov 2 is {cov2}")
         return node_info, node_std
 
     def observed_positions(self, current_node_index, next_node_index, sample_length, agent_ID, dist_residual):
@@ -271,7 +282,7 @@ class Env():
         return ground_truth
 
     def plot(self, gaussian_mean, gaussian_cov, sampling_end_nodes,
-             route, n, path, all_samples, sample_numbers, remain_budget, agent_ID, CMAES_route=False):
+             route, n, path, all_samples, sample_numbers, remain_budget, agent_ID, agent_position, CMAES_route=False):
         # Plotting path
         plt.switch_backend('agg')
         print("plot start")
@@ -289,6 +300,14 @@ class Env():
         ground_truth = self.get_ground_truth()
         self.gp_ipp.update_gp()
         self.high_info_area = self.gp_ipp.get_high_info_area() if ADAPTIVE_AREA else None
+        # plot the others route
+        for agent_ID in range(1, NUM_THREADS + 1):
+            if agent_position[f"{agent_ID}"] != []:
+                for j, sample in enumerate(agent_position[f"{agent_ID}"]):
+                    observed_value = np.array([0])
+                    self.gp_ipp.add_observed_point(sample, observed_value)
+
+        self.gp_ipp.update_gp()
         cov_trace = self.gp_ipp.evaluate_cov_trace(self.high_info_area)
         print(f"cov_trace in plot is {cov_trace}", "\n")
 

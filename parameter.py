@@ -19,22 +19,23 @@ EMBEDDING_DIM = 128
 SAMPLE_SIZE = 200
 
 # training parameters
-# NUM_META_AGENT = 1  # 3
+# NUM_META_AGENT = 10  # 3
 # SAVE_IMAGE = False  # True
 # GREEDY = False
 # LOAD_MODEL = False  # default False
 # GAUSSIAN_NUM = (8, 12)
-
+#
 # test parameters
-NUM_META_AGENT = 1  # 3
-SAVE_IMAGE = True   # True
+NUM_META_AGENT = 10  # 3
+SAVE_IMAGE = False   # True
 GREEDY = True
 LOAD_MODEL = True  # default False
 GAUSSIAN_NUM = (8, 12)
+
 K_SIZE = 20
 # BUDGET_RANGE = (2.999, 3)
-BUDGET_RANGE = (2.999, 3)
-SAMPLE_LENGTH = 0.2
+BUDGET_RANGE = (1.999, 2)
+SAMPLE_LENGTH = 0.1
 ADAPTIVE_AREA = True
 ADAPTIVE_TH = 0.4
 USE_GPU = False

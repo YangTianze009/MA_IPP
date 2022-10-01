@@ -274,9 +274,9 @@ def main():
             if save_cov_results:
                 trainingData = []
                 if curr_episode > 299:
-                    if not os.path.exists("ma_ipp_results/1 agents/no sampling"):
-                        os.makedirs(f"ma_ipp_results/1 agents/no sampling")
-                    np.savez(f"ma_ipp_results/1 agents/no sampling/budget_8",
+                    if not os.path.exists("ma_ipp_results/3 agents/no_sampling_no_agent_inputs"):
+                        os.makedirs(f"ma_ipp_results/3 agents/no_sampling_no_agent_inputs")
+                    np.savez(f"ma_ipp_results/3 agents/no_sampling_no_agent_inputs/budget_2_0.1",
                              cov_trace_final_30)
                     print(f"save the result, cov is {cov_trace_final_30}")
                     for a in meta_agents:

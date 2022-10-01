@@ -33,9 +33,9 @@ def writeToTensorBoard(writer, tensorboardData, curr_episode, plotMeans=True):
         tensorboardData = np.array(tensorboardData)
         tensorboardData = list(np.nanmean(tensorboardData, axis=0))
         metric_name = ['remain_budget', 'success_rate', 'RMSE', 'delta_cov_trace', 'MI', 'F1Score', 'cov_trace']
-        reward, value, policyLoss, valueLoss, entropy, gradNorm, returns, remain_budget, success_rate, RMSE, dct, MI, F1, cov_tr = tensorboardData
+        reward, value, policyLoss, valueLoss, entropy, gradNorm, returns, remain_budget, success_rate, RMSE, dct, MI, F1, cov_tr, intent_difference = tensorboardData
     else:
-        reward, value, policyLoss, valueLoss, entropy, gradNorm, returns, remain_budget, success_rate, RMSE, dct, MI, F1, cov_tr = tensorboardData
+        reward, value, policyLoss, valueLoss, entropy, gradNorm, returns, remain_budget, success_rate, RMSE, dct, MI, F1, cov_tr, intent_difference = tensorboardData
 
     if USE_WANDB:
         import wandb

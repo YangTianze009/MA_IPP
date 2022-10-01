@@ -1,0 +1,24 @@
+{
+    "os": "Linux-5.8.0-41-generic-x86_64-with-glibc2.31",
+    "python": "3.10.4",
+    "heartbeatAt": "2022-09-30T14:52:03.509862",
+    "startedAt": "2022-09-30T14:52:02.904956",
+    "docker": null,
+    "gpu": "GeForce RTX 2080 SUPER",
+    "gpu_count": 2,
+    "cpu_count": 16,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/marmot/Desktop/Tianze/MA_IPP/driver.py",
+    "codePath": "driver.py",
+    "git": {
+        "remote": "https://github.com/YangTianze009/MA_IPP.git",
+        "commit": "6c5d2f23419eac3c2c749ee151486bf0c86b8799"
+    },
+    "email": "yangtianze@u.nus.edu",
+    "root": "/home/marmot/Desktop/Tianze/MA_IPP",
+    "host": "Adora",
+    "username": "marmot",
+    "executable": "/home/marmot/anaconda3/envs/MAIPP/bin/python"
+}

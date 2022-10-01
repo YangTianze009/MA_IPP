@@ -16,8 +16,10 @@ import random
 
 # store all the agents route for communication
 agent_route = dict()
+agent_position = dict()
 for i in range(1, NUM_THREADS + 1):
     agent_route[f"{i}"] = []
+    agent_position[f"{i}"] = []
 
 # store all the samples position for update the GP when making decision
 all_samples = dict()
@@ -109,7 +111,7 @@ def cal_distance(p1, p2):
 class Worker:
     def __init__(self, metaAgentID, agent_ID, localNetwork, global_step, env,
                  sample_size=SAMPLE_SIZE, sample_length=None, device='cuda', greedy=False, save_image=False):
-        global agent_route, all_samples, all_done, all_reset, sampling_end_nodes, agent_step
+        global agent_route, all_samples, all_done, all_reset, sampling_end_nodes, agent_step, agent_position
         self.node_coords = []
         self.device = device
         self.greedy = greedy
@@ -157,6 +159,7 @@ class Worker:
             episode = currEpisode
             for i in range(1, NUM_THREADS + 1):
                 agent_route[f"{i}"] = []
+                agent_position[f"{i}"] = []
             for i in range(1, NUM_THREADS + 1):
                 all_samples[f"{i}"] = []
                 sampling_end_nodes[f"{i}"] = []
@@ -205,6 +208,7 @@ class Worker:
         if flag == 0:
             for t in range(1, NUM_THREADS + 1):
                 agent_route[f"{t}"].append(1)
+                agent_position[f"{t}"].append(self.node_coords[1])
 
         n_nodes = node_coords.shape[0]
         current_index = torch.tensor([1]).unsqueeze(0).unsqueeze(0).to(self.device)  # (1,1,1)
@@ -264,7 +268,7 @@ class Worker:
         intent_input = self.env.construct_intent_map(gaussian_mean, gaussian_cov, self.agent_ID, self.node_coords)
 
         # get the node input before making the policy to make sure that information is updating
-        node_info, node_std = self.env.get_node_information(all_samples, 0, self.agent_ID)
+        node_info, node_std = self.env.get_node_information(all_samples, 0, self.agent_ID, agent_position)
         node_info_inputs = node_info.reshape((n_nodes, 1))
         node_std_inputs = node_std.reshape((n_nodes, 1))
 
@@ -370,7 +374,8 @@ class Worker:
                         all_samples_sampling=all_samples_sampling,
                         sampling=True)
                     node_info_sampling, node_std_sampling = self.env.get_node_information(all_samples_sampling,
-                                                                                          sample_numbers, self.agent_ID)
+                                                                                          sample_numbers, self.agent_ID,
+                                                                                          agent_position)
                     route_sampling.append(next_node_index_sampling.item())
                     # print(f"route sampling is {route_sampling}", f"reward is {reward_sampling}",
                     #       f"cov_trace is {cov_trace_sampling}")
@@ -475,6 +480,7 @@ class Worker:
             ground_truth = ground_truth_sampling
 
         agent_route[f"{self.agent_ID}"].append(next_node_index.item())
+        agent_position[f"{self.agent_ID}"][0] = self.node_coords[next_node_index.item()]
         current_index = next_node_index.unsqueeze(0).unsqueeze(0)
 
         # print("stuck here 2")
@@ -538,7 +544,7 @@ class Worker:
             # intent_input = np.random.rand(202, 1)
             # print(f"intent input is {intent_input}")
             # print(f"agent_input is {agent_input}")
-            node_info, node_std = self.env.get_node_information(all_samples, sample_numbers, self.agent_ID)
+            node_info, node_std = self.env.get_node_information(all_samples, sample_numbers, self.agent_ID, agent_position)
             # print(f"all samples is {all_samples}")
             # print(f"sample numbers is {sample_numbers}", "\n")
 
@@ -656,7 +662,8 @@ class Worker:
                             sampling=True)
                         node_info_sampling, node_std_sampling = self.env.get_node_information(all_samples_sampling,
                                                                                               sample_numbers,
-                                                                                              self.agent_ID)
+                                                                                              self.agent_ID,
+                                                                                              agent_position)
                         route_sampling.append(next_node_index_sampling.item())
 
                         # print(f"cov_trace_sampling is {cov_trace_sampling}")
@@ -814,9 +821,12 @@ class Worker:
                     #               remain_budget=remain_budget, agent_ID=self.agent_ID)
                     self.env.plot(gaussian_mean, gaussian_cov, sampling_end_nodes, agent_route, n, self.gifs_path,
                                                      all_samples=all_samples, sample_numbers=sample_numbers,
-                                                     remain_budget=remain_budget, agent_ID=self.agent_ID)
+                                                     remain_budget=remain_budget, agent_ID=self.agent_ID,
+                                    agent_position=agent_position)
             # store the next_node_index in a global variable
             agent_route[f"{self.agent_ID}"].append(next_node_index.item())
+            agent_position[f"{self.agent_ID}"][0] = self.node_coords[next_node_index.item()]
+            # print(f"agent position is {agent_position}")
 
             episode_buffer[5] += torch.FloatTensor([[[reward]]]).to(self.device)
             # print(f"reward is {reward}", f"agentID is {self.agent_ID}", "\n")
@@ -857,7 +867,9 @@ class Worker:
             perf_metrics['MI'] = self.env.gp_ipp.evaluate_mutual_info(self.env.high_info_area)
             perf_metrics['cov_trace'] = cov_trace
             perf_metrics['success_rate'] = False
-
+            intent_difference_final = np.array(intent_difference)
+            intent_difference_final = np.mean(intent_difference_final, axis=0)
+            perf_metrics["intent_difference_abs"] = intent_difference_final
         # print(f'agent {self.agent_ID}: route is {route}')
 
         reward = copy.deepcopy(episode_buffer[5])

@@ -1,0 +1,1266 @@
+2022-09-30 23:23:27,776 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-09-30 23:23:27,776 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-09-30 23:23:27,776 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-09-30 23:23:27,776 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-09-30 23:23:27,776 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-09-30 23:23:27,776 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_232327-3qx9wevo/logs/debug.log
+2022-09-30 23:23:27,777 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_232327-3qx9wevo/logs/debug-internal.log
+2022-09-30 23:23:27,777 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-09-30 23:23:27,777 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-09-30 23:23:27,777 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-09-30 23:23:27,778 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:23:27,778 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-09-30 23:23:27,778 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:23:27,778 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-09-30 23:23:27,779 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:23:27,779 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-09-30 23:23:27,779 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:23:27,779 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-09-30 23:23:27,780 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:23:27,780 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-09-30 23:23:27,780 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:23:27,781 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-09-30 23:25:19,412 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-09-30 23:25:19,412 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-09-30 23:25:19,412 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-09-30 23:25:19,412 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-09-30 23:25:19,412 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-09-30 23:25:19,413 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_232519-gpajeuch/logs/debug.log
+2022-09-30 23:25:19,413 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_232519-gpajeuch/logs/debug-internal.log
+2022-09-30 23:25:19,413 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-09-30 23:25:19,413 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-09-30 23:25:19,413 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-09-30 23:25:19,414 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:25:19,414 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-09-30 23:25:19,414 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:25:19,415 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-09-30 23:25:19,415 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:25:19,415 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-09-30 23:25:19,415 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:25:19,416 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-09-30 23:25:19,416 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:25:19,416 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-09-30 23:25:19,417 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:25:19,417 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-09-30 23:27:05,657 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-09-30 23:27:05,658 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-09-30 23:27:05,658 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-09-30 23:27:05,658 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-09-30 23:27:05,658 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-09-30 23:27:05,658 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_232705-1rcjo08i/logs/debug.log
+2022-09-30 23:27:05,658 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_232705-1rcjo08i/logs/debug-internal.log
+2022-09-30 23:27:05,659 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-09-30 23:27:05,659 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-09-30 23:27:05,659 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-09-30 23:27:05,660 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:27:05,660 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-09-30 23:27:05,660 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:27:05,660 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-09-30 23:27:05,661 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:27:05,661 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-09-30 23:27:05,661 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:27:05,661 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-09-30 23:27:05,662 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:27:05,662 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-09-30 23:27:05,662 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:27:05,663 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-09-30 23:28:55,390 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-09-30 23:28:55,391 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-09-30 23:28:55,391 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-09-30 23:28:55,391 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-09-30 23:28:55,391 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-09-30 23:28:55,391 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_232855-3h4204eo/logs/debug.log
+2022-09-30 23:28:55,392 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_232855-3h4204eo/logs/debug-internal.log
+2022-09-30 23:28:55,392 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-09-30 23:28:55,392 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-09-30 23:28:55,392 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-09-30 23:28:55,393 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:28:55,393 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-09-30 23:28:55,393 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:28:55,394 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-09-30 23:28:55,394 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:28:55,394 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-09-30 23:28:55,394 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:28:55,395 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-09-30 23:28:55,395 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:28:55,395 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-09-30 23:28:55,396 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:28:55,396 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-09-30 23:30:35,531 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-09-30 23:30:35,532 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-09-30 23:30:35,532 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-09-30 23:30:35,532 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-09-30 23:30:35,532 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-09-30 23:30:35,533 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_233035-2wt9mmlp/logs/debug.log
+2022-09-30 23:30:35,533 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_233035-2wt9mmlp/logs/debug-internal.log
+2022-09-30 23:30:35,533 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-09-30 23:30:35,533 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-09-30 23:30:35,533 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-09-30 23:30:35,534 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:30:35,534 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-09-30 23:30:35,534 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:30:35,535 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-09-30 23:30:35,535 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:30:35,535 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-09-30 23:30:35,536 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:30:35,536 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-09-30 23:30:35,536 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:30:35,537 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-09-30 23:30:35,537 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:30:35,537 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-09-30 23:32:22,167 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-09-30 23:32:22,167 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-09-30 23:32:22,167 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-09-30 23:32:22,168 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-09-30 23:32:22,168 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-09-30 23:32:22,168 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_233222-21m85drr/logs/debug.log
+2022-09-30 23:32:22,168 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_233222-21m85drr/logs/debug-internal.log
+2022-09-30 23:32:22,169 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-09-30 23:32:22,169 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-09-30 23:32:22,169 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-09-30 23:32:22,169 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:32:22,170 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-09-30 23:32:22,170 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:32:22,170 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-09-30 23:32:22,171 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:32:22,171 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-09-30 23:32:22,171 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:32:22,172 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-09-30 23:32:22,172 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:32:22,172 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-09-30 23:32:22,173 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:32:22,173 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-09-30 23:34:11,528 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-09-30 23:34:11,528 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-09-30 23:34:11,528 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-09-30 23:34:11,529 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-09-30 23:34:11,529 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-09-30 23:34:11,529 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_233411-9lq8jig3/logs/debug.log
+2022-09-30 23:34:11,529 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_233411-9lq8jig3/logs/debug-internal.log
+2022-09-30 23:34:11,530 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-09-30 23:34:11,530 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-09-30 23:34:11,530 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-09-30 23:34:11,531 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:34:11,531 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-09-30 23:34:11,531 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:34:11,531 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-09-30 23:34:11,532 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:34:11,532 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-09-30 23:34:11,532 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:34:11,533 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-09-30 23:34:11,533 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:34:11,533 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-09-30 23:34:11,534 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:34:11,534 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-09-30 23:35:58,081 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-09-30 23:35:58,082 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-09-30 23:35:58,082 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-09-30 23:35:58,082 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-09-30 23:35:58,082 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-09-30 23:35:58,082 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_233558-2ensud59/logs/debug.log
+2022-09-30 23:35:58,083 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_233558-2ensud59/logs/debug-internal.log
+2022-09-30 23:35:58,083 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-09-30 23:35:58,083 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-09-30 23:35:58,084 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-09-30 23:35:58,084 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:35:58,084 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-09-30 23:35:58,085 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:35:58,085 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-09-30 23:35:58,085 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:35:58,086 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-09-30 23:35:58,086 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:35:58,086 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-09-30 23:35:58,087 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:35:58,087 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-09-30 23:35:58,087 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:35:58,088 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-09-30 23:37:47,789 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-09-30 23:37:47,790 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-09-30 23:37:47,790 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-09-30 23:37:47,790 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-09-30 23:37:47,790 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-09-30 23:37:47,790 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_233747-szb55vx5/logs/debug.log
+2022-09-30 23:37:47,791 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_233747-szb55vx5/logs/debug-internal.log
+2022-09-30 23:37:47,791 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-09-30 23:37:47,791 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-09-30 23:37:47,792 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-09-30 23:37:47,792 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:37:47,792 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-09-30 23:37:47,793 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:37:47,793 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-09-30 23:37:47,793 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:37:47,794 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-09-30 23:37:47,794 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:37:47,794 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-09-30 23:37:47,795 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:37:47,795 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-09-30 23:37:47,796 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:37:47,796 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-09-30 23:39:33,092 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-09-30 23:39:33,092 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-09-30 23:39:33,092 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-09-30 23:39:33,093 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-09-30 23:39:33,093 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-09-30 23:39:33,093 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_233933-6wcoaf59/logs/debug.log
+2022-09-30 23:39:33,093 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_233933-6wcoaf59/logs/debug-internal.log
+2022-09-30 23:39:33,094 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-09-30 23:39:33,094 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-09-30 23:39:33,094 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-09-30 23:39:33,095 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:39:33,095 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-09-30 23:39:33,096 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:39:33,096 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-09-30 23:39:33,096 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:39:33,097 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-09-30 23:39:33,097 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:39:33,097 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-09-30 23:39:33,098 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:39:33,098 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-09-30 23:39:33,098 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:39:33,099 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-09-30 23:41:16,554 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-09-30 23:41:16,555 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-09-30 23:41:16,555 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-09-30 23:41:16,555 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-09-30 23:41:16,555 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-09-30 23:41:16,556 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_234116-2r7hr76l/logs/debug.log
+2022-09-30 23:41:16,556 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_234116-2r7hr76l/logs/debug-internal.log
+2022-09-30 23:41:16,556 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-09-30 23:41:16,556 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-09-30 23:41:16,557 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-09-30 23:41:16,557 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:41:16,557 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-09-30 23:41:16,558 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:41:16,558 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-09-30 23:41:16,558 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:41:16,559 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-09-30 23:41:16,559 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:41:16,560 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-09-30 23:41:16,560 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:41:16,560 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-09-30 23:41:16,561 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:41:16,561 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-09-30 23:43:04,696 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-09-30 23:43:04,697 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-09-30 23:43:04,697 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-09-30 23:43:04,697 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-09-30 23:43:04,697 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-09-30 23:43:04,697 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_234304-1c2qh86w/logs/debug.log
+2022-09-30 23:43:04,698 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_234304-1c2qh86w/logs/debug-internal.log
+2022-09-30 23:43:04,698 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-09-30 23:43:04,698 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-09-30 23:43:04,699 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-09-30 23:43:04,699 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:43:04,699 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-09-30 23:43:04,700 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:43:04,700 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-09-30 23:43:04,700 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:43:04,701 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-09-30 23:43:04,701 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:43:04,701 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-09-30 23:43:04,702 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:43:04,702 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-09-30 23:43:04,702 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:43:04,703 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-09-30 23:44:57,315 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-09-30 23:44:57,316 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-09-30 23:44:57,316 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-09-30 23:44:57,316 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-09-30 23:44:57,316 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-09-30 23:44:57,317 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_234457-9v7yxovg/logs/debug.log
+2022-09-30 23:44:57,317 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_234457-9v7yxovg/logs/debug-internal.log
+2022-09-30 23:44:57,317 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-09-30 23:44:57,318 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-09-30 23:44:57,318 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-09-30 23:44:57,318 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:44:57,319 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-09-30 23:44:57,319 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:44:57,320 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-09-30 23:44:57,320 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:44:57,320 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-09-30 23:44:57,321 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:44:57,321 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-09-30 23:44:57,321 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:44:57,322 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-09-30 23:44:57,322 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:44:57,322 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-09-30 23:46:43,950 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-09-30 23:46:43,950 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-09-30 23:46:43,951 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-09-30 23:46:43,951 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-09-30 23:46:43,951 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-09-30 23:46:43,951 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_234643-1bu80u21/logs/debug.log
+2022-09-30 23:46:43,952 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_234643-1bu80u21/logs/debug-internal.log
+2022-09-30 23:46:43,952 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-09-30 23:46:43,952 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-09-30 23:46:43,953 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-09-30 23:46:43,953 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:46:43,953 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-09-30 23:46:43,954 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:46:43,954 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-09-30 23:46:43,955 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:46:43,955 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-09-30 23:46:43,955 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:46:43,956 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-09-30 23:46:43,956 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:46:43,957 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-09-30 23:46:43,957 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:46:43,957 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-09-30 23:48:34,077 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-09-30 23:48:34,078 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-09-30 23:48:34,078 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-09-30 23:48:34,078 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-09-30 23:48:34,078 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-09-30 23:48:34,079 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_234834-w5k6vlvs/logs/debug.log
+2022-09-30 23:48:34,079 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_234834-w5k6vlvs/logs/debug-internal.log
+2022-09-30 23:48:34,079 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-09-30 23:48:34,080 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-09-30 23:48:34,080 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-09-30 23:48:34,080 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:48:34,081 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-09-30 23:48:34,081 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:48:34,082 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-09-30 23:48:34,082 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:48:34,082 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-09-30 23:48:34,083 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:48:34,083 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-09-30 23:48:34,084 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:48:34,084 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-09-30 23:48:34,084 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:48:34,085 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-09-30 23:50:20,149 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-09-30 23:50:20,150 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-09-30 23:50:20,150 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-09-30 23:50:20,150 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-09-30 23:50:20,151 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-09-30 23:50:20,151 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_235020-3stuue7v/logs/debug.log
+2022-09-30 23:50:20,151 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_235020-3stuue7v/logs/debug-internal.log
+2022-09-30 23:50:20,152 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-09-30 23:50:20,152 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-09-30 23:50:20,152 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-09-30 23:50:20,153 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:50:20,153 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-09-30 23:50:20,154 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:50:20,154 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-09-30 23:50:20,154 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:50:20,155 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-09-30 23:50:20,155 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:50:20,156 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-09-30 23:50:20,156 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:50:20,156 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-09-30 23:50:20,157 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:50:20,157 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-09-30 23:52:09,772 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-09-30 23:52:09,772 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-09-30 23:52:09,772 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-09-30 23:52:09,772 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-09-30 23:52:09,773 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-09-30 23:52:09,773 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_235209-3vpq3wll/logs/debug.log
+2022-09-30 23:52:09,773 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_235209-3vpq3wll/logs/debug-internal.log
+2022-09-30 23:52:09,774 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-09-30 23:52:09,774 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-09-30 23:52:09,774 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-09-30 23:52:09,775 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:52:09,775 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-09-30 23:52:09,776 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:52:09,776 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-09-30 23:52:09,777 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:52:09,777 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-09-30 23:52:09,777 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:52:09,778 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-09-30 23:52:09,778 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:52:09,779 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-09-30 23:52:09,779 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:52:09,779 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-09-30 23:53:56,000 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-09-30 23:53:56,000 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-09-30 23:53:56,000 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-09-30 23:53:56,001 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-09-30 23:53:56,001 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-09-30 23:53:56,001 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_235355-nqpjbalu/logs/debug.log
+2022-09-30 23:53:56,002 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_235355-nqpjbalu/logs/debug-internal.log
+2022-09-30 23:53:56,002 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-09-30 23:53:56,002 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-09-30 23:53:56,003 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-09-30 23:53:56,003 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:53:56,003 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-09-30 23:53:56,004 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:53:56,004 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-09-30 23:53:56,005 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:53:56,005 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-09-30 23:53:56,006 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:53:56,006 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-09-30 23:53:56,007 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:53:56,007 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-09-30 23:53:56,007 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:53:56,008 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-09-30 23:55:48,842 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-09-30 23:55:48,842 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-09-30 23:55:48,843 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-09-30 23:55:48,843 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-09-30 23:55:48,843 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-09-30 23:55:48,844 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_235548-10pmse01/logs/debug.log
+2022-09-30 23:55:48,844 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_235548-10pmse01/logs/debug-internal.log
+2022-09-30 23:55:48,844 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-09-30 23:55:48,845 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-09-30 23:55:48,845 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-09-30 23:55:48,845 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:55:48,846 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-09-30 23:55:48,846 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:55:48,847 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-09-30 23:55:48,847 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:55:48,848 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-09-30 23:55:48,848 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:55:48,848 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-09-30 23:55:48,849 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:55:48,849 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-09-30 23:55:48,850 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:55:48,850 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-09-30 23:57:37,443 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-09-30 23:57:37,443 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-09-30 23:57:37,444 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-09-30 23:57:37,444 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-09-30 23:57:37,444 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-09-30 23:57:37,445 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_235737-1v23aqdi/logs/debug.log
+2022-09-30 23:57:37,445 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_235737-1v23aqdi/logs/debug-internal.log
+2022-09-30 23:57:37,445 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-09-30 23:57:37,446 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-09-30 23:57:37,446 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-09-30 23:57:37,447 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:57:37,447 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-09-30 23:57:37,448 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:57:37,448 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-09-30 23:57:37,448 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:57:37,449 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-09-30 23:57:37,449 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:57:37,450 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-09-30 23:57:37,450 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:57:37,451 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-09-30 23:57:37,451 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:57:37,451 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-09-30 23:59:24,801 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-09-30 23:59:24,802 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-09-30 23:59:24,802 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-09-30 23:59:24,802 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-09-30 23:59:24,802 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-09-30 23:59:24,803 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_235924-q9i2ojd7/logs/debug.log
+2022-09-30 23:59:24,803 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20220930_235924-q9i2ojd7/logs/debug-internal.log
+2022-09-30 23:59:24,804 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-09-30 23:59:24,804 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-09-30 23:59:24,804 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-09-30 23:59:24,805 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:59:24,805 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-09-30 23:59:24,806 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:59:24,806 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-09-30 23:59:24,806 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:59:24,807 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-09-30 23:59:24,807 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:59:24,808 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-09-30 23:59:24,808 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:59:24,809 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-09-30 23:59:24,809 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-09-30 23:59:24,809 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:01:10,629 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:01:10,629 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:01:10,630 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:01:10,630 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:01:10,630 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:01:10,631 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_000110-19q1wx8j/logs/debug.log
+2022-10-01 00:01:10,631 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_000110-19q1wx8j/logs/debug-internal.log
+2022-10-01 00:01:10,631 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:01:10,632 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:01:10,632 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:01:10,633 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:01:10,633 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:01:10,634 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:01:10,634 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:01:10,634 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:01:10,635 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:01:10,635 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:01:10,636 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:01:10,636 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:01:10,637 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:01:10,637 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:01:10,638 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:02:59,539 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:02:59,540 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:02:59,540 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:02:59,541 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:02:59,541 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:02:59,541 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_000259-3ai5wy4z/logs/debug.log
+2022-10-01 00:02:59,541 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_000259-3ai5wy4z/logs/debug-internal.log
+2022-10-01 00:02:59,542 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:02:59,542 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:02:59,543 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:02:59,543 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:02:59,544 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:02:59,544 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:02:59,544 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:02:59,545 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:02:59,545 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:02:59,546 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:02:59,546 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:02:59,547 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:02:59,547 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:02:59,548 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:02:59,548 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:04:49,532 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:04:49,532 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:04:49,533 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:04:49,533 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:04:49,533 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:04:49,534 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_000449-mh7pzlpg/logs/debug.log
+2022-10-01 00:04:49,534 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_000449-mh7pzlpg/logs/debug-internal.log
+2022-10-01 00:04:49,534 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:04:49,535 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:04:49,535 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:04:49,536 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:04:49,536 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:04:49,537 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:04:49,537 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:04:49,538 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:04:49,538 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:04:49,539 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:04:49,539 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:04:49,540 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:04:49,540 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:04:49,541 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:04:49,541 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:06:38,682 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:06:38,682 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:06:38,683 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:06:38,683 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:06:38,684 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:06:38,684 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_000638-21aauare/logs/debug.log
+2022-10-01 00:06:38,684 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_000638-21aauare/logs/debug-internal.log
+2022-10-01 00:06:38,685 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:06:38,685 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:06:38,685 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:06:38,686 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:06:38,686 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:06:38,687 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:06:38,687 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:06:38,688 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:06:38,688 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:06:38,689 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:06:38,689 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:06:38,690 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:06:38,690 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:06:38,691 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:06:38,691 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:08:23,779 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:08:23,779 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:08:23,780 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:08:23,780 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:08:23,780 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:08:23,781 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_000823-2keuo88q/logs/debug.log
+2022-10-01 00:08:23,781 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_000823-2keuo88q/logs/debug-internal.log
+2022-10-01 00:08:23,781 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:08:23,782 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:08:23,782 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:08:23,783 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:08:23,783 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:08:23,784 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:08:23,784 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:08:23,785 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:08:23,785 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:08:23,786 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:08:23,786 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:08:23,787 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:08:23,787 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:08:23,788 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:08:23,788 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:10:18,198 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:10:18,198 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:10:18,199 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:10:18,199 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:10:18,200 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:10:18,200 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_001018-3tfj5zmj/logs/debug.log
+2022-10-01 00:10:18,200 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_001018-3tfj5zmj/logs/debug-internal.log
+2022-10-01 00:10:18,201 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:10:18,201 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:10:18,202 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:10:18,202 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:10:18,202 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:10:18,203 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:10:18,204 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:10:18,204 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:10:18,204 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:10:18,205 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:10:18,205 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:10:18,206 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:10:18,206 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:10:18,207 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:10:18,207 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:12:08,182 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:12:08,182 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:12:08,183 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:12:08,183 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:12:08,184 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:12:08,184 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_001208-1hgq2egl/logs/debug.log
+2022-10-01 00:12:08,184 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_001208-1hgq2egl/logs/debug-internal.log
+2022-10-01 00:12:08,185 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:12:08,185 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:12:08,186 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:12:08,186 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:12:08,187 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:12:08,187 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:12:08,188 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:12:08,188 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:12:08,189 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:12:08,189 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:12:08,190 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:12:08,190 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:12:08,191 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:12:08,191 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:12:08,192 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:13:57,024 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:13:57,025 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:13:57,025 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:13:57,026 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:13:57,026 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:13:57,026 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_001357-3p05q89l/logs/debug.log
+2022-10-01 00:13:57,027 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_001357-3p05q89l/logs/debug-internal.log
+2022-10-01 00:13:57,027 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:13:57,028 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:13:57,028 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:13:57,029 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:13:57,029 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:13:57,029 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:13:57,030 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:13:57,030 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:13:57,031 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:13:57,032 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:13:57,032 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:13:57,033 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:13:57,033 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:13:57,034 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:13:57,034 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:15:42,392 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:15:42,392 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:15:42,393 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:15:42,393 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:15:42,393 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:15:42,394 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_001542-34oqobc8/logs/debug.log
+2022-10-01 00:15:42,394 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_001542-34oqobc8/logs/debug-internal.log
+2022-10-01 00:15:42,395 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:15:42,395 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:15:42,395 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:15:42,396 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:15:42,396 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:15:42,397 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:15:42,397 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:15:42,398 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:15:42,399 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:15:42,399 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:15:42,400 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:15:42,400 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:15:42,401 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:15:42,401 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:15:42,402 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:17:43,236 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:17:43,236 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:17:43,237 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:17:43,237 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:17:43,238 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:17:43,238 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_001743-1o5iyego/logs/debug.log
+2022-10-01 00:17:43,238 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_001743-1o5iyego/logs/debug-internal.log
+2022-10-01 00:17:43,239 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:17:43,239 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:17:43,240 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:17:43,240 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:17:43,241 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:17:43,241 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:17:43,242 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:17:43,243 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:17:43,243 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:17:43,244 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:17:43,244 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:17:43,245 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:17:43,245 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:17:43,246 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:17:43,246 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:19:25,630 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:19:25,630 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:19:25,631 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:19:25,631 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:19:25,632 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:19:25,632 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_001925-37ndmh6x/logs/debug.log
+2022-10-01 00:19:25,632 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_001925-37ndmh6x/logs/debug-internal.log
+2022-10-01 00:19:25,633 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:19:25,633 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:19:25,634 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:19:25,634 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:19:25,635 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:19:25,636 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:19:25,636 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:19:25,637 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:19:25,637 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:19:25,638 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:19:25,638 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:19:25,639 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:19:25,639 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:19:25,640 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:19:25,640 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:21:11,190 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:21:11,190 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:21:11,191 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:21:11,191 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:21:11,191 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:21:11,192 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_002111-e7w9fb3s/logs/debug.log
+2022-10-01 00:21:11,192 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_002111-e7w9fb3s/logs/debug-internal.log
+2022-10-01 00:21:11,193 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:21:11,193 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:21:11,194 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:21:11,194 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:21:11,195 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:21:11,195 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:21:11,196 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:21:11,196 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:21:11,197 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:21:11,197 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:21:11,198 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:21:11,198 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:21:11,199 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:21:11,200 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:21:11,200 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:23:01,786 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:23:01,787 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:23:01,787 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:23:01,788 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:23:01,788 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:23:01,788 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_002301-2ffx4sct/logs/debug.log
+2022-10-01 00:23:01,789 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_002301-2ffx4sct/logs/debug-internal.log
+2022-10-01 00:23:01,789 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:23:01,790 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:23:01,790 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:23:01,791 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:23:01,791 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:23:01,792 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:23:01,793 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:23:01,793 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:23:01,794 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:23:01,794 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:23:01,795 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:23:01,795 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:23:01,796 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:23:01,796 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:23:01,797 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:24:50,099 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:24:50,099 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:24:50,100 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:24:50,100 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:24:50,100 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:24:50,101 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_002450-yv7xmmx9/logs/debug.log
+2022-10-01 00:24:50,101 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_002450-yv7xmmx9/logs/debug-internal.log
+2022-10-01 00:24:50,102 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:24:50,102 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:24:50,103 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:24:50,103 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:24:50,104 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:24:50,104 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:24:50,105 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:24:50,106 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:24:50,106 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:24:50,107 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:24:50,107 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:24:50,108 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:24:50,108 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:24:50,109 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:24:50,110 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:26:34,755 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:26:34,755 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:26:34,756 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:26:34,756 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:26:34,756 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:26:34,757 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_002634-14wf1axx/logs/debug.log
+2022-10-01 00:26:34,757 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_002634-14wf1axx/logs/debug-internal.log
+2022-10-01 00:26:34,758 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:26:34,758 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:26:34,759 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:26:34,759 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:26:34,760 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:26:34,760 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:26:34,761 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:26:34,762 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:26:34,762 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:26:34,763 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:26:34,763 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:26:34,764 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:26:34,764 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:26:34,765 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:26:34,765 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:28:20,302 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:28:20,303 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:28:20,303 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:28:20,303 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:28:20,304 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:28:20,304 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_002820-hqzens0z/logs/debug.log
+2022-10-01 00:28:20,305 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_002820-hqzens0z/logs/debug-internal.log
+2022-10-01 00:28:20,305 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:28:20,306 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:28:20,306 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:28:20,307 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:28:20,307 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:28:20,308 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:28:20,309 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:28:20,309 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:28:20,310 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:28:20,310 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:28:20,311 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:28:20,312 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:28:20,312 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:28:20,313 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:28:20,313 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:30:08,199 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:30:08,199 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:30:08,200 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:30:08,200 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:30:08,201 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:30:08,201 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_003008-2ix2lux5/logs/debug.log
+2022-10-01 00:30:08,202 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_003008-2ix2lux5/logs/debug-internal.log
+2022-10-01 00:30:08,202 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:30:08,203 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:30:08,203 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:30:08,204 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:30:08,204 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:30:08,205 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:30:08,205 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:30:08,206 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:30:08,207 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:30:08,207 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:30:08,208 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:30:08,208 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:30:08,209 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:30:08,210 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:30:08,210 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:31:55,937 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:31:55,938 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:31:55,938 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:31:55,939 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:31:55,939 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:31:55,940 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_003155-24xmrkr5/logs/debug.log
+2022-10-01 00:31:55,940 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_003155-24xmrkr5/logs/debug-internal.log
+2022-10-01 00:31:55,941 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:31:55,941 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:31:55,942 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:31:55,942 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:31:55,943 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:31:55,943 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:31:55,944 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:31:55,944 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:31:55,945 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:31:55,946 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:31:55,946 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:31:55,947 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:31:55,947 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:31:55,948 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:31:55,948 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:33:48,745 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:33:48,746 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:33:48,746 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:33:48,747 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:33:48,747 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:33:48,748 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_003348-3egd4wty/logs/debug.log
+2022-10-01 00:33:48,748 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_003348-3egd4wty/logs/debug-internal.log
+2022-10-01 00:33:48,749 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:33:48,749 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:33:48,750 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:33:48,750 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:33:48,751 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:33:48,752 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:33:48,752 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:33:48,753 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:33:48,753 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:33:48,754 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:33:48,755 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:33:48,755 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:33:48,756 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:33:48,756 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:33:48,757 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:35:39,206 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:35:39,206 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:35:39,207 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:35:39,207 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:35:39,208 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:35:39,208 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_003539-13qub756/logs/debug.log
+2022-10-01 00:35:39,209 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_003539-13qub756/logs/debug-internal.log
+2022-10-01 00:35:39,209 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:35:39,210 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:35:39,210 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:35:39,211 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:35:39,212 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:35:39,212 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:35:39,213 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:35:39,213 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:35:39,214 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:35:39,215 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:35:39,215 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:35:39,216 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:35:39,216 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:35:39,217 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:35:39,218 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:37:29,927 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:37:29,928 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:37:29,928 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:37:29,929 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:37:29,929 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:37:29,930 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_003729-3llfbs0d/logs/debug.log
+2022-10-01 00:37:29,930 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_003729-3llfbs0d/logs/debug-internal.log
+2022-10-01 00:37:29,931 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:37:29,931 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:37:29,932 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:37:29,933 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:37:29,933 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:37:29,934 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:37:29,934 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:37:29,935 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:37:29,936 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:37:29,936 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:37:29,937 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:37:29,938 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:37:29,938 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:37:29,939 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:37:29,940 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:39:21,450 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:39:21,451 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:39:21,452 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:39:21,452 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:39:21,452 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:39:21,453 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_003921-1je7i7u7/logs/debug.log
+2022-10-01 00:39:21,453 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_003921-1je7i7u7/logs/debug-internal.log
+2022-10-01 00:39:21,454 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:39:21,454 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:39:21,455 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:39:21,456 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:39:21,456 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:39:21,457 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:39:21,457 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:39:21,458 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:39:21,458 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:39:21,459 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:39:21,460 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:39:21,460 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:39:21,461 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:39:21,462 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:39:21,462 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:41:05,607 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:41:05,608 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:41:05,608 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:41:05,608 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:41:05,609 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:41:05,609 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_004105-3h6lbk8i/logs/debug.log
+2022-10-01 00:41:05,610 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_004105-3h6lbk8i/logs/debug-internal.log
+2022-10-01 00:41:05,611 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:41:05,611 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:41:05,612 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:41:05,612 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:41:05,613 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:41:05,614 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:41:05,614 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:41:05,615 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:41:05,615 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:41:05,616 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:41:05,617 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:41:05,617 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:41:05,618 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:41:05,619 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:41:05,619 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:42:49,362 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:42:49,363 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:42:49,363 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:42:49,364 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:42:49,364 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:42:49,365 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_004249-33hrtwf4/logs/debug.log
+2022-10-01 00:42:49,365 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_004249-33hrtwf4/logs/debug-internal.log
+2022-10-01 00:42:49,366 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:42:49,366 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:42:49,367 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:42:49,368 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:42:49,368 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:42:49,369 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:42:49,369 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:42:49,370 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:42:49,370 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:42:49,371 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:42:49,372 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:42:49,372 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:42:49,373 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:42:49,374 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:42:49,374 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:44:36,395 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:44:36,395 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:44:36,396 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:44:36,396 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:44:36,397 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:44:36,397 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_004436-o2c53cnj/logs/debug.log
+2022-10-01 00:44:36,398 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_004436-o2c53cnj/logs/debug-internal.log
+2022-10-01 00:44:36,399 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:44:36,399 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:44:36,400 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:44:36,400 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:44:36,401 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:44:36,402 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:44:36,402 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:44:36,403 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:44:36,404 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:44:36,404 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:44:36,405 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:44:36,406 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:44:36,406 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:44:36,407 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:44:36,408 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:46:21,531 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:46:21,532 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:46:21,533 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:46:21,533 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:46:21,534 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:46:21,534 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_004621-18oczvwb/logs/debug.log
+2022-10-01 00:46:21,535 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_004621-18oczvwb/logs/debug-internal.log
+2022-10-01 00:46:21,535 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:46:21,536 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:46:21,536 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:46:21,537 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:46:21,538 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:46:21,538 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:46:21,539 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:46:21,540 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:46:21,540 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:46:21,541 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:46:21,542 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:46:21,542 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:46:21,543 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:46:21,544 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:46:21,544 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:48:13,060 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:48:13,061 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:48:13,062 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:48:13,062 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:48:13,063 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:48:13,063 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_004813-15jspbqs/logs/debug.log
+2022-10-01 00:48:13,064 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_004813-15jspbqs/logs/debug-internal.log
+2022-10-01 00:48:13,064 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:48:13,065 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:48:13,065 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:48:13,066 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:48:13,067 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:48:13,068 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:48:13,068 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:48:13,069 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:48:13,069 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:48:13,070 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:48:13,071 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:48:13,072 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:48:13,072 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:48:13,073 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:48:13,073 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:49:53,810 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:49:53,811 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:49:53,811 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:49:53,812 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:49:53,812 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:49:53,813 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_004953-1a2435rh/logs/debug.log
+2022-10-01 00:49:53,813 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_004953-1a2435rh/logs/debug-internal.log
+2022-10-01 00:49:53,814 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:49:53,814 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:49:53,815 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:49:53,816 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:49:53,816 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:49:53,817 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:49:53,818 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:49:53,818 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:49:53,819 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:49:53,820 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:49:53,821 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:49:53,821 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:49:53,822 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:49:53,823 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:49:53,823 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:51:41,140 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:51:41,140 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:51:41,141 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:51:41,141 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:51:41,142 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:51:41,142 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_005141-1ybo19ej/logs/debug.log
+2022-10-01 00:51:41,143 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_005141-1ybo19ej/logs/debug-internal.log
+2022-10-01 00:51:41,144 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:51:41,144 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:51:41,145 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:51:41,145 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:51:41,146 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:51:41,147 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:51:41,148 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:51:41,148 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:51:41,149 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:51:41,150 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:51:41,150 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:51:41,151 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:51:41,152 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:51:41,152 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:51:41,153 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:53:29,322 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:53:29,323 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:53:29,324 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:53:29,324 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:53:29,325 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:53:29,325 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_005329-2fuzkgm4/logs/debug.log
+2022-10-01 00:53:29,326 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_005329-2fuzkgm4/logs/debug-internal.log
+2022-10-01 00:53:29,326 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:53:29,327 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:53:29,328 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:53:29,328 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:53:29,329 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:53:29,330 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:53:29,330 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:53:29,331 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:53:29,332 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:53:29,332 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:53:29,333 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:53:29,334 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:53:29,334 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:53:29,335 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:53:29,336 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:55:13,273 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:55:13,274 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:55:13,274 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:55:13,275 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:55:13,276 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:55:13,276 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_005513-s7vak4fs/logs/debug.log
+2022-10-01 00:55:13,277 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_005513-s7vak4fs/logs/debug-internal.log
+2022-10-01 00:55:13,277 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:55:13,278 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:55:13,279 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:55:13,279 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:55:13,280 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:55:13,281 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:55:13,281 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:55:13,282 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:55:13,283 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:55:13,284 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:55:13,284 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:55:13,285 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:55:13,286 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:55:13,287 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:55:13,287 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:57:02,444 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:57:02,445 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:57:02,446 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:57:02,446 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:57:02,447 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:57:02,447 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_005702-8b94e4ca/logs/debug.log
+2022-10-01 00:57:02,448 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_005702-8b94e4ca/logs/debug-internal.log
+2022-10-01 00:57:02,449 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:57:02,449 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:57:02,450 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:57:02,451 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:57:02,451 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:57:02,452 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:57:02,453 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:57:02,454 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:57:02,454 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:57:02,455 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:57:02,456 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:57:02,456 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:57:02,457 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:57:02,458 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:57:02,459 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 00:58:48,696 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 00:58:48,696 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 00:58:48,697 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 00:58:48,697 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 00:58:48,698 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 00:58:48,698 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_005848-2tgbqvsb/logs/debug.log
+2022-10-01 00:58:48,699 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_005848-2tgbqvsb/logs/debug-internal.log
+2022-10-01 00:58:48,700 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 00:58:48,700 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 00:58:48,701 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 00:58:48,702 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:58:48,702 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 00:58:48,703 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:58:48,704 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 00:58:48,704 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:58:48,705 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 00:58:48,706 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:58:48,706 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 00:58:48,707 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:58:48,708 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 00:58:48,709 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 00:58:48,709 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 01:00:35,117 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Configure stats pid to 20382
+2022-10-01 01:00:35,118 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/.config/wandb/settings
+2022-10-01 01:00:35,119 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from /home/marmot/Desktop/Tianze/MA_IPP/wandb/settings
+2022-10-01 01:00:35,119 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-01 01:00:35,120 INFO    MainThread:20382 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'driver.py', 'program': '/home/marmot/Desktop/Tianze/MA_IPP/driver.py'}
+2022-10-01 01:00:35,120 INFO    MainThread:20382 [wandb_init.py:_log_setup():476] Logging user logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_010035-26lfbnbj/logs/debug.log
+2022-10-01 01:00:35,121 INFO    MainThread:20382 [wandb_init.py:_log_setup():477] Logging internal logs to /home/marmot/Desktop/Tianze/MA_IPP/wandb/run-20221001_010035-26lfbnbj/logs/debug-internal.log
+2022-10-01 01:00:35,121 INFO    MainThread:20382 [wandb_init.py:init():516] calling init triggers
+2022-10-01 01:00:35,122 INFO    MainThread:20382 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-10-01 01:00:35,123 INFO    MainThread:20382 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-10-01 01:00:35,123 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Runner = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 01:00:35,124 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Runner 10 None
+2022-10-01 01:00:35,125 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set NUM_Worker = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 01:00:35,125 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb NUM_Worker 3 None
+2022-10-01 01:00:35,126 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BATCH_SIZE = 256 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 01:00:35,127 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BATCH_SIZE 256 None
+2022-10-01 01:00:35,128 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set BUDGET_RANGE = [2.999, 3] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 01:00:35,128 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb BUDGET_RANGE [2.999, 3] None
+2022-10-01 01:00:35,129 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GAUSSIAN_NUM = [8, 12] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 01:00:35,130 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GAUSSIAN_NUM [8, 12] None
+2022-10-01 01:00:35,130 INFO    MainThread:20382 [wandb_config.py:__setitem__():148] config set GREEDY = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7efcfc5cff40>>
+2022-10-01 01:00:35,131 INFO    MainThread:20382 [wandb_run.py:_config_callback():1145] config_cb GREEDY False None
+2022-10-01 01:02:34,881 WARNING MsgRouterThr:20382 [router.py:message_loop():77] message_loop has been closed
