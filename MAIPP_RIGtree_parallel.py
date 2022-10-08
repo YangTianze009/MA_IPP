@@ -43,7 +43,7 @@ class RIG_planner:
         self.rrt = None
 
         self.radius = RIG_RADIUS
-        self.step_sample = 0.2
+        self.step_sample = SAMPLE_LENGTH
         self.info = None
         self.budget_history = []
         self.obj_history = []
@@ -76,8 +76,8 @@ class RIG_planner:
         self.Tree = Graph()
         self.cov_trace = float('infinity')
 
-        self.generator = RRTGraph(self.step_sample)
-
+        # self.generator = RRTGraph(self.step_sample)
+        self.generator = RRTGraph(0.2)
     def agent_replan(self, agent_ID):
 
         self.added_node_coord = self.start
@@ -111,7 +111,7 @@ class RIG_planner:
         gp_rrt.update_gp()
         high_info_area = gp_rrt.get_high_info_area()
         # Generate tree
-        self.rrt = RRT(20, 1.0, 1.0, self.radius, self.step_sample, gp_rrt, self.underlying_distribution)  # 50
+        self.rrt = RRT(20, 1.0, 1.0, self.radius, 0.2, gp_rrt, self.underlying_distribution)  # 50
 
         nodes = self.rrt.RRT_planner(self.start[f"{agent_ID}"], iterations=175, info=gp_rrt)
         # self.rrt.draw_stuff()
@@ -427,7 +427,7 @@ class RIG_planner:
 
 if __name__ == '__main__':
     NUM_REPEAT = 10  # 10
-    NUM_TEST = 10  # 10
+    NUM_TEST = 30  # 10
     SAVE_CSV_RESULT = True
 
     NUM_AGENTS = NUM_AGENTS
@@ -445,7 +445,7 @@ if __name__ == '__main__':
             # print('test successfully')
 
             cov_trace, time_used = rig.agent_planner()
-            print(f"total usedtime is {time_used}, final cov_trace is {cov_trace}")
+            # print(f"total usedtime is {time_used}, final cov_trace is {cov_trace}")
 
             results_10.append(cov_trace)
             time_10.append(time_used)
@@ -454,12 +454,12 @@ if __name__ == '__main__':
         results_10 = []
         time_10 = []
 
-    if not os.path.exists("ma_ipp_results/10 agents/rig_tree"):
-        os.makedirs(f"ma_ipp_results/10 agents/rig_tree")
-    np.savez(f"ma_ipp_results/10 agents/rig_tree/cov_budget_3", results_30)
-    np.savez(f"ma_ipp_results/10 agents/rig_tree/time_budget_3", time_30)
+    if not os.path.exists("ma_ipp_results/3 agents/rig_tree"):
+        os.makedirs(f"ma_ipp_results/3 agents/rig_tree")
+    np.savez(f"ma_ipp_results/3 agents/rig_tree/cov_budget_2_0.1", results_30)
+    np.savez(f"ma_ipp_results/3 agents/rig_tree/time_budget_2_0.1", time_30)
 
-    print(f"save the result, cov is {results_30}")
+    # print(f"save the result, cov is {results_30}")
     # budget_history = np.array(rig.budget_history)
     # obj_history = np.array(rig.obj_history)
 

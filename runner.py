@@ -74,7 +74,7 @@ class Runner(object):
             # print(np.array(w.experience).shape)
             perf_metrics = w.perf_metrics
         perf_metrics["cov_trace"] = cov_trace
-        print(f"final cov trace is {cov_trace}")
+        # print(f"final cov trace is {cov_trace}")
 
         for b in range(len(rollouts)):
             for a in range(14):
