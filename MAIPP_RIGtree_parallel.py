@@ -111,7 +111,7 @@ class RIG_planner:
         gp_rrt.update_gp()
         high_info_area = gp_rrt.get_high_info_area()
         # Generate tree
-        self.rrt = RRT(20, 1.0, 1.0, self.radius, 0.15, gp_rrt, self.underlying_distribution)  # 50
+        self.rrt = RRT(20, 1.0, 1.0, self.radius, 0.18, gp_rrt, self.underlying_distribution)  # 50
 
         nodes = self.rrt.RRT_planner(self.start[f"{agent_ID}"], iterations=175, info=gp_rrt)
         # self.rrt.draw_stuff()
@@ -337,12 +337,6 @@ class RIG_planner:
                         #     observed_value = np.array([0])
                         self.gp.add_observed_point(sample, observed_value)
 
-            # observed_value = self.underlying_distribution.distribution_function(
-            # self.sample.reshape(-1, 2)) + np.random.normal(0, 1e-10)
-
-            # gp.add_observed_point(self.sample, observed_value)
-
-            # print(np.array(gp.observed_points).shape)
 
             remain_length -= next_length
             next_length = self.step_sample
@@ -453,8 +447,8 @@ if __name__ == '__main__':
 
     if not os.path.exists("ma_ipp_results/3 agents/rig_tree"):
         os.makedirs(f"ma_ipp_results/3 agents/rig_tree")
-    np.savez(f"ma_ipp_results/3 agents/rig_tree/cov_budget_3_0.1_revise", results_30)
-    np.savez(f"ma_ipp_results/3 agents/rig_tree/time_budget_3_0.1_revise", time_30)
+    np.savez(f"ma_ipp_results/3 agents/rig_tree/cov_budget_2_revise", results_30)
+    np.savez(f"ma_ipp_results/3 agents/rig_tree/time_budget_2_revise", time_30)
 
     # print(f"save the result, cov is {results_30}")
     # budget_history = np.array(rig.budget_history)
