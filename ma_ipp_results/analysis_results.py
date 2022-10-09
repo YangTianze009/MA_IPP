@@ -2,14 +2,14 @@ import numpy as np
 
 
 def analysis_cov_trace():
-    cov_trace = np.load("3 agents/intent_all_sampling_nodes/(8, 5)/budget_3_best_0.1.npz")
+    cov_trace = np.load("3 agents/rig_tree/cov_budget_3_0.1.npz")
     # cov_trace = cov_trace["arr_0"]
     cov_trace = cov_trace["arr_0"]
-    print(f"cov_trace is {cov_trace}")
     mean = np.mean(cov_trace)
     max_cov_trace = np.max(cov_trace)
     min_cov_trace = np.min(cov_trace)
     std = np.std(cov_trace)
+    print(f"cov_trace is {cov_trace}")
     print(f"mean is {mean}")
     print(f"std is {std}")
     print(f"max_cov_trace is {max_cov_trace}")

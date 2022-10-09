@@ -111,7 +111,7 @@ class RIG_planner:
         gp_rrt.update_gp()
         high_info_area = gp_rrt.get_high_info_area()
         # Generate tree
-        self.rrt = RRT(20, 1.0, 1.0, self.radius, 0.2, gp_rrt, self.underlying_distribution)  # 50
+        self.rrt = RRT(20, 1.0, 1.0, self.radius, 0.15, gp_rrt, self.underlying_distribution)  # 50
 
         nodes = self.rrt.RRT_planner(self.start[f"{agent_ID}"], iterations=175, info=gp_rrt)
         # self.rrt.draw_stuff()
@@ -193,24 +193,17 @@ class RIG_planner:
         # print(f"path of agent is {path}")
         # print(BUDGET_SIZE // self.step_sample)
         for each_step in path:
-            if len(self.measurement_points[f"{agent_ID}"]) >= (BUDGET_SIZE // self.step_sample):
-
-                if_done = True
-                break
-            else:
-                if_done = False
 
             self.added_node_coord = np.append(self.added_node_coord, self.node_coords[int(each_step)])
 
             current_pos = self.global_agent_pos[f"{agent_ID}"][-1]
             each_step_pos = self.node_coords[int(each_step)]
             covariance_trace = self.execute_path(each_step_pos, current_pos, agent_ID, sample_number)
-            # print(f"cov_trace is {covariance_trace}")
-            # start_index = int(each_step)
-
-            ## record global agent position
-            # print(f"current pos of agent {agent_ID}")
-            # print(self.node_coords[int(each_step)])
+            if len(self.measurement_points[f"{agent_ID}"]) >= (BUDGET_SIZE // self.step_sample):
+                if_done = True
+                break
+            else:
+                if_done = False
 
             self.global_agent_pos[f"{agent_ID}"].append(self.node_coords[int(each_step)])
             # print(f"global agent pos is {self.global_agent_pos}")
@@ -280,16 +273,17 @@ class RIG_planner:
             covariance_trace, if_done = self.agent_replan(agent_ID=agent_ID)
             # self.agent_done[f"{agent_ID}"] = if_done
             print(f"agent budget is {self.agent_budget}")
+            # print(f"measurement points are {BUDGET_SIZE // self.step_sample}")
             for agent_ID in range(NUM_AGENTS):
                 if len(self.measurement_points[f"{agent_ID}"]) >= (BUDGET_SIZE // self.step_sample):
                     self.all_done = True
                 else:
                     self.all_done = False
                     break
-        # a = len(self.measurement_points["0"])
-        # b = len(self.measurement_points["1"])
-        # c = len(self.measurement_points["2"])
-        # print(f"a is {a}", f"b is {b}", f"c is {c}")
+        a = len(self.measurement_points["0"])
+        b = len(self.measurement_points["1"])
+        c = len(self.measurement_points["2"])
+        print(f"a is {a}", f"b is {b}", f"c is {c}")
         tf = time.time()
         # generator.visualize_graph(self.Tree, self.path, self.i, self.gp, self.ground_truth, 'Tree', self.added_node_coord, self.budget, covariance_trace, tf-ti)
 
@@ -328,7 +322,10 @@ class RIG_planner:
             else:
                 self.sample = (each_step_pos - current_pos) * next_length / dist + self.sample
 
-            self.measurement_points[f"{agent_ID}"].append(self.sample)
+            if len(self.measurement_points[f"{agent_ID}"]) < (BUDGET_SIZE // self.step_sample):
+                self.measurement_points[f"{agent_ID}"].append(self.sample)
+            else:
+                pass
 
             for agent_i in range(NUM_AGENTS):
                 if self.measurement_points[f"{agent_i}"] != []:
@@ -445,7 +442,7 @@ if __name__ == '__main__':
             # print('test successfully')
 
             cov_trace, time_used = rig.agent_planner()
-            # print(f"total usedtime is {time_used}, final cov_trace is {cov_trace}")
+            print(f"total usedtime is {time_used}")
 
             results_10.append(cov_trace)
             time_10.append(time_used)
@@ -456,8 +453,8 @@ if __name__ == '__main__':
 
     if not os.path.exists("ma_ipp_results/3 agents/rig_tree"):
         os.makedirs(f"ma_ipp_results/3 agents/rig_tree")
-    np.savez(f"ma_ipp_results/3 agents/rig_tree/cov_budget_2_0.1", results_30)
-    np.savez(f"ma_ipp_results/3 agents/rig_tree/time_budget_2_0.1", time_30)
+    np.savez(f"ma_ipp_results/3 agents/rig_tree/cov_budget_3_0.1_revise", results_30)
+    np.savez(f"ma_ipp_results/3 agents/rig_tree/time_budget_3_0.1_revise", time_30)
 
     # print(f"save the result, cov is {results_30}")
     # budget_history = np.array(rig.budget_history)
