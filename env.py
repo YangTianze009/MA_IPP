@@ -234,14 +234,14 @@ class Env():
         # print(f"cov1 is {cov1}")
         node_info, node_std = gp_ipp_info.update_node(self.node_coords[f"{agent_ID}"])
 
-        for agent_ID in range(1, NUM_THREADS + 1):
-            if agent_position[f"{agent_ID}"] != []:
-                for j, sample in enumerate(agent_position[f"{agent_ID}"]):
+        for i in range(1, NUM_THREADS + 1):
+            if agent_position[f"{i}"] != []:
+                for j, sample in enumerate(agent_position[f"{i}"]):
                     observed_value = np.array([0])
                     gp_ipp_info.add_observed_point(sample, observed_value)
 
         gp_ipp_info.update_gp()
-        # _, node_std = gp_ipp_info.update_node(self.node_coords[f"{agent_ID}"])
+        _, node_std = gp_ipp_info.update_node(self.node_coords[f"{agent_ID}"])
         # cov2 = gp_ipp_info.evaluate_cov_trace()
         # print(f"cov 2 is {cov2}")
         return node_info, node_std
@@ -293,27 +293,29 @@ class Env():
                         observed_value = self.underlying_distribution.distribution_function(
                             sample.reshape(-1, 2)) + np.random.normal(0, 1e-10)
 
-                    # print(f"sample is {sample}", f"observed value is {observed_value}")
+                        # print(f"sample is {sample}", f"observed value is {observed_value}")
                         self.gp_ipp.add_observed_point(sample, observed_value)
         # print(f"observation points are {len(self.gp_ipp.observed_points)}")
         # print(f"observation points are {self.gp_ipp.observed_points}")
         ground_truth = self.get_ground_truth()
         self.gp_ipp.update_gp()
+        self.gp_ipp.plot(ground_truth)
+
         self.high_info_area = self.gp_ipp.get_high_info_area() if ADAPTIVE_AREA else None
+        cov_trace = self.gp_ipp.evaluate_cov_trace(self.high_info_area)
+
         # plot the others route
         for agent_ID in range(1, NUM_THREADS + 1):
             if agent_position[f"{agent_ID}"] != []:
                 for j, sample in enumerate(agent_position[f"{agent_ID}"]):
                     observed_value = np.array([0])
                     self.gp_ipp.add_observed_point(sample, observed_value)
-
         self.gp_ipp.update_gp()
-        cov_trace = self.gp_ipp.evaluate_cov_trace(self.high_info_area)
+
         print(f"cov_trace in plot is {cov_trace}", "\n")
+        self.gp_ipp.plot_std()
 
-        self.gp_ipp.plot(ground_truth)
-
-        # plt.subplot(1,3,1)
+        plt.subplot(2, 3, 1)
         colorlist = ['black', 'darkred', 'darkolivegreen', "purple", "gold"]
         plt.scatter(self.node_coords[f"{agent_ID}"][1][0], self.node_coords[f"{agent_ID}"][1][1], c='r', marker='*',
                     s=15 ** 2)
@@ -364,10 +366,10 @@ class Env():
 
         for i in range(1, NUM_THREADS + 1):
             if i != agent_ID and gaussian_mean[f"{i}"] != []:
-                plt.scatter(gaussian_mean[f"{i}"][0], gaussian_mean[f"{i}"][1], c=colorlist[i-1], marker='*',
+                plt.scatter(gaussian_mean[f"{i}"][0], gaussian_mean[f"{i}"][1], c=colorlist[i - 1], marker='*',
                             s=15 ** 2)
                 for j in range(SAMPLING_TIMES):
-                    plt.scatter(sampling_end_nodes[f"{i}"][j][0], sampling_end_nodes[f"{i}"][j][1], c=colorlist[i-1],
+                    plt.scatter(sampling_end_nodes[f"{i}"][j][0], sampling_end_nodes[f"{i}"][j][1], c=colorlist[i - 1],
                                 marker='o', s=8 ** 2)
         plt.suptitle('Cov trace: {:.4g}  remain_budget: {:.4g}'.format(cov_trace, remain_budget))
         # plt.tight_layout()
