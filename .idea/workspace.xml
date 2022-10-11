@@ -1,7 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="313ccdbc-a2c3-4060-b21c-8a6dc21db9ba" name="Changes" comment="" />
+    <list default="true" id="313ccdbc-a2c3-4060-b21c-8a6dc21db9ba" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MAIPP_RIGtree_parallel.py" beforeDir="false" afterPath="$PROJECT_DIR$/MAIPP_RIGtree_parallel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RIG_parameter.py" beforeDir="false" afterPath="$PROJECT_DIR$/RIG_parameter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/10 agents/rig_tree/cov_budget_3.npz" beforeDir="false" afterPath="$PROJECT_DIR$/ma_ipp_results/10 agents/rig_tree/cov_budget_3.npz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/10 agents/rig_tree/time_budget_3.npz" beforeDir="false" afterPath="$PROJECT_DIR$/ma_ipp_results/10 agents/rig_tree/time_budget_3.npz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 3)*/diff_graph_budget_3.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 3)/diff_graph_budget_3.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 3)/diff_graph_budget_4.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 5)/diff_graph_budget_2.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 5)/diff_graph_budget_2_best_trajectory.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 5)/diff_graph_budget_3.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 5)/diff_graph_budget_3_best_trajectory.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 5)/diff_graph_budget_4.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 5)/diff_graph_budget_4_best_trajectory.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 5)/diff_graph_budget_5.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 5)/diff_graph_budget_5_best_trajectory.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 5)/same_graph_budget_2.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 5)/same_graph_budget_2_best_trajectory.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 5)/same_graph_budget_3.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 5)/same_graph_budget_3_best_trajectory.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 5)/same_graph_budget_4.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 5)/same_graph_budget_4_best_trajectory.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 5)/same_graph_budget_5.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 5)/same_graph_budget_5_best_trajectory.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 6)*/diff_graph_budget_3.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 6)/diff_graph_budget_3.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 6)/diff_graph_budget_4.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 9)*/diff_graph_budget_3.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 9)/diff_graph_budget_3.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 9)/diff_graph_budget_4.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_all_sampling_nodes/intent_difference_KL/all_nodes(8, 3)_budget_3.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_all_sampling_nodes/intent_difference_KL/all_nodes(8, 6)_budget_3.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_all_sampling_nodes/intent_difference_KL/all_nodes(8, 9)_budget_3.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_end_nodes/intent_difference_KL/end_nodes(8, 3)_budget3.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_end_nodes/intent_difference_KL/end_nodes(8, 6)_budget3.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_end_nodes/intent_difference_KL/end_nodes(8, 9)_budget3.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_end_nodes/intent_difference_abs/end_nodes(8, 3)_budget3.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_end_nodes/intent_difference_abs/end_nodes(8, 6)_budget3.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_end_nodes/intent_difference_abs/end_nodes(8, 9)_budget3.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_end_nodes/intent_end_nodes_(8, 3)/diff_graph_budget_2.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_end_nodes/intent_end_nodes_(8, 3)/diff_graph_budget_3.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_end_nodes/intent_end_nodes_(8, 3)/diff_graph_budget_4.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_end_nodes/intent_end_nodes_(8, 3)/diff_graph_budget_5.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_end_nodes/intent_end_nodes_(8, 3)/same_graph_budget_2.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_end_nodes/intent_end_nodes_(8, 3)/same_graph_budget_3.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_end_nodes/intent_end_nodes_(8, 3)/same_graph_budget_4.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_end_nodes/intent_end_nodes_(8, 3)/same_graph_budget_5.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_end_nodes/intent_end_nodes_(8, 6)/diff_graph_budget_3.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_end_nodes/intent_end_nodes_(8, 6)/diff_graph_budget_4.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_end_nodes/intent_end_nodes_(8, 9)/diff_graph_budget_3.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/intent_end_nodes/intent_end_nodes_(8, 9)/diff_graph_budget_4.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/no_sampling_no_agent_inputs/diff_graph_budget_2.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/no_sampling_no_agent_inputs/diff_graph_budget_3.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/no_sampling_no_agent_inputs/diff_graph_budget_4.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/no_sampling_no_agent_inputs/diff_graph_budget_5.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/no_sampling_no_agent_inputs/same_graph_budget_2.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/no_sampling_no_agent_inputs/same_graph_budget_3.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/no_sampling_no_agent_inputs/same_graph_budget_4.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/3 agents/no_sampling_no_agent_inputs/same_graph_budget_5.npz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ma_ipp_results/analysis_results.py" beforeDir="false" afterPath="$PROJECT_DIR$/ma_ipp_results/analysis_results.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/11.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/12.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/13.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/14.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/15.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/15.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/16.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/17.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/17.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/18.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/18.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/19.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/19.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/20.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/20.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/21.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/21.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/22.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/22.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/23.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/23.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/24.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/24.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/25.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/25.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/26.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/26.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/27.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/27.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/28.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/28.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/29.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/29.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/30.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/30.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/31.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/31.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/32.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/33.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/33.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/34.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/34.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/35.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/35.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/36.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/36.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/37.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/37.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/38.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/38.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/39.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/39.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/40.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/40.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/41.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/41.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/42.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/42.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/43.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/43.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/44.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/44.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/45.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/45.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/46.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/46.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/47.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/47.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/48.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/48.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/49.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/49.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/50.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/50.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/51.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/51.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/52.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/52.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/53.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/53.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/54.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/54.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/55.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/55.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/56.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/56.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/57.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/57.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/58.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/58.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/59.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/59.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/60.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/60.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/61.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/61.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/62.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/62.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/63.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/63.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig_tree_plot/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/rig_tree_plot/9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_driver_tianze.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_driver_tianze.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,7 +155,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.MAIPP_RIG_tree_baseline">
+  <component name="RunManager" selected="Python.analysis_results">
     <configuration name="MAIPP_RIG_tree_adaptive" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MA_IPP" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -73,8 +198,52 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="MAIPP_RIGtree_parallel" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MA_IPP" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MAIPP_RIGtree_parallel.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="analysis_results" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MA_IPP" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ma_ipp_results" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ma_ipp_results/analysis_results.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.analysis_results" />
+        <item itemvalue="Python.MAIPP_RIGtree_parallel" />
         <item itemvalue="Python.MAIPP_RIG_tree_baseline" />
         <item itemvalue="Python.MAIPP_RIG_tree_adaptive" />
       </list>
@@ -101,5 +270,21 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/MAIPP_RIGtree_parallel.py</url>
+          <line>145</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/MAIPP_RIGtree_parallel.py</url>
+          <line>167</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -2,7 +2,7 @@ import numpy as np
 
 
 def analysis_cov_trace():
-    cov_trace = np.load("3 agents/rig_tree/cov_budget_2_revise.npz")
+    cov_trace = np.load("3 agents/rig_tree/cov_budget_5.npz")
     # cov_trace = cov_trace["arr_0"]
     cov_trace = cov_trace["arr_0"]
     mean = np.mean(cov_trace)
@@ -17,7 +17,7 @@ def analysis_cov_trace():
 
 
 def analysis_intent_difference_KL():
-    KL_divergence = np.load("3 agents/intent_end_nodes/intent_difference_KL/end_nodes(8, 9)_budget3.npz")
+    KL_divergence = np.load("3 agents/destination_intent/intent_difference_KL/end_nodes(8, 9)_budget3.npz")
     KL_divergence = KL_divergence["arr_0"]
     print(f"KL divergence is {KL_divergence}")
     mean = np.mean(KL_divergence, axis=0)

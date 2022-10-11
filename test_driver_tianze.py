@@ -261,9 +261,9 @@ def main():
             if save_results:
                 trainingData = []
                 if curr_episode > 299:
-                    if not os.path.exists("ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 5)"):
-                        os.makedirs(f"ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 5)")
-                    np.savez(f"ma_ipp_results/3 agents/intent_all_sampling_nodes/(8, 5)/budget_3_0.1",
+                    if not os.path.exists("ma_ipp_results/3 agents/trajectory_intent/(8, 5)"):
+                        os.makedirs(f"ma_ipp_results/3 agents/trajectory_intent/(8, 5)")
+                    np.savez(f"ma_ipp_results/3 agents/trajectory_intent/(8, 5)/budget_3_0.1",
                              cov_trace_final_30)
                     print(f"save the result, cov is {cov_trace_final_30}")
                     for a in meta_agents:
@@ -273,10 +273,10 @@ def main():
             if save_intent_difference:
                 trainingData = []
                 if curr_episode > 99:
-                    if not os.path.exists("ma_ipp_results/3 agents/intent_all_sampling_nodes/intent_difference_KL"):
-                        os.makedirs(f"ma_ipp_results/3 agents/intent_all_sampling_nodes/intent_difference_KL")
+                    if not os.path.exists("ma_ipp_results/3 agents/trajectory_intent/intent_difference_KL"):
+                        os.makedirs(f"ma_ipp_results/3 agents/trajectory_intent/intent_difference_KL")
                     np.savez(
-                        f"ma_ipp_results/3 agents/intent_all_sampling_nodes/intent_difference_KL/all_nodes(8, 6)_budget_3",
+                        f"ma_ipp_results/3 agents/trajectory_intent/intent_difference_KL/all_nodes(8, 6)_budget_3",
                         intent_difference_10)
                     print(f"save the result, intent difference is {intent_difference_10}")
                     for a in meta_agents:
