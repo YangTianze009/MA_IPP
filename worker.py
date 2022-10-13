@@ -21,8 +21,10 @@ for i in range(0, NUM_THREADS):
     overall_delta_cov_trace.append(0)
 # store all the agents route for communication
 agent_route = dict()
+agent_position = dict()
 for i in range(1, NUM_THREADS + 1):
     agent_route[f"{i}"] = []
+    agent_position[f"{i}"] = []
 
 # store all the samples position for update the GP when making decision
 all_samples = dict()
@@ -85,6 +87,8 @@ def calculate_intent_difference_KL(cov, cov_before, mean, mean_before):
     intent_difference_KL = [intent_difference_KL_1, intent_difference_KL_2]
 
     return intent_difference_KL
+
+
 def discount(x, gamma):
     return signal.lfilter([1], [1, -gamma], x[::-1], axis=0)[::-1]
 
@@ -96,7 +100,7 @@ def cal_distance(p1, p2):
 class Worker:
     def __init__(self, metaAgentID, agent_ID, localNetwork, global_step, env,
                  sample_size=SAMPLE_SIZE, sample_length=None, device='cuda', greedy=False, save_image=False):
-        global agent_route, all_samples, all_done, all_reset, sampling_end_nodes, agent_step
+        global agent_route, all_samples, all_done, all_reset, sampling_end_nodes, agent_step, agent_position
         self.node_coords = []
         self.device = device
         self.greedy = greedy
@@ -144,6 +148,7 @@ class Worker:
             episode = currEpisode
             for i in range(1, NUM_THREADS + 1):
                 agent_route[f"{i}"] = []
+                agent_position[f"{i}"] = []
             for i in range(1, NUM_THREADS + 1):
                 all_samples[f"{i}"] = []
                 sampling_end_nodes[f"{i}"] = []
@@ -200,6 +205,7 @@ class Worker:
         if flag == 0:
             for t in range(1, NUM_THREADS + 1):
                 agent_route[f"{t}"].append(1)
+                agent_position[f"{t}"].append(self.node_coords[1])
 
         n_nodes = node_coords.shape[0]
         current_index = torch.tensor([1]).unsqueeze(0).unsqueeze(0).to(self.device)  # (1,1,1)
@@ -260,7 +266,7 @@ class Worker:
         else:
             pass
         # get the node input before making the policy to make sure that information is updating
-        node_info, node_std = self.env.get_node_information(all_samples, 0, self.agent_ID)
+        node_info, node_std = self.env.get_node_information(all_samples, 0, self.agent_ID, agent_position)
         node_info_inputs = node_info.reshape((n_nodes, 1))
         node_std_inputs = node_std.reshape((n_nodes, 1))
 
@@ -367,7 +373,8 @@ class Worker:
                         all_samples_sampling=all_samples_sampling,
                         sampling=True)
                     node_info_sampling, node_std_sampling = self.env.get_node_information(all_samples_sampling,
-                                                                                          sample_numbers, self.agent_ID)
+                                                                                          sample_numbers, self.agent_ID,
+                                                                                          agent_position)
                     route_sampling.append(next_node_index_sampling.item())
                     # print(f"route sampling is {route_sampling}", f"reward is {reward_sampling}",
                     #       f"cov_trace is {cov_trace_sampling}")
@@ -473,6 +480,7 @@ class Worker:
             overall_reward[self.agent_ID - 1] += reward
 
         agent_route[f"{self.agent_ID}"].append(next_node_index.item())
+        agent_position[f"{self.agent_ID}"][0] = self.node_coords[next_node_index.item()]
         current_index = next_node_index.unsqueeze(0).unsqueeze(0)
 
         # print("stuck here 2")
@@ -532,7 +540,7 @@ class Worker:
 
             # print(f"agent route is {agent_route}")
             # print(f"agent_input is {agent_input}")
-            node_info, node_std = self.env.get_node_information(all_samples, sample_numbers, self.agent_ID)
+            node_info, node_std = self.env.get_node_information(all_samples, sample_numbers, self.agent_ID, agent_position)
             node_info_inputs = node_info.reshape((n_nodes, 1))
             node_std_inputs = node_std.reshape((n_nodes, 1))
             relative_node_coords = []
@@ -648,7 +656,7 @@ class Worker:
                             sampling=True)
                         node_info_sampling, node_std_sampling = self.env.get_node_information(all_samples_sampling,
                                                                                               sample_numbers,
-                                                                                              self.agent_ID)
+                                                                                              self.agent_ID, agent_position)
                         route_sampling.append(next_node_index_sampling.item())
 
                         # print(f"cov_trace_sampling is {cov_trace_sampling}")
@@ -800,16 +808,18 @@ class Worker:
                     if self.save_image:
                         if not os.path.exists(self.gifs_path):
                             os.makedirs(self.gifs_path)
-                        self.env.plot_each(gaussian_mean, gaussian_cov, sampling_end_nodes, agent_route, n, self.gifs_path,
-                                      all_samples=all_samples, sample_numbers=sample_numbers,
-                                      remain_budget=remain_budget, agent_ID=self.agent_ID)
+                        self.env.plot_each(gaussian_mean, gaussian_cov, sampling_end_nodes, agent_route, n,
+                                           self.gifs_path,
+                                           all_samples=all_samples, sample_numbers=sample_numbers,
+                                           remain_budget=remain_budget, agent_ID=self.agent_ID)
 
                 # store the next_node_index in a global variable
             agent_route[f"{self.agent_ID}"].append(next_node_index.item())
 
             episode_buffer[5] += torch.FloatTensor([[[reward]]]).to(self.device)
             # print(f"reward is {reward}", f"agentID is {self.agent_ID}", "\n")
-
+            agent_position[f"{self.agent_ID}"][0] = self.node_coords[next_node_index.item()]
+            # print(f"agent position is {agent_position}")
             current_index = next_node_index.unsqueeze(0).unsqueeze(0)
             mask = torch.zeros((1, self.sample_size + 2, K_SIZE), dtype=torch.int64).to(self.device)
 

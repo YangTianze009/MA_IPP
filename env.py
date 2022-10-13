@@ -63,7 +63,7 @@ class Env():
         coordinates = np.random.rand(self.sample_size, 2)
         # different graph is a random seed to ensure that all the agents start at the same node
         for i in range(1, NUM_THREADS + 1):
-            coordinates = np.random.rand(self.sample_size, 2)
+            # coordinates = np.random.rand(self.sample_size, 2)
             prm[f"{i}"] = PRMController(self.sample_size, self.obstacle, self.start, self.destination,
                                         self.budget_range,
                                         self.k_size)
@@ -203,7 +203,7 @@ class Env():
 
         return intent_info
 
-    def get_node_information(self, all_samples, sample_numbers, agent_ID):
+    def get_node_information(self, all_samples, sample_numbers, agent_ID, agent_position):
         gp_ipp_info = GaussianProcessForIPP()
         if not PARTIAL_GP:
             for i in range(1, NUM_THREADS + 1):
@@ -232,6 +232,15 @@ class Env():
         gp_ipp_info.update_gp()
     # try:
         node_info, node_std = gp_ipp_info.update_node(self.node_coords[f"{agent_ID}"])
+
+        for i in range(1, NUM_THREADS + 1):
+            if agent_position[f"{i}"] != []:
+                for j, sample in enumerate(agent_position[f"{i}"]):
+                    observed_value = np.array([0])
+                    gp_ipp_info.add_observed_point(sample, observed_value)
+
+        gp_ipp_info.update_gp()
+        _, node_std = gp_ipp_info.update_node(self.node_coords[f"{agent_ID}"])
         return node_info, node_std
 
     def observed_positions(self, current_node_index, next_node_index, sample_length, agent_ID, dist_residual):
