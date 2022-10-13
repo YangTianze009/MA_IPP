@@ -1,0 +1,19 @@
+Index: ma_ipp_results/analysis_results.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import numpy as np\n\n\ndef analysis_cov_trace():\n    cov_trace = np.load(\"3 agents/rig_tree/cov_budget_5.npz\")\n    # cov_trace = cov_trace[\"arr_0\"]\n    cov_trace = cov_trace[\"arr_0\"]\n    mean = np.mean(cov_trace)\n    max_cov_trace = np.max(cov_trace)\n    min_cov_trace = np.min(cov_trace)\n    std = np.std(cov_trace)\n    print(f\"cov_trace is {cov_trace}\")\n    print(f\"mean is {mean}\")\n    print(f\"std is {std}\")\n    print(f\"max_cov_trace is {max_cov_trace}\")\n    print(f\"min_cov_trace is {min_cov_trace}\")\n\n\ndef analysis_intent_difference_KL():\n    KL_divergence = np.load(\"3 agents/destination_intent/intent_difference_KL/end_nodes(8, 9)_budget3.npz\")\n    KL_divergence = KL_divergence[\"arr_0\"]\n    print(f\"KL divergence is {KL_divergence}\")\n    mean = np.mean(KL_divergence, axis=0)\n    max_KL_divergence = np.max(KL_divergence, axis=0)\n    min_KL_divergence = np.min(KL_divergence, axis=0)\n    std = np.std(KL_divergence, axis=0)\n    print(f\"mean is {mean}\")\n    print(f\"std is {std}\")\n    print(f\"max KL divergence is {max_KL_divergence}\")\n    print(f\"min KL divergence is {min_KL_divergence}\")\n\n\nif __name__ == \"__main__\":\n    # analysis_intent_difference_KL()\n    analysis_cov_trace()
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/ma_ipp_results/analysis_results.py b/ma_ipp_results/analysis_results.py
+--- a/ma_ipp_results/analysis_results.py	(revision 28994d1e8fa11dc964d2f65a9cdbd22e90620a62)
++++ b/ma_ipp_results/analysis_results.py	(date 1665496080695)
+@@ -2,7 +2,7 @@
+ 
+ 
+ def analysis_cov_trace():
+-    cov_trace = np.load("3 agents/rig_tree/cov_budget_5.npz")
++    cov_trace = np.load("3 agents/no_sampling/budget_3_0.2_virtual.npz")
+     # cov_trace = cov_trace["arr_0"]
+     cov_trace = cov_trace["arr_0"]
+     mean = np.mean(cov_trace)

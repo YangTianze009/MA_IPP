@@ -230,7 +230,6 @@ def main():
                 # advantage = target_v_batch - value_batch
                 entropy = (logp_list * logp_list.exp()).sum(dim=-1).mean()
 
-
                 perf_data = []
                 for n in metric_name:
                     perf_data.append(np.nanmean(perf_metrics[n]))
@@ -251,7 +250,6 @@ def main():
                         print("Write to Wandb")
                     else:
                         print("Write to Tensorboard")
-
 
             if len(cov_trace_final_10) == 3:
                 # print(f"cov trace final 10 is {cov_trace_final_10}")
@@ -274,10 +272,11 @@ def main():
             if save_cov_results:
                 trainingData = []
                 if curr_episode > 299:
-                    if not os.path.exists("ma_ipp_results/3 agents/no_sampling_no_agent_inputs"):
-                        os.makedirs(f"ma_ipp_results/3 agents/no_sampling_no_agent_inputs")
-                    np.savez(f"ma_ipp_results/3 agents/no_sampling_no_agent_inputs/budget_4_0.2_virtual",
-                             cov_trace_final_30)
+                    if not os.path.exists("ma_ipp_results/3 agents/destination_intent"):
+                        os.makedirs(f"ma_ipp_results/3 agents/destination_intent")
+                    np.savez(
+                        f"ma_ipp_results/3 agents/destination_intent/intent_end_nodes_(8, 3)/diff_graph_budget_5_virtual",
+                        cov_trace_final_30)
                     print(f"save the result, cov is {cov_trace_final_30}")
                     for a in meta_agents:
                         ray.kill(a)
