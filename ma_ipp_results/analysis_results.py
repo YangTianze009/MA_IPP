@@ -15,7 +15,6 @@ def analysis_cov_trace():
     print(f"max_cov_trace is {max_cov_trace}")
     print(f"min_cov_trace is {min_cov_trace}")
 
-
 def analysis_intent_difference_KL():
     KL_divergence = np.load("3 agents/destination_intent/intent_difference_KL/end_nodes(8, 9)_budget3.npz")
     KL_divergence = KL_divergence["arr_0"]
