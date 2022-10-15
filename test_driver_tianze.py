@@ -261,9 +261,9 @@ def main():
             if save_results:
                 trainingData = []
                 if curr_episode > 299:
-                    if not os.path.exists("ma_ipp_results/3 agents/trajectory_intent/(8, 5)"):
-                        os.makedirs(f"ma_ipp_results/3 agents/trajectory_intent/(8, 5)")
-                    np.savez(f"ma_ipp_results/3 agents/trajectory_intent/(8, 5)/same_graph_budget_2_virtual",
+                    if not os.path.exists("ma_ipp_results/3 agents/trajectory_intent/(8, 5)*"):
+                        os.makedirs(f"ma_ipp_results/3 agents/trajectory_intent/(8, 5)*")
+                    np.savez(f"ma_ipp_results/3 agents/trajectory_intent/(8, 5)*/same_graph_budget_5_best_virtual",
                              cov_trace_final_30)
                     print(f"save the result, cov is {cov_trace_final_30}")
                     for a in meta_agents:

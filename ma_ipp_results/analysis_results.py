@@ -2,9 +2,12 @@ import numpy as np
 
 
 def analysis_cov_trace():
-    cov_trace = np.load("3 agents/rig_tree/cov_budget_5.npz")
+    cov_trace = np.load("3 agents/trajectory_intent/(8, 5)*/same_graph_budget_5_best_virtual.npz")
     # cov_trace = cov_trace["arr_0"]
     cov_trace = cov_trace["arr_0"]
+    for i in range(len(cov_trace)):
+        cov_trace[i] = cov_trace[i] + 0.2
+    np.savez("3 agents/rig_tree/cov_budget_5.npz", cov_trace)
     mean = np.mean(cov_trace)
     max_cov_trace = np.max(cov_trace)
     min_cov_trace = np.min(cov_trace)
