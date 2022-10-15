@@ -234,10 +234,11 @@ class Env():
         node_info, node_std = gp_ipp_info.update_node(self.node_coords[f"{agent_ID}"])
 
         for i in range(1, NUM_THREADS + 1):
-            if agent_position[f"{i}"] != []:
-                for j, sample in enumerate(agent_position[f"{i}"]):
-                    observed_value = np.array([0])
-                    gp_ipp_info.add_observed_point(sample, observed_value)
+            if i != agent_ID:
+                if agent_position[f"{i}"] != []:
+                    for j, sample in enumerate(agent_position[f"{i}"]):
+                        observed_value = np.array([0])
+                        gp_ipp_info.add_observed_point(sample, observed_value)
 
         gp_ipp_info.update_gp()
         _, node_std = gp_ipp_info.update_node(self.node_coords[f"{agent_ID}"])
