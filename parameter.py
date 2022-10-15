@@ -1,7 +1,7 @@
-USE_INTENT = True
+USE_INTENT = False
 
-SAMPLING_TIMES = 8  # 8
-SAMPLING_STEPS = 3  # 3
+SAMPLING_TIMES = 1  # 8
+SAMPLING_STEPS = 1  # 3
 
 BEST_TRAJ = False
 PARTIAL_GP = False
@@ -26,9 +26,9 @@ SAMPLE_SIZE = 200
 # GAUSSIAN_NUM = (8, 12)
 #
 # test parameters
-NUM_META_AGENT = 10  # 3
-SAVE_IMAGE = False   # True
-GREEDY = False
+NUM_META_AGENT = 1  # 3
+SAVE_IMAGE = True   # True
+GREEDY = True
 LOAD_MODEL = True  # default False
 GAUSSIAN_NUM = (8, 12)
 
@@ -45,7 +45,7 @@ LR = 5e-5
 GAMMA = 1
 DECAY_STEP = 32
 SUMMARY_WINDOW = 6
-FOLDER_NAME = 'intent(8, 3)_not_best_budget3_diff_graph_no_agent_input_1'
+FOLDER_NAME = 'no_sampling_budget3_diff_graph_0.2_no_agent_input'
 model_path = f'model/{FOLDER_NAME}'
 train_path = f'train/{FOLDER_NAME}'
 gifs_path = f'gifs/{FOLDER_NAME}'

@@ -236,9 +236,10 @@ class Env():
 
         for i in range(1, NUM_THREADS + 1):
             if agent_position[f"{i}"] != []:
-                for j, sample in enumerate(agent_position[f"{i}"]):
-                    observed_value = np.array([0])
-                    gp_ipp_info.add_observed_point(sample, observed_value)
+                if i != agent_ID:
+                    for j, sample in enumerate(agent_position[f"{i}"]):
+                        observed_value = np.array([0])
+                        gp_ipp_info.add_observed_point(sample, observed_value)
 
         gp_ipp_info.update_gp()
         _, node_std = gp_ipp_info.update_node(self.node_coords[f"{agent_ID}"])
@@ -341,7 +342,7 @@ class Env():
         plt.hist2d(x, y, bins=30, vmin=0, vmax=1)
 
         # plot the intent map
-        plt.subplot(2, 3, 3)
+        # plt.subplot(2, 3, 3)
         M = 1000  # sample numbers in gaussian distribution
         gaussian_value = np.zeros((M, M))
         for i in range(1, NUM_THREADS + 1):
@@ -361,8 +362,8 @@ class Env():
         X, Y = np.meshgrid(np.linspace(0, 1, M), np.linspace(0, 1, M))
         levels = [0.01 * i for i in range(101)]
 
-        plt.contourf(X, Y, gaussian_value, levels, cmap=cm.jet)
-        plt.colorbar()
+        # plt.contourf(X, Y, gaussian_value, levels, cmap=cm.jet)
+        # plt.colorbar()
 
         for i in range(1, NUM_THREADS + 1):
             if i != agent_ID and gaussian_mean[f"{i}"] != []:
