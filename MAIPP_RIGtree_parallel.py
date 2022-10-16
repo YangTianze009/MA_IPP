@@ -138,8 +138,7 @@ class RIG_planner:
         start_node_index = 0
         best_dis_residual = 0
         predict_measurements = []
-        while cost < REPLAN_LENGTH:
-
+        while cost < TRAJECTORY_LENGTH:
             # print(f"graph edge is {graph.edges}")
             # print(f"start node index is {self.start_node_index}")
             try:
@@ -193,7 +192,6 @@ class RIG_planner:
         # print(f"path of agent is {path}")
         # print(BUDGET_SIZE // self.step_sample)
         for each_step in path:
-
             self.added_node_coord = np.append(self.added_node_coord, self.node_coords[int(each_step)])
 
             current_pos = self.global_agent_pos[f"{agent_ID}"][-1]

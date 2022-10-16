@@ -63,8 +63,8 @@ class RRT:
         for p in self.nodes:
             if self.distance([p.x, p.y], [newnode.x, newnode.y]) < self.radius and p.cost + self.distance([p.x, p.y],
                                                                                                           [newnode.x,
-                                                                                                           newnode.y]) < nn.cost + self.distance(
-                    [nn.x, nn.y], [newnode.x, newnode.y]):
+                                                                                                           newnode.y]) < \
+                    nn.cost + self.distance([nn.x, nn.y], [newnode.x, newnode.y]):
                 nn = p
         newnode.cost = nn.cost + self.distance([nn.x, nn.y], [newnode.x, newnode.y])
         newnode.parent = nn
@@ -75,7 +75,7 @@ class RRT:
             p = self.nodes[i]
             if p != newnode.parent and self.distance([p.x, p.y], [newnode.x,
                                                                   newnode.y]) < self.radius and newnode.cost + self.distance(
-                    [p.x, p.y], [newnode.x, newnode.y]) < p.cost:
+                [p.x, p.y], [newnode.x, newnode.y]) < p.cost:
                 # Show old lines here ->
                 p.parent = newnode
                 p.cost = newnode.cost + self.distance([p.x, p.y], [newnode.x, newnode.y])
