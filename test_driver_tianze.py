@@ -275,7 +275,7 @@ def main():
                     if not os.path.exists("ma_ipp_results/3 agents/destination_intent"):
                         os.makedirs(f"ma_ipp_results/3 agents/destination_intent")
                     np.savez(
-                        f"ma_ipp_results/3 agents/no_sampling/diff_graph_budget_4_virtual.npz",
+                        f"ma_ipp_results/3 agents/no_sampling/same_graph_budget_5_virtual.npz",
                         cov_trace_final_30)
                     print(f"save the result, cov is {cov_trace_final_30}")
                     for a in meta_agents:

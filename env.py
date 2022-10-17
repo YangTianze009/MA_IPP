@@ -61,10 +61,10 @@ class Env():
 
         start_pos = np.random.rand(1, 2)
         # start_pos = np.array([0, 0])
-        # coordinates = np.random.rand(self.sample_size, 2)
+        coordinates = np.random.rand(self.sample_size, 2)
         # different graph is a random seed to ensure that all the agents start at the same node
         for i in range(1, NUM_THREADS + 1):
-            coordinates = np.random.rand(self.sample_size, 2)
+            # coordinates = np.random.rand(self.sample_size, 2)
             prm[f"{i}"] = PRMController(self.sample_size, self.obstacle, self.start, self.destination,
                                         self.budget_range,
                                         self.k_size)

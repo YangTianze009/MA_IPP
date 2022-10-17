@@ -2,7 +2,7 @@ import numpy as np
 
 
 def analysis_cov_trace():
-    cov_trace = np.load("3 agents/no_sampling/diff_graph_budget_4_virtual.npz")
+    cov_trace = np.load("3 agents/trajectory_intent/(8, 5)*/same_graph_budget_2_best_virtual.npz")
     # cov_trace = cov_trace["arr_0"]
     cov_trace = cov_trace["arr_0"]
     mean = np.mean(cov_trace)
