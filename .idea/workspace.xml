@@ -3,9 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="313ccdbc-a2c3-4060-b21c-8a6dc21db9ba" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ma_ipp_results/analysis_results.py" beforeDir="false" afterPath="$PROJECT_DIR$/ma_ipp_results/analysis_results.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parameter.py" beforeDir="false" afterPath="$PROJECT_DIR$/parameter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_driver_tianze.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_driver_tianze.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MAIPP_RIGtree_parallel.py" beforeDir="false" afterPath="$PROJECT_DIR$/MAIPP_RIGtree_trajectory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RIG_original.py" beforeDir="false" afterPath="$PROJECT_DIR$/RIG_original.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RIG_parameter.py" beforeDir="false" afterPath="$PROJECT_DIR$/RIG_parameter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/intent(8, 5)_budget3_all_sampling_nodes_no_agent_input/events.out.tfevents.1665911829.Adora.384594.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/intent(8, 5)_budget3_all_sampling_nodes_no_agent_input/events.out.tfevents.1665917208.Adora.393190.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/intent(8, 5)_budget3_all_sampling_nodes_no_agent_input/events.out.tfevents.1665923439.Adora.404372.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/intent(8, 5)_budget3_all_sampling_nodes_no_agent_input/events.out.tfevents.1665936916.Adora.429826.0" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,28 +39,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.analysis_results">
-    <configuration name="MAIPP_RIG_tree_adaptive" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="MA_IPP" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MAIPP_RIG_tree_adaptive.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.MAIPP_RIGtree_trajectory">
     <configuration name="MAIPP_RIG_tree_baseline" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MA_IPP" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -78,7 +61,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="MAIPP_RIGtree_parallel" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="MAIPP_RIGtree_trajectory" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MA_IPP" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -90,7 +73,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MAIPP_RIGtree_parallel.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MAIPP_RIGtree_trajectory.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="RIG_original" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MA_IPP" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RIG_original.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -143,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.MAIPP_RIGtree_trajectory" />
+        <item itemvalue="Python.RIG_original" />
         <item itemvalue="Python.analysis_results" />
         <item itemvalue="Python.test_driver_tianze" />
-        <item itemvalue="Python.MAIPP_RIGtree_parallel" />
         <item itemvalue="Python.MAIPP_RIG_tree_baseline" />
-        <item itemvalue="Python.MAIPP_RIG_tree_adaptive" />
       </list>
     </recent_temporary>
   </component>
@@ -177,14 +181,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/MAIPP_RIGtree_parallel.py</url>
-          <line>145</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/MAIPP_RIGtree_parallel.py</url>
-          <line>167</line>
-          <option name="timeStamp" value="40" />
+          <url>file://$PROJECT_DIR$/MAIPP_RIGtree_trajectory.py</url>
+          <line>118</line>
+          <option name="timeStamp" value="81" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -60,12 +60,12 @@ class RRT:
             return from_node[0] + self.sample_size * cos(theta), from_node[1] + self.sample_size * sin(theta)
 
     def chooseParent(self, nn, newnode):
-        for p in self.nodes:
-            if self.distance([p.x, p.y], [newnode.x, newnode.y]) < self.radius and p.cost + self.distance([p.x, p.y],
-                                                                                                          [newnode.x,
-                                                                                                           newnode.y]) < \
-                    nn.cost + self.distance([nn.x, nn.y], [newnode.x, newnode.y]):
-                nn = p
+        # for p in self.nodes:
+        #     if self.distance([p.x, p.y], [newnode.x, newnode.y]) < self.radius and self.distance([p.x, p.y], [newnode.x,
+        #                                                                                                       newnode.y]) < \
+        #             self.distance([nn.x, nn.y], [newnode.x, newnode.y]):
+        #         nn = p
+        # # print(f"distance is {self.distance([nn.x, nn.y], [newnode.x, newnode.y])}")
         newnode.cost = nn.cost + self.distance([nn.x, nn.y], [newnode.x, newnode.y])
         newnode.parent = nn
         return newnode, nn
@@ -86,10 +86,8 @@ class RRT:
         return np.where((self.nodes == p).all(axis=1))[0][0]
 
     def prune(self, newnode):
-        if newnode.cost > 8.0:
-            return True
         for p in self.nodes:
-            if p.std < newnode.std and p.cost < newnode.cost:
+            if p.std < newnode.std and p.cost < newnode.cost and p.info > newnode.info:
                 return True
         return False
 
@@ -105,7 +103,7 @@ class RRT:
         plt.scatter(x_vals[0], y_vals[0], color='orange')  # Start node, in orange
         plt.show()
 
-    def RRT_planner(self, start_node, iterations=500, info=None):
+    def RRT_planner(self, start_node, iterations=300, info=None):
         counts = 0
         self.nodes = []
         start = Node(start_node[0], start_node[1])
@@ -118,27 +116,70 @@ class RRT:
         goal = Node(1.0, 1.0)  # Destination
 
         while counts < iterations:
-            for i in range(self.num_nodes):
-                rand = Node(np.random.rand() * self.XDIM, np.random.rand() * self.YDIM)
-                nn = self.nodes[0]
-                for p in self.nodes:
-                    if self.distance([p.x, p.y], [rand.x, rand.y]) < self.distance([nn.x, nn.y], [rand.x, rand.y]):
-                        nn = p
+            # for i in range(self.num_nodes):
+            rand = Node(np.random.rand() * self.XDIM, np.random.rand() * self.YDIM)
+            nn = self.nodes[0]
+            for p in self.nodes:
+                if self.distance([p.x, p.y], [rand.x, rand.y]) < self.distance([nn.x, nn.y], [rand.x, rand.y]):
+                    nn = p
             interpolatedNode = self.step_from_to([nn.x, nn.y], [rand.x, rand.y])
             newnode = Node(interpolatedNode[0], interpolatedNode[1])
+            distance = self.distance([nn.x, nn.y], [newnode.x, newnode.y])
+            # print(f"distance is {distance}")
             node_C = np.array([[newnode.x, newnode.y]])
             newnode.info, newnode.std = self.gp_ipp.flexi_updates(node_C)
 
             if not self.prune(newnode):
                 [newnode, nn] = self.chooseParent(nn, newnode)
                 self.nodes.append(newnode)
-                self.reWire(newnode)
+                # self.reWire(newnode)
 
             counts += 1
         #            if counts == iterations:
         #                print('Tree constructed')
         #                self.draw_stuff()
         return self.nodes
+
+    def plot(self, trajectory, prior_position, agent_ID):
+        x_vals = []
+        y_vals = []
+        edge_x = []
+        edge_y = []
+        for each_node in self.nodes[1:]:
+            x_vals.append(each_node.x)
+            y_vals.append(each_node.y)
+            # print(f"parent is {[each_node.parent.x, each_node.parent.y]}")
+            edge_x.append([each_node.x, each_node.parent.x])
+            edge_y.append([each_node.y, each_node.parent.y])
+        plt.figure(1)
+        plt.title(f"current agent is {agent_ID}")
+        plt.scatter(x_vals[:], y_vals[:], color='blue')  # All sampled nodes, in blue
+        plt.scatter(self.nodes[0].x, self.nodes[0].y, color='orange', marker="*", s=30 ** 2)  # Start node, in orange
+        for i in range(len(edge_x)):
+            plt.plot(edge_x[i], edge_y[i], color="r")
+        path_x = []
+        path_y = []
+        if trajectory:
+            trajectory.insert(0, [self.nodes[0].x, self.nodes[0].y])
+            for i in range(1, len(trajectory)):
+                path_x.append([trajectory[i - 1][0], trajectory[i][0]])
+                path_y.append([trajectory[i - 1][1], trajectory[i][1]])
+        for i in range(1, len(path_x)):
+            plt.plot(path_x[i], path_y[i], color="black", linewidth=4)
+        plt.plot(path_x[0], path_y[0], color="purple", linewidth=4)
+
+        prior_x = []
+        prior_y = []
+        # print(f"prior position is {prior_position}")
+        if prior_position:
+            for i in range(1, len(prior_position)):
+                prior_x.append([prior_position[i - 1][0], prior_position[i][0]])
+                prior_y.append([prior_position[i - 1][1], prior_position[i][1]])
+
+        for i in range(len(prior_x)):
+            plt.plot(prior_x[i], prior_y[i], color="y", linewidth=4)
+        print(f"trajectory is {trajectory}", f"path is {path_x}")
+        plt.show()
 
 
 if __name__ == '__main__':
