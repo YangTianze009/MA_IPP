@@ -12,7 +12,7 @@ from gp_ipp import *
 
 class predictor:
     def __init__(self, updated_node_coords, sample_size, gaussian, gp, measurement_points, agent_ID, sample_number,
-                 high_info_area):
+                 virtual_measurements):
 
         # self.gp = gp
         self.gp = GaussianProcessForIPP()
@@ -39,15 +39,19 @@ class predictor:
 
                     self.gp.add_observed_point(sample, observed_value)
 
-        self.gp.update_gp()
+        for i in virtual_measurements:
+            observed_value = np.array([0])
+            self.gp.add_observed_point(i, observed_value)
 
+        self.gp.update_gp()
+        # self.gp.plot(self.ground_truth)
         high_info_area = self.gp.get_high_info_area() # if ADAPTIVE_AREA else None
         self.cov_trace = self.gp.evaluate_cov_trace(high_info_area)
         # print(f"cov_trace in prediction is {self.cov_trace}")
 
     def get_ground_truth(self):
-        x1 = np.linspace(0, 1)
-        x2 = np.linspace(0, 1)
+        x1 = np.linspace(0, 1, 30)
+        x2 = np.linspace(0, 1, 30)
         x1x2 = np.array(list(product(x1, x2)))
         ground_truth = self.underlying_distribution.distribution_function(x1x2)
         return ground_truth

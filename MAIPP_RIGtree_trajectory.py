@@ -1,8 +1,8 @@
 '''
 Adaptive implementation of RRT_star
 Replans after every budget expenditure of ~0.4
-
 '''
+
 import copy
 from cgi import print_directory
 import csv
@@ -44,9 +44,12 @@ class RIG_planner:
         self.branch_length = BRANCH_LENGTH
         self.radius = RIG_RADIUS
         self.step_sample = SAMPLE_LENGTH
+        self.node_number = NODE_NUMBER
         self.info = None
         self.budget_history = []
         self.obj_history = []
+        self.trajectory_length = TRAJECTORY_LENGTH
+        self.trajectory_intent = TRAJECTORY_INTENT
 
         self.node_coords = np.array([[]])
         self.updated_node_coords = np.array([[]])
@@ -78,6 +81,7 @@ class RIG_planner:
 
         # self.generator = RRTGraph(self.step_sample)
         self.generator = RRTGraph(self.branch_length)
+
     def agent_replan(self, agent_ID):
 
         self.added_node_coord = self.start
@@ -113,7 +117,7 @@ class RIG_planner:
         # Generate tree
         self.rrt = RRT(20, 1.0, 1.0, self.radius, self.branch_length, gp_rrt, self.underlying_distribution)  # 50
 
-        nodes = self.rrt.RRT_planner(self.start[f"{agent_ID}"], iterations=300, info=gp_rrt)
+        nodes = self.rrt.RRT_planner(self.start[f"{agent_ID}"], iterations=self.node_number, info=gp_rrt)
 
         # self.rrt.draw_stuff()
         biggest_cost = 0
@@ -124,29 +128,36 @@ class RIG_planner:
                 biggest_cost = each_node.cost
 
         self.node_coords = self.node_coords.reshape(-1, 2)
-        print(f"coordinate are {len(self.node_coords)}")
+
         # print(np.shape(self.node_coords))
         # print(self.node_coords[0])
         self.updated_node_coords = np.array(np.append(self.updated_node_coords, self.node_coords))
 
-        # gp = deepcopy(self.gp)
-        # Generating graph & predictor
+        virtual_measurements = []
+        # print(f"agent ID is {type(agent_ID)}")
+        for i in range(NUM_AGENTS):
+            if i != int(agent_ID):
+                for measurement in self.predict_measurements[f"{i}"]:
+                    virtual_measurements.append(measurement)
 
         # print(f"self.measurement points are {self.measurement_points}")
         Predictor = predictor(self.node_coords, self.step_sample, self.gaussian, self.gp, self.measurement_points,
-                              agent_ID, sample_number, self.high_info_area)
-        graph = self.generator.create_graph(self.node_coords)
+                              agent_ID, sample_number, virtual_measurements)
+        # graph = self.generator.create_graph(self.node_coords)
 
         path = []
         destination = []
         best_trajectory_node = []
         best_trajectory = []
+        all_trajectory = []
+
         for each_node in nodes:
-            if 0.8 < each_node.cost < 1.0:
+            if self.trajectory_length[0] < each_node.cost < self.trajectory_length[1]:
                 destination.append(each_node)
 
         old_cov_trace = float("infinity")
         cov_new = float("infinity")
+
         for step in destination:
             trajectory = [[step.x, step.y]]
             trajectory_node = [step]
@@ -154,6 +165,7 @@ class RIG_planner:
                 step = step.parent
                 trajectory.insert(0, [step.x, step.y])
                 trajectory_node.insert(0, step)
+            all_trajectory.append(trajectory)
             dis_residual_prediction = self.dist_residual[f"{agent_ID}"]
             predict_measurements = []
             start_node_index = 0
@@ -161,23 +173,31 @@ class RIG_planner:
             for i in trajectory:
                 i = np.array(i)
                 node = np.where(self.node_coords == i)[0][0]
+
                 cov_new, dist, dis_residual_prediction, predict_measurements = pred_copy.prediction(node,
-                                                                                          int(start_node_index),
-                                                                                          dis_residual_prediction,
-                                                                                          predict_measurements,
-                                                                                          high_info_area)
+                                                                                                    int(start_node_index),
+                                                                                                    dis_residual_prediction,
+                                                                                                    predict_measurements,
+                                                                                                    high_info_area)
 
                 start_node_index = node
             if cov_new < old_cov_trace:
                 old_cov_trace = cov_new
                 best_trajectory_node = copy.deepcopy(trajectory_node)
                 best_trajectory = copy.deepcopy(trajectory)
+                self.predict_measurements[f"{agent_ID}"] = best_trajectory
 
         for node in best_trajectory_node:
             if node.cost < REPLAN_LENGTH:
                 path.append([node.x, node.y])
+        path_length = len(path)
 
-        self.rrt.plot(trajectory=best_trajectory, prior_position=self.global_agent_pos[f"{agent_ID}"], agent_ID=agent_ID)
+        if not self.trajectory_intent:
+            self.predict_measurements[f"{agent_ID}"] = path
+        # print(f"all trajectories are {all_trajectory}")
+        if USE_PLOT:
+            self.rrt.plot(trajectory=best_trajectory, prior_position=self.global_agent_pos[f"{agent_ID}"],
+                          agent_ID=agent_ID, path_length=path_length, all_trajectory=all_trajectory)
         # print(f"path is {path}")
         for each_step in path:
             each_step = np.where(self.node_coords == np.array(each_step))[0][0]
@@ -221,8 +241,10 @@ class RIG_planner:
         self.updated_node_coords = np.array([[]])
 
         self.measurement_points = dict()
+        self.predict_measurements = dict()
         for agent_i in range(NUM_AGENTS):
             self.measurement_points[f"{agent_i}"] = []
+            self.predict_measurements[f"{agent_i}"] = []
 
         self.global_agent_pos = dict()
         for agent_i in range(NUM_AGENTS):
@@ -270,7 +292,7 @@ class RIG_planner:
         a = len(self.measurement_points["0"])
         b = len(self.measurement_points["1"])
         c = len(self.measurement_points["2"])
-        print(f"measurement points are {self.measurement_points}")
+        # print(f"measurement points are {self.measurement_points}")
         print(f"a is {a}", f"b is {b}", f"c is {c}")
         tf = time.time()
         # generator.visualize_graph(self.Tree, self.path, self.i, self.gp, self.ground_truth, 'Tree', self.added_node_coord, self.budget, covariance_trace, tf-ti)
@@ -325,7 +347,6 @@ class RIG_planner:
                         #     observed_value = np.array([0])
                         self.gp.add_observed_point(sample, observed_value)
 
-
             remain_length -= next_length
             next_length = self.step_sample
             no_sample = False
@@ -366,14 +387,14 @@ class RIG_planner:
 
                     gp_plot.add_observed_point(sample, observed_value)
         gp_plot.update_gp()
+        high_info_area = gp_plot.get_high_info_area()
         gp_plot.plot(self.ground_truth)
         # self.gp.plot(self.ground_truth)
-
         # plt.subplot(1,3,1)
         colorlist = ['black', 'darkred', 'darkolivegreen', "purple", "gold"]
         # plt.scatter(self.node_coords[f"{agent_ID}"][1][0], self.node_coords[f"{agent_ID}"][1][1], c='r', marker='*',
         # s=15 ** 2)
-
+        # plt.subplot(2, 2, 1)
         for ID in range(NUM_AGENTS):
 
             pointsToDisplay = [path for path in global_agent_pos[f"{ID}"]]
@@ -385,11 +406,11 @@ class RIG_planner:
                          alpha=0.25 + 0.6 * i / len(x))
 
             # plt.scatter(self.node_coords[agent_ID][0], self.node_coords[agent_ID][1], c='r', s=35)
-
+        # plt.subplot(2, 3, 4)
         plt.subplot(2, 2, 4)
         plt.title('Interesting area')
-        x = self.high_info_area[:, 0]
-        y = self.high_info_area[:, 1]
+        x = high_info_area[:, 0]
+        y = high_info_area[:, 1]
         plt.hist2d(x, y, bins=30, vmin=0, vmax=1)
 
         # plt.suptitle('Cov trace: {:.4g} of with budget {:.4g} '.format(self.cov_trace, BUDGET_SIZE-self.agent_budget[f"{agent_ID}"] ))
@@ -399,14 +420,14 @@ class RIG_planner:
         # plt.tight_layout()
         # plt.savefig('{}/{}.png'.format(path, n), dpi=150)
         # plt.savefig('./gifs/{agent_ID}.png')
-        if not os.path.exists("rig_tree_plot"):
-            os.mkdir("rig_tree_plot")
-        plt.savefig('./rig_tree_plot/{}.png'.format(plot_num), dpi=150)
+        if not os.path.exists("rig_tree_plot/all_trajectory"):
+            os.mkdir("rig_tree_plot/all_trajectory")
+        plt.savefig('./rig_tree_plot/all_trajectory/{}.png'.format(plot_num), dpi=150)
 
 
 if __name__ == '__main__':
     NUM_REPEAT = 10  # 10
-    NUM_TEST = 30  # 10
+    NUM_TEST = 30  # 30
     SAVE_CSV_RESULT = True
 
     NUM_AGENTS = NUM_AGENTS
@@ -433,10 +454,10 @@ if __name__ == '__main__':
         results_10 = []
         time_10 = []
 
-    if not os.path.exists("ma_ipp_results/3 agents/rig_tree"):
-        os.makedirs(f"ma_ipp_results/3 agents/rig_tree")
-    np.savez(f"ma_ipp_results/3 agents/rig_tree/cov_budget_5", results_30)
-    np.savez(f"ma_ipp_results/3 agents/rig_tree/time_budget_5", time_30)
+    if not os.path.exists("ma_ipp_results/3 agents/RRT/step_intent/400_(0.4, 0.5)_0.2"):
+        os.makedirs(f"ma_ipp_results/3 agents/RRT/step_intent/400_(0.4, 0.5)_0.2")
+    np.savez(f"ma_ipp_results/3 agents/RRT/step_intent/400_(0.4, 0.5)_0.2/cov_budget_2", results_30)
+    np.savez(f"ma_ipp_results/3 agents/RRT/step_intent/400_(0.4, 0.5)_0.2/time_budget_2", time_30)
 
     # print(f"save the result, cov is {results_30}")
     # budget_history = np.array(rig.budget_history)

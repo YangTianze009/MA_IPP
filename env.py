@@ -241,7 +241,7 @@ class Env():
                         gp_ipp_info.add_observed_point(sample, observed_value)
 
         gp_ipp_info.update_gp()
-        _, node_std = gp_ipp_info.update_node(self.node_coords[f"{agent_ID}"])
+        # _, node_std = gp_ipp_info.update_node(self.node_coords[f"{agent_ID}"])
         return node_info, node_std
 
     def observed_positions(self, current_node_index, next_node_index, sample_length, agent_ID, dist_residual):

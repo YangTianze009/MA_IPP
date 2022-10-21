@@ -125,13 +125,16 @@ class GaussianProcessForIPP():
         fig = plt.figure(figsize=(10,10))
         #if self.observed_points:
         #    plt.scatter(X[:, 0].reshape(1, -1), X[:, 1].reshape(1, -1), s=10, c='r')
-        plt.subplot(2, 3, 2) # ground truth
+        # plt.subplot(2, 3, 2) # ground truth
+        plt.subplot(2, 2, 2)
         plt.title('Ground truth')
         plt.pcolormesh(X0p, X1p, y_true.reshape(30, 30), shading='auto', vmin=0, vmax=1)
-        plt.subplot(2, 3, 4) # stddev
+        # plt.subplot(2, 3, 4) # stddev
+        plt.subplot(2, 2, 3)
         plt.title('Predict std')
         plt.pcolormesh(X0p, X1p, std, shading='auto', vmin=0, vmax=1)
-        plt.subplot(2, 3, 1) # mean
+        # plt.subplot(2, 3, 1) # mean
+        plt.subplot(2, 2, 1)
         plt.title('Predict mean')
         plt.pcolormesh(X0p, X1p, y_pred, shading='auto', vmin=0, vmax=1)
         # if self.observed_points:

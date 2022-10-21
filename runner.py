@@ -57,7 +57,6 @@ class Runner(object):
 
             worker_threads.append(t)
 
-
         # print(f"rollout size is: {np.array(rollouts).size}")
         cov_trace = 900
         for w in workers:
@@ -73,7 +72,7 @@ class Runner(object):
                 cov_trace = w.perf_metrics['cov_trace']
             # print(np.array(w.experience).shape)
             perf_metrics = w.perf_metrics
-        perf_metrics["cov_trace"] = cov_trace
+        # perf_metrics["cov_trace"] = cov_trace
         print(f"final cov trace is {cov_trace}")
 
         for b in range(len(rollouts)):

@@ -87,8 +87,10 @@ class RRT:
 
     def prune(self, newnode):
         for p in self.nodes:
-            if p.std < newnode.std and p.cost < newnode.cost and p.info > newnode.info:
+            if p.std > newnode.std and p.cost < newnode.cost and p.info > newnode.info:
+                print("remove the branch")
                 return True
+
         return False
 
     def draw_stuff(self):  # , num, start_node):
@@ -128,7 +130,7 @@ class RRT:
             # print(f"distance is {distance}")
             node_C = np.array([[newnode.x, newnode.y]])
             newnode.info, newnode.std = self.gp_ipp.flexi_updates(node_C)
-
+            # print(f"info is {newnode.info}", f"std is {newnode.std}")
             if not self.prune(newnode):
                 [newnode, nn] = self.chooseParent(nn, newnode)
                 self.nodes.append(newnode)
@@ -140,7 +142,7 @@ class RRT:
         #                self.draw_stuff()
         return self.nodes
 
-    def plot(self, trajectory, prior_position, agent_ID):
+    def plot(self, trajectory, prior_position, agent_ID, path_length, all_trajectory):
         x_vals = []
         y_vals = []
         edge_x = []
@@ -151,7 +153,7 @@ class RRT:
             # print(f"parent is {[each_node.parent.x, each_node.parent.y]}")
             edge_x.append([each_node.x, each_node.parent.x])
             edge_y.append([each_node.y, each_node.parent.y])
-        plt.figure(1)
+        plt.figure()
         plt.title(f"current agent is {agent_ID}")
         plt.scatter(x_vals[:], y_vals[:], color='blue')  # All sampled nodes, in blue
         plt.scatter(self.nodes[0].x, self.nodes[0].y, color='orange', marker="*", s=30 ** 2)  # Start node, in orange
@@ -159,14 +161,28 @@ class RRT:
             plt.plot(edge_x[i], edge_y[i], color="r")
         path_x = []
         path_y = []
+
+        if all_trajectory:
+            for t in all_trajectory:
+                all_path_x = []
+                all_path_y = []
+                t.insert(0, [self.nodes[0].x, self.nodes[0].y])
+                # print(f"all trajectory are {all_trajectory}")
+                for i in range(1, len(t)):
+                    all_path_x.append([t[i - 1][0], t[i][0]])
+                    all_path_y.append([t[i - 1][1], t[i][1]])
+                for i in range(len(all_path_x)):
+                    plt.plot(all_path_x[i], all_path_y[i], color="black", linewidth=2)
+
         if trajectory:
             trajectory.insert(0, [self.nodes[0].x, self.nodes[0].y])
             for i in range(1, len(trajectory)):
                 path_x.append([trajectory[i - 1][0], trajectory[i][0]])
                 path_y.append([trajectory[i - 1][1], trajectory[i][1]])
-        for i in range(1, len(path_x)):
-            plt.plot(path_x[i], path_y[i], color="black", linewidth=4)
-        plt.plot(path_x[0], path_y[0], color="purple", linewidth=4)
+            for i in range(path_length, len(path_x)):
+                plt.plot(path_x[i], path_y[i], color="black", linewidth=4)
+            for i in range(path_length):
+                plt.plot(path_x[i], path_y[i], color="purple", linewidth=4)
 
         prior_x = []
         prior_y = []
@@ -178,8 +194,13 @@ class RRT:
 
         for i in range(len(prior_x)):
             plt.plot(prior_x[i], prior_y[i], color="y", linewidth=4)
-        print(f"trajectory is {trajectory}", f"path is {path_x}")
-        plt.show()
+        # print(f"trajectory is {trajectory}", f"path is {path_x}")
+
+        if not os.path.exists("rig_tree_plot"):
+            os.mkdir("rig_tree_plot")
+        if not os.path.exists("rig_tree_plot/RRT"):
+            os.mkdir("rig_tree_plot/RRT")
+        plt.savefig('rig_tree_plot/RRT/{}_{}.png'.format(len(prior_position), agent_ID), dpi=150)
 
 
 if __name__ == '__main__':

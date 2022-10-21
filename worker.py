@@ -839,8 +839,7 @@ class Worker:
                 intent_difference_final = np.array(intent_difference)
                 intent_difference_final = np.mean(intent_difference_final, axis=0)
                 perf_metrics["intent_difference_KL"] = intent_difference_final
-                # print(f"over all reward is {overall_reward}")
-                # print(f"delta_cov_trace is {overall_delta_cov_trace}")
+
 
                 break
 
