@@ -808,7 +808,7 @@ class Worker:
                     if self.save_image:
                         if not os.path.exists(self.gifs_path):
                             os.makedirs(self.gifs_path)
-                        self.env.plot_each(gaussian_mean, gaussian_cov, sampling_end_nodes, agent_route, n,
+                        self.env.plot(gaussian_mean, gaussian_cov, sampling_end_nodes, agent_route, n,
                                            self.gifs_path,
                                            all_samples=all_samples, sample_numbers=sample_numbers,
                                            remain_budget=remain_budget, agent_ID=self.agent_ID)
@@ -861,13 +861,15 @@ class Worker:
 
         reward = copy.deepcopy(episode_buffer[5])
         reward.append(episode_buffer[6][-1])
+
         for i in range(len(reward)):
             reward[i] = reward[i].cpu().numpy()
         reward_plus = np.array(reward, dtype=object).reshape(-1)
+        print(f"reward is {reward_plus}")
         discounted_rewards = discount(reward_plus, GAMMA)[:-1]
         discounted_rewards = discounted_rewards.tolist()
         target_v = torch.FloatTensor(discounted_rewards).unsqueeze(1).unsqueeze(1).to(self.device)
-
+        print(f"target v is {target_v}")
         for i in range(target_v.size()[0]):
             episode_buffer[7].append(target_v[i, :, :])
 

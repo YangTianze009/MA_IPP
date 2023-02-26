@@ -303,7 +303,7 @@ class Env():
 
         self.gp_ipp.plot(ground_truth)
 
-        # plt.subplot(1,3,1)
+        # plt.subplot(2, 3, 1)
         colorlist = ['black', 'darkred', 'darkolivegreen', "purple", "gold"]
         plt.scatter(self.node_coords[f"{agent_ID}"][1][0], self.node_coords[f"{agent_ID}"][1][1], c='r', marker='*',
                     s=15 ** 2)
@@ -326,7 +326,7 @@ class Env():
         plt.title('Interesting area')
         x = self.high_info_area[:, 0]
         y = self.high_info_area[:, 1]
-        plt.hist2d(x, y, bins=30, vmin=0, vmax=1)
+        plt.hist2d(x, y, bins=30, vmin=0, vmax=1, edgecolors="face")
 
         # plot the intent map
         plt.subplot(2, 3, 3)

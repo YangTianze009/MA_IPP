@@ -260,7 +260,7 @@ def main():
             #
             if save_results:
                 trainingData = []
-                if curr_episode > 299:
+                if curr_episode > 9999:
                     if not os.path.exists("ma_ipp_results/3 agents/trajectory_intent_deterministic/(8, 5)"):
                         os.makedirs(f"ma_ipp_results/3 agents/trajectory_intent_deterministic/(8, 5)")
                     np.savez(f"ma_ipp_results/3 agents/trajectory_intent_deterministic/(8, 5)/diff_graph_budget_5",
@@ -272,7 +272,7 @@ def main():
 
             if save_intent_difference:
                 trainingData = []
-                if curr_episode > 99:
+                if curr_episode > 9999:
                     if not os.path.exists("ma_ipp_results/3 agents/trajectory_intent/intent_difference_KL"):
                         os.makedirs(f"ma_ipp_results/3 agents/trajectory_intent/intent_difference_KL")
                     np.savez(

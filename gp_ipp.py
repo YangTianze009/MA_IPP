@@ -13,7 +13,7 @@ class GaussianProcessForIPP():
     def __init__(self):
         # self.kernel = C(1.0, (1e-3, 1e3)) * RBF([5,5], (1e-2, 1e2))
         # self.kernel = RBF(0.2)
-        self.kernel = Matern(length_scale=0.45)     # default 0.45
+        self.kernel = Matern(length_scale=0.45)   # default 0.45
         self.gp = GaussianProcessRegressor(kernel=self.kernel, optimizer=None, n_restarts_optimizer=0)
         self.observed_points = []
         self.observed_value = []
@@ -122,21 +122,21 @@ class GaussianProcessForIPP():
 
         X = np.array(self.observed_points)
 
-        fig = plt.figure(figsize=(10,10))
+        fig = plt.figure(figsize=(15, 10))
         #if self.observed_points:
         #    plt.scatter(X[:, 0].reshape(1, -1), X[:, 1].reshape(1, -1), s=10, c='r')
         # plt.subplot(2, 3, 2) # ground truth
-        plt.subplot(2, 2, 2)
+        plt.subplot(2, 3, 2)
         plt.title('Ground truth')
-        plt.pcolormesh(X0p, X1p, y_true.reshape(30, 30), shading='auto', vmin=0, vmax=1)
+        plt.pcolormesh(X0p, X1p, y_true.reshape(30, 30), shading='auto', vmin=0, vmax=1, edgecolors="face")
         # plt.subplot(2, 3, 4) # stddev
-        plt.subplot(2, 2, 3)
+        plt.subplot(2, 3, 4)
         plt.title('Predict std')
-        plt.pcolormesh(X0p, X1p, std, shading='auto', vmin=0, vmax=1)
+        plt.pcolormesh(X0p, X1p, std, shading='auto', vmin=0, vmax=1, edgecolors="face")
         # plt.subplot(2, 3, 1) # mean
-        plt.subplot(2, 2, 1)
+        plt.subplot(2, 3, 1)
         plt.title('Predict mean')
-        plt.pcolormesh(X0p, X1p, y_pred, shading='auto', vmin=0, vmax=1)
+        plt.pcolormesh(X0p, X1p, y_pred, shading='auto', vmin=0, vmax=1, edgecolors="face")
         # if self.observed_points:
         #     plt.scatter(X[:, 0].reshape(1, -1), X[:, 1].reshape(1, -1), s=2, c='r')
         # plt.show()

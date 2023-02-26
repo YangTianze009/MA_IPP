@@ -32,6 +32,8 @@ from RIG_parameter import *
 
 import traceback
 
+def cal_distance(p1, p2):
+    return math.sqrt(math.pow((p2[0] - p1[0]), 2) + math.pow((p2[1] - p1[1]), 2))
 
 class RIG_planner:
     def __init__(self, i):
@@ -50,6 +52,7 @@ class RIG_planner:
         self.obj_history = []
         self.trajectory_length = TRAJECTORY_LENGTH
         self.trajectory_intent = TRAJECTORY_INTENT
+
 
         self.node_coords = np.array([[]])
         self.updated_node_coords = np.array([[]])
@@ -70,8 +73,13 @@ class RIG_planner:
         self.high_info_area = self.gp.get_high_info_area()
 
         self.agent_budget = dict()
+        self.new_destination = dict()
+        self.old_destination = dict()
+        self.destination_difference = []
         for agent_ID in range(NUM_AGENTS):
             self.agent_budget[f"{agent_ID}"] = np.array(BUDGET_SIZE)
+            self.new_destination[f"{agent_ID}"] = []
+            self.old_destination[f"{agent_ID}"] = []
 
         self.step_used_budget = 0
 
@@ -158,6 +166,7 @@ class RIG_planner:
         old_cov_trace = float("infinity")
         cov_new = float("infinity")
 
+        RRT_plan_dis = None
         for step in destination:
             trajectory = [[step.x, step.y]]
             trajectory_node = [step]
@@ -187,10 +196,21 @@ class RIG_planner:
                 best_trajectory = copy.deepcopy(trajectory)
                 self.predict_measurements[f"{agent_ID}"] = best_trajectory
 
+        self.new_destination[f"{agent_ID}"] = best_trajectory[-1]
+        if not self.old_destination[f"{agent_ID}"]:
+            self.old_destination[f"{agent_ID}"] = best_trajectory[-1]
+        else:
+            RRT_plan_dis = cal_distance(self.old_destination[f"{agent_ID}"], self.new_destination[f"{agent_ID}"])
+            self.old_destination[f"{agent_ID}"] = self.new_destination[f"{agent_ID}"]
+            self.destination_difference.append(RRT_plan_dis)
+            # print(f"RRT distance is {RRT_plan_dis}")
+
+
         for node in best_trajectory_node:
             if node.cost < REPLAN_LENGTH:
                 path.append([node.x, node.y])
         path_length = len(path)
+
 
         if not self.trajectory_intent:
             self.predict_measurements[f"{agent_ID}"] = path
@@ -290,10 +310,10 @@ class RIG_planner:
                     self.all_done = False
                     break
         a = len(self.measurement_points["0"])
-        b = len(self.measurement_points["1"])
-        c = len(self.measurement_points["2"])
+        # b = len(self.measurement_points["1"])
+        # c = len(self.measurement_points["2"])
         # print(f"measurement points are {self.measurement_points}")
-        print(f"a is {a}", f"b is {b}", f"c is {c}")
+        # print(f"a is {a}", f"b is {b}", f"c is {c}")
         tf = time.time()
         # generator.visualize_graph(self.Tree, self.path, self.i, self.gp, self.ground_truth, 'Tree', self.added_node_coord, self.budget, covariance_trace, tf-ti)
 
@@ -311,7 +331,7 @@ class RIG_planner:
         #         self.Tree.add_edge(str(i + 1), str(i),
         #                            np.linalg.norm(self.added_node_coord[i] - self.added_node_coord[i + 1]))
 
-        return covariance_trace, tf - ti
+        return covariance_trace, tf - ti, self.destination_difference
 
     def execute_path(self, each_step_pos, current_pos, agent_ID, sample_number, index_input=True):
         self.gp = GaussianProcessForIPP()
@@ -427,7 +447,7 @@ class RIG_planner:
 
 if __name__ == '__main__':
     NUM_REPEAT = 10  # 10
-    NUM_TEST = 30  # 30
+    NUM_TEST = 10  # 30
     SAVE_CSV_RESULT = True
 
     NUM_AGENTS = NUM_AGENTS
@@ -435,6 +455,8 @@ if __name__ == '__main__':
     time_30 = []
     results_10 = []
     results_30 = []
+    destination_diff_10 = []
+    destination_diff_30 = []
     all_results = []
 
     for j in range(NUM_REPEAT):
@@ -444,21 +466,26 @@ if __name__ == '__main__':
             rig.global_planner()
             # print('test successfully')
 
-            cov_trace, time_used = rig.agent_planner()
-            print(f"total usedtime is {time_used}", f"cov trace is {cov_trace}")
+            cov_trace, time_used, RRT_difference = rig.agent_planner()
+            RRT_difference = np.mean(RRT_difference)
+            # print(f"total usedtime is {time_used}", f"cov trace is {cov_trace}")
+            print(f"RRT_difference is {RRT_difference}")
 
             results_10.append(cov_trace)
             time_10.append(time_used)
+            destination_diff_10.append(RRT_difference)
         results_30.append(np.mean(results_10))
         time_30.append(np.mean(time_10))
+        destination_diff_30.append(np.mean(destination_diff_10))
         results_10 = []
         time_10 = []
+        destination_diff_10 = []
 
-    if not os.path.exists("ma_ipp_results/3 agents/RRT/step_intent/400_(0.4, 0.5)_0.2"):
-        os.makedirs(f"ma_ipp_results/3 agents/RRT/step_intent/400_(0.4, 0.5)_0.2")
-    np.savez(f"ma_ipp_results/3 agents/RRT/step_intent/400_(0.4, 0.5)_0.2/cov_budget_2", results_30)
-    np.savez(f"ma_ipp_results/3 agents/RRT/step_intent/400_(0.4, 0.5)_0.2/time_budget_2", time_30)
-
+    if not os.path.exists("ma_ipp_results/3 agents/RRT/trajectory_intent/400_(0.3, 0.4)_0.2"):
+        os.makedirs(f"ma_ipp_results/3 agents/RRT/trajectory_intent/400_(0.3, 0.4)_0.2")
+    # np.savez(f"ma_ipp_results/10 agents/RRT/400_(0.3, 0.4)_0.2/cov_budget_3", results_30)
+    # np.savez(f"ma_ipp_results/10 agents/RRT/400_(0.3, 0.4)_0.2/time_budget_3", time_30)
+    np.savez(f"ma_ipp_results/3 agents/RRT/trajectory_intent/400_(0.9, 1.0)_0.2/difference_3", destination_diff_30)
     # print(f"save the result, cov is {results_30}")
     # budget_history = np.array(rig.budget_history)
     # obj_history = np.array(rig.obj_history)
