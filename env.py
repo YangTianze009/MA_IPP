@@ -193,6 +193,7 @@ class Env():
 
     # plot the intent map using Gaussian distribution and gain the intent value
     def construct_intent_map(self, gaussian_mean, gaussian_cov, agent_ID, node_coordinates):
+        print(f"gaussian_cov is {gaussian_cov}")
         intent_info = np.zeros((len(node_coordinates), 1))
         for i in range(1, NUM_THREADS + 1):
             if gaussian_mean[f"{i}"] != [] and i != agent_ID:
