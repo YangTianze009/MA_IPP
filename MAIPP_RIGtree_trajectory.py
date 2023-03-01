@@ -211,7 +211,6 @@ class RIG_planner:
                 path.append([node.x, node.y])
         path_length = len(path)
 
-
         if not self.trajectory_intent:
             self.predict_measurements[f"{agent_ID}"] = path
         # print(f"all trajectories are {all_trajectory}")
