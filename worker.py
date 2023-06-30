@@ -58,6 +58,16 @@ first_sampling_agent = None
 cov_trace = 900
 first_step_seq = []
 
+def merge_dict_values(dict_obj, index1, index2):
+    values1 = dict_obj.get(index1, [])
+    values2 = dict_obj.get(index2, [])
+    new_merged_value = []
+    merged_values = list(set(tuple(arr) for arr in values1 + values2))
+    for item in merged_values:
+        new_merged_value.append(np.array(item))
+    dict_obj[index1] = new_merged_value
+    dict_obj[index2] = new_merged_value
+    return dict_obj
 
 def calculate_intent_difference_KL(cov, cov_before, mean, mean_before):
     intent_difference_KL_1 = 0
@@ -286,6 +296,7 @@ class Worker:
 
         route = agent_route[f"{self.agent_ID}"]
         remain_budget = self.env.budget[self.agent_ID]
+        # print(f"agent position is {agent_position}")
 
         # sampling for the first step
         current_agent_dis = self.cal_agent_distance(self.agent_ID)
@@ -527,6 +538,18 @@ class Worker:
             sampling_finish[self.agent_ID] = False
             agent_step += 1
             self.curren_step += 1
+            print("\n",all_samples)
+            # add communication range
+            for index in range(1, NUM_THREADS + 1):
+                if index != self.agent_ID:
+                    agent_distance = cal_distance(agent_position[f"{index}"][0], agent_position[f"{self.agent_ID}"][0])
+                    print(f"agent distance is {agent_distance}, index is {index}, self.agent_ID is {self.agent_ID}")
+                    if  agent_distance< COMMS_RANGE:
+                        all_samples = merge_dict_values(all_samples, f"{index}", f"{self.agent_ID}")
+                        print(all_samples)
+                    else:
+                        gaussian_mean[f"{index}"] = []
+                        gaussian_cov[f"{index}"] = []
 
             agent_input = [index for index in range(1, NUM_THREADS + 1)]
             for agent_ID in range(1, NUM_THREADS + 1):
@@ -536,7 +559,8 @@ class Worker:
             # agent_input[agent_ID - 1] = np.random.rand(2)
             agent_input = torch.FloatTensor(agent_input).unsqueeze(0).to(self.device)  # (1, num_threads, 2)
             intent_input = self.env.construct_intent_map(gaussian_mean, gaussian_cov, self.agent_ID, self.node_coords)
-            intent_input = intent_input / np.max(intent_input)
+            if np.max(intent_input) > 0:
+                intent_input = intent_input / np.max(intent_input)
 
             # print(f"agent route is {agent_route}")
             # print(f"agent_input is {agent_input}")
@@ -839,7 +863,7 @@ class Worker:
                 intent_difference_final = np.array(intent_difference)
                 intent_difference_final = np.mean(intent_difference_final, axis=0)
                 perf_metrics["intent_difference_KL"] = intent_difference_final
-
+                print(f"cov_trace is {cov_trace}")
 
                 break
 
@@ -865,11 +889,11 @@ class Worker:
         for i in range(len(reward)):
             reward[i] = reward[i].cpu().numpy()
         reward_plus = np.array(reward, dtype=object).reshape(-1)
-        print(f"reward is {reward_plus}")
+        # print(f"reward is {reward_plus}")
         discounted_rewards = discount(reward_plus, GAMMA)[:-1]
         discounted_rewards = discounted_rewards.tolist()
         target_v = torch.FloatTensor(discounted_rewards).unsqueeze(1).unsqueeze(1).to(self.device)
-        print(f"target v is {target_v}")
+        # print(f"target v is {target_v}")
         for i in range(target_v.size()[0]):
             episode_buffer[7].append(target_v[i, :, :])
 

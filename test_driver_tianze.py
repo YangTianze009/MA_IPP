@@ -260,10 +260,10 @@ def main():
             #
             if save_results:
                 trainingData = []
-                if curr_episode > 9999:
-                    if not os.path.exists("ma_ipp_results/3 agents/trajectory_intent_deterministic/(8, 5)"):
-                        os.makedirs(f"ma_ipp_results/3 agents/trajectory_intent_deterministic/(8, 5)")
-                    np.savez(f"ma_ipp_results/3 agents/trajectory_intent_deterministic/(8, 5)/diff_graph_budget_5",
+                if curr_episode > 299:
+                    if not os.path.exists("ma_ipp_results/3 agents/partial_comms_trajectory/(8, 5)/comms_range_0.3"):
+                        os.makedirs(f"ma_ipp_results/3 agents/partial_comms_trajectory/(8, 5)/comms_range_0.3")
+                    np.savez(f"ma_ipp_results/3 agents/partial_comms_trajectory/(8, 5)/comms_range_0.3/budget_5",
                              cov_trace_final_30)
                     print(f"save the result, cov is {cov_trace_final_30}")
                     for a in meta_agents:
