@@ -272,11 +272,10 @@ def main():
             if save_cov_results:
                 trainingData = []
                 if curr_episode > 299:
-                    if not os.path.exists("ma_ipp_results/3 agents/destination_intent"):
-                        os.makedirs(f"ma_ipp_results/3 agents/destination_intent")
-                    np.savez(
-                        f"ma_ipp_results/3 agents/no_sampling/same_graph_budget_5_virtual.npz",
-                        cov_trace_final_30)
+                    if not os.path.exists("ma_ipp_results/3 agents/partial_comms_destination/(8, 3)/comms_range_0.3"):
+                        os.makedirs(f"ma_ipp_results/3 agents/partial_comms_destination/(8, 3)/comms_range_0.3")
+                    np.savez(f"ma_ipp_results/3 agents/partial_comms_destination/(8, 3)/comms_range_0.3/budget_2",
+                             cov_trace_final_30)
                     print(f"save the result, cov is {cov_trace_final_30}")
                     for a in meta_agents:
                         ray.kill(a)

@@ -193,7 +193,7 @@ class Env():
 
     # plot the intent map using Gaussian distribution and gain the intent value
     def construct_intent_map(self, gaussian_mean, gaussian_cov, agent_ID, node_coordinates):
-        print(f"gaussian_cov is {gaussian_cov}")
+        # print(f"gaussian_cov is {gaussian_cov}")
         intent_info = np.zeros((len(node_coordinates), 1))
         for i in range(1, NUM_THREADS + 1):
             if gaussian_mean[f"{i}"] != [] and i != agent_ID:
@@ -235,15 +235,15 @@ class Env():
         # print(f"cov1 is {cov1}")
         node_info, node_std = gp_ipp_info.update_node(self.node_coords[f"{agent_ID}"])
 
-        for i in range(1, NUM_THREADS + 1):
-            if agent_position[f"{i}"] != []:
-                if i != agent_ID:
-                    for j, sample in enumerate(agent_position[f"{i}"]):
-                        observed_value = np.array([0])
-                        gp_ipp_info.add_observed_point(sample, observed_value)
-
-        gp_ipp_info.update_gp()
-        _, node_std = gp_ipp_info.update_node(self.node_coords[f"{agent_ID}"])
+        # for i in range(1, NUM_THREADS + 1):
+        #     if agent_position[f"{i}"] != []:
+        #         if i != agent_ID:
+        #             for j, sample in enumerate(agent_position[f"{i}"]):
+        #                 observed_value = np.array([0])
+        #                 gp_ipp_info.add_observed_point(sample, observed_value)
+        #
+        # gp_ipp_info.update_gp()
+        # _, node_std = gp_ipp_info.update_node(self.node_coords[f"{agent_ID}"])
         # cov2 = gp_ipp_info.evaluate_cov_trace()
         # print(f"cov 2 is {cov2}")
         return node_info, node_std

@@ -1,0 +1,240 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"313ccdbc-a2c3-4060-b21c-8a6dc21db9ba\" name=\"Changes\" comment=\"\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/MAIPP_RIGtree_trajectory.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/MAIPP_RIGtree_trajectory.py\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"ma_ipp_rig_tree\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n    <option name=\"ROOT_SYNC\" value=\"DONT_SYNC\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2EzOf9IMxA38sjKtMyaYUGukpsr\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;last_opened_file_path&quot;: &quot;/home/marmot/Desktop/MAPF&quot;,\n    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;\n  }\n}</component>\n  <component name=\"RunManager\" selected=\"Python.test_driver_tianze\">\n    <configuration name=\"MAIPP_RIGtree_trajectory\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"MA_IPP\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <envs>\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n      </envs>\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/MAIPP_RIGtree_trajectory.py\" />\n      <option name=\"PARAMETERS\" value=\"\" />\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\n      <option name=\"MODULE_MODE\" value=\"false\" />\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\n      <option name=\"INPUT_FILE\" value=\"\" />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"analysis_results\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"MA_IPP\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <envs>\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n      </envs>\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/ma_ipp_results\" />\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/ma_ipp_results/analysis_results.py\" />\n      <option name=\"PARAMETERS\" value=\"\" />\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\n      <option name=\"MODULE_MODE\" value=\"false\" />\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\n      <option name=\"INPUT_FILE\" value=\"\" />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"driver\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"MA_IPP\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <envs>\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n      </envs>\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/driver.py\" />\n      <option name=\"PARAMETERS\" value=\"\" />\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\n      <option name=\"MODULE_MODE\" value=\"false\" />\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\n      <option name=\"INPUT_FILE\" value=\"\" />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"practice\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"MA_IPP\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <envs>\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n      </envs>\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/practice.py\" />\n      <option name=\"PARAMETERS\" value=\"\" />\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\n      <option name=\"MODULE_MODE\" value=\"false\" />\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\n      <option name=\"INPUT_FILE\" value=\"\" />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"test_driver_tianze\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"MA_IPP\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <envs>\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n      </envs>\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/test_driver_tianze.py\" />\n      <option name=\"PARAMETERS\" value=\"\" />\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\n      <option name=\"MODULE_MODE\" value=\"false\" />\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\n      <option name=\"INPUT_FILE\" value=\"\" />\n      <method v=\"2\" />\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Python.test_driver_tianze\" />\n        <item itemvalue=\"Python.practice\" />\n        <item itemvalue=\"Python.analysis_results\" />\n        <item itemvalue=\"Python.MAIPP_RIGtree_trajectory\" />\n        <item itemvalue=\"Python.driver\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"313ccdbc-a2c3-4060-b21c-8a6dc21db9ba\" name=\"Changes\" comment=\"\" />\n      <created>1663595047631</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1663595047631</updated>\n    </task>\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"XDebuggerManager\">\n    <breakpoint-manager>\n      <breakpoints>\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\n          <url>file://$PROJECT_DIR$/MAIPP_RIGtree_trajectory.py</url>\n          <line>198</line>\n          <option name=\"timeStamp\" value=\"5\" />\n        </line-breakpoint>\n      </breakpoints>\n    </breakpoint-manager>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,10 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="313ccdbc-a2c3-4060-b21c-8a6dc21db9ba" name="Changes" comment="">
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/MAIPP_RIGtree_trajectory.py" beforeDir="false" afterPath="$PROJECT_DIR$/MAIPP_RIGtree_trajectory.py" afterDir="false" />
+-    </list>
++    <list default="true" id="4a86309a-1a3f-41c0-ac90-0c3794a11751" name="Changes" comment="" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -16,50 +13,26 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="ma_ipp_rig_tree" />
++        <entry key="$PROJECT_DIR$" value="main" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+-    <option name="ROOT_SYNC" value="DONT_SYNC" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+   </component>
+-  <component name="ProjectId" id="2EzOf9IMxA38sjKtMyaYUGukpsr" />
++  <component name="ProjectId" id="2Rmg2myWRkpA1ykMtnPm9ZRRyWG" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;/home/marmot/Desktop/MAPF&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+   }
+-}</component>
++}]]></component>
+   <component name="RunManager" selected="Python.test_driver_tianze">
+-    <configuration name="MAIPP_RIGtree_trajectory" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+-      <module name="MA_IPP" />
+-      <option name="INTERPRETER_OPTIONS" value="" />
+-      <option name="PARENT_ENVS" value="true" />
+-      <envs>
+-        <env name="PYTHONUNBUFFERED" value="1" />
+-      </envs>
+-      <option name="SDK_HOME" value="" />
+-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+-      <option name="IS_MODULE_SDK" value="true" />
+-      <option name="ADD_CONTENT_ROOTS" value="true" />
+-      <option name="ADD_SOURCE_ROOTS" value="true" />
+-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MAIPP_RIGtree_trajectory.py" />
+-      <option name="PARAMETERS" value="" />
+-      <option name="SHOW_COMMAND_LINE" value="false" />
+-      <option name="EMULATE_TERMINAL" value="false" />
+-      <option name="MODULE_MODE" value="false" />
+-      <option name="REDIRECT_INPUT" value="false" />
+-      <option name="INPUT_FILE" value="" />
+-      <method v="2" />
+-    </configuration>
+     <configuration name="analysis_results" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+       <module name="MA_IPP" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+@@ -73,27 +46,6 @@
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ma_ipp_results/analysis_results.py" />
+-      <option name="PARAMETERS" value="" />
+-      <option name="SHOW_COMMAND_LINE" value="false" />
+-      <option name="EMULATE_TERMINAL" value="false" />
+-      <option name="MODULE_MODE" value="false" />
+-      <option name="REDIRECT_INPUT" value="false" />
+-      <option name="INPUT_FILE" value="" />
+-      <method v="2" />
+-    </configuration>
+-    <configuration name="driver" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+-      <module name="MA_IPP" />
+-      <option name="INTERPRETER_OPTIONS" value="" />
+-      <option name="PARENT_ENVS" value="true" />
+-      <envs>
+-        <env name="PYTHONUNBUFFERED" value="1" />
+-      </envs>
+-      <option name="SDK_HOME" value="" />
+-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+-      <option name="IS_MODULE_SDK" value="true" />
+-      <option name="ADD_CONTENT_ROOTS" value="true" />
+-      <option name="ADD_SOURCE_ROOTS" value="true" />
+-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/driver.py" />
+       <option name="PARAMETERS" value="" />
+       <option name="SHOW_COMMAND_LINE" value="false" />
+       <option name="EMULATE_TERMINAL" value="false" />
+@@ -147,44 +99,20 @@
+     <recent_temporary>
+       <list>
+         <item itemvalue="Python.test_driver_tianze" />
++        <item itemvalue="Python.analysis_results" />
+         <item itemvalue="Python.practice" />
+-        <item itemvalue="Python.analysis_results" />
+-        <item itemvalue="Python.MAIPP_RIGtree_trajectory" />
+-        <item itemvalue="Python.driver" />
+       </list>
+     </recent_temporary>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+-      <changelist id="313ccdbc-a2c3-4060-b21c-8a6dc21db9ba" name="Changes" comment="" />
+-      <created>1663595047631</created>
++      <changelist id="4a86309a-1a3f-41c0-ac90-0c3794a11751" name="Changes" comment="" />
++      <created>1687860465626</created>
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+-      <updated>1663595047631</updated>
++      <updated>1687860465626</updated>
+     </task>
+     <servers />
+   </component>
+-  <component name="Vcs.Log.Tabs.Properties">
+-    <option name="TAB_STATES">
+-      <map>
+-        <entry key="MAIN">
+-          <value>
+-            <State />
+-          </value>
+-        </entry>
+-      </map>
+-    </option>
+-  </component>
+-  <component name="XDebuggerManager">
+-    <breakpoint-manager>
+-      <breakpoints>
+-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+-          <url>file://$PROJECT_DIR$/MAIPP_RIGtree_trajectory.py</url>
+-          <line>198</line>
+-          <option name="timeStamp" value="5" />
+-        </line-breakpoint>
+-      </breakpoints>
+-    </breakpoint-manager>
+-  </component>
+ </project>
+\ No newline at end of file
+Index: .idea/MA_IPP.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<module type=\"PYTHON_MODULE\" version=\"4\">\n  <component name=\"NewModuleRootManager\">\n    <content url=\"file://$MODULE_DIR$\">\n      <excludeFolder url=\"file://$MODULE_DIR$/venv\" />\n    </content>\n    <orderEntry type=\"jdk\" jdkName=\"Python 3.10 (MAIPP)\" jdkType=\"Python SDK\" />\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\n  </component>\n  <component name=\"PyDocumentationSettings\">\n    <option name=\"format\" value=\"PLAIN\" />\n    <option name=\"myDocStringFormat\" value=\"Plain\" />\n  </component>\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/MA_IPP.iml b/.idea/MA_IPP.iml
+--- a/.idea/MA_IPP.iml	
++++ b/.idea/MA_IPP.iml	
+@@ -1,14 +1,8 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <module type="PYTHON_MODULE" version="4">
+   <component name="NewModuleRootManager">
+-    <content url="file://$MODULE_DIR$">
+-      <excludeFolder url="file://$MODULE_DIR$/venv" />
+-    </content>
+-    <orderEntry type="jdk" jdkName="Python 3.10 (MAIPP)" jdkType="Python SDK" />
++    <content url="file://$MODULE_DIR$" />
++    <orderEntry type="jdk" jdkName="Python 3.10 (MAIPP) (2)" jdkType="Python SDK" />
+     <orderEntry type="sourceFolder" forTests="false" />
+   </component>
+-  <component name="PyDocumentationSettings">
+-    <option name="format" value="PLAIN" />
+-    <option name="myDocStringFormat" value="Plain" />
+-  </component>
+ </module>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.10 (MAIPP)\" project-jdk-type=\"Python SDK\" />\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	
+@@ -1,4 +1,4 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (MAIPP)" project-jdk-type="Python SDK" />
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (MAIPP) (2)" project-jdk-type="Python SDK" />
+ </project>
+\ No newline at end of file
+Index: .idea/inspectionProfiles/Project_Default.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"InspectionProjectProfileManager\">\n  <profile version=\"1.0\">\n    <option name=\"myName\" value=\"Project Default\" />\n    <inspection_tool class=\"PyPackageRequirementsInspection\" enabled=\"true\" level=\"WARNING\" enabled_by_default=\"true\">\n      <option name=\"ignoredPackages\">\n        <value>\n          <list size=\"3\">\n            <item index=\"0\" class=\"java.lang.String\" itemvalue=\"pandas\" />\n            <item index=\"1\" class=\"java.lang.String\" itemvalue=\"scikit_learn\" />\n            <item index=\"2\" class=\"java.lang.String\" itemvalue=\"scikit-learn\" />\n          </list>\n        </value>\n      </option>\n    </inspection_tool>\n    <inspection_tool class=\"PyPep8NamingInspection\" enabled=\"true\" level=\"WEAK WARNING\" enabled_by_default=\"true\">\n      <option name=\"ignoredErrors\">\n        <list>\n          <option value=\"N806\" />\n        </list>\n      </option>\n    </inspection_tool>\n    <inspection_tool class=\"PyUnresolvedReferencesInspection\" enabled=\"true\" level=\"WARNING\" enabled_by_default=\"true\">\n      <option name=\"ignoredIdentifiers\">\n        <list>\n          <option value=\"tuple.reshape\" />\n        </list>\n      </option>\n    </inspection_tool>\n  </profile>\n</component>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/inspectionProfiles/Project_Default.xml b/.idea/inspectionProfiles/Project_Default.xml
+--- a/.idea/inspectionProfiles/Project_Default.xml	
++++ b/.idea/inspectionProfiles/Project_Default.xml	
+@@ -4,10 +4,25 @@
+     <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+       <option name="ignoredPackages">
+         <value>
+-          <list size="3">
++          <list size="18">
+             <item index="0" class="java.lang.String" itemvalue="pandas" />
+             <item index="1" class="java.lang.String" itemvalue="scikit_learn" />
+             <item index="2" class="java.lang.String" itemvalue="scikit-learn" />
++            <item index="3" class="java.lang.String" itemvalue="scipy" />
++            <item index="4" class="java.lang.String" itemvalue="imageio" />
++            <item index="5" class="java.lang.String" itemvalue="Shapely" />
++            <item index="6" class="java.lang.String" itemvalue="matplotlib" />
++            <item index="7" class="java.lang.String" itemvalue="torch" />
++            <item index="8" class="java.lang.String" itemvalue="numpy" />
++            <item index="9" class="java.lang.String" itemvalue="ray" />
++            <item index="10" class="java.lang.String" itemvalue="tensorflow" />
++            <item index="11" class="java.lang.String" itemvalue="networkx" />
++            <item index="12" class="java.lang.String" itemvalue="ipdb" />
++            <item index="13" class="java.lang.String" itemvalue="scikit_image" />
++            <item index="14" class="java.lang.String" itemvalue="gym" />
++            <item index="15" class="java.lang.String" itemvalue="Cython" />
++            <item index="16" class="java.lang.String" itemvalue="setproctitle" />
++            <item index="17" class="java.lang.String" itemvalue="skimage" />
+           </list>
+         </value>
+       </option>

@@ -55,6 +55,17 @@ cov_trace = 900
 first_step_seq = []
 
 
+def merge_dict_values(dict_obj, index1, index2):
+    values1 = dict_obj.get(index1, [])
+    values2 = dict_obj.get(index2, [])
+    new_merged_value = []
+    merged_values = list(set(tuple(arr) for arr in values1 + values2))
+    for item in merged_values:
+        new_merged_value.append(np.array(item))
+    dict_obj[index1] = new_merged_value
+    dict_obj[index2] = new_merged_value
+    return dict_obj
+
 def calculate_intent_difference_abs(cov, cov_before, mean, mean_before):
     intent_difference = 0
     Gaussian = multivariate_normal(mean=mean, cov=cov)
@@ -533,6 +544,18 @@ class Worker:
             # intent_info = self.env.construct_intent_map(gaussian_mean, gaussian_cov, self.agent_ID, self.node_coords)
             # print(intent_info.shape)
 
+            # add communication range
+            for index in range(1, NUM_THREADS + 1):
+                if index != self.agent_ID:
+                    agent_distance = cal_distance(agent_position[f"{index}"][0], agent_position[f"{self.agent_ID}"][0])
+                    # print(f"agent distance is {agent_distance}, index is {index}, self.agent_ID is {self.agent_ID}")
+                    if agent_distance < COMMS_RANGE:
+                        all_samples = merge_dict_values(all_samples, f"{index}", f"{self.agent_ID}")
+                        # print(all_samples)
+                    else:
+                        gaussian_mean[f"{index}"] = []
+                        gaussian_cov[f"{index}"] = []
+
             agent_input = [index for index in range(1, NUM_THREADS + 1)]
             for agent_ID in range(1, NUM_THREADS + 1):
                 agent_input[agent_ID - 1] = self.cal_agent_input(agent_route[f"{agent_ID}"][-1],
@@ -851,7 +874,7 @@ class Worker:
                 intent_difference_final = np.mean(intent_difference_final, axis=0)
                 perf_metrics["intent_difference_abs"] = intent_difference_final
                 # print(f"intent difference is {intent_difference_final}")
-                # print(f"cov_trace is {cov_trace}")
+                print(f"cov_trace is {cov_trace}")
                 break
 
         if not done:
