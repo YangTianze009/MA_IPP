@@ -155,6 +155,7 @@ def main():
                     experience_buffer[i] += jobResults[i]
                 for n in metric_name:
                     perf_metrics[n].append(metrics[n])
+            print(perf_metrics['cov_trace'])
 
             cov_trace_final_10.append(np.mean(perf_metrics['cov_trace']))
             intent_difference_10.append(np.mean(perf_metrics["intent_difference_KL"], axis=0))
@@ -244,7 +245,7 @@ def main():
             save_intent_difference = False
 
             if not save_results:
-                if len(trainingData) >= 5:
+                if len(trainingData) >= 299:
                     writeToTensorBoard(writer, trainingData, curr_episode)
                     trainingData = []
                     if USE_WANDB:
@@ -256,14 +257,15 @@ def main():
                 if len(cov_trace_final_10) == 3:
                     # print(f"cov trace final 10 is {cov_trace_final_10}")
                     cov_trace_final_30.append(np.mean(cov_trace_final_10))
+                    print(f"cov_trace_30 is {cov_trace_final_30}")
                     cov_trace_final_10 = []
             #
             if save_results:
                 trainingData = []
                 if curr_episode > 299:
-                    if not os.path.exists("ma_ipp_results/3 agents/partial_comms_trajectory/(8, 5)/comms_range_0.3"):
-                        os.makedirs(f"ma_ipp_results/3 agents/partial_comms_trajectory/(8, 5)/comms_range_0.3")
-                    np.savez(f"ma_ipp_results/3 agents/partial_comms_trajectory/(8, 5)/comms_range_0.3/budget_5",
+                    if not os.path.exists("ma_ipp_results/3 agents/partial_comms_trajectory/(8, 5)/comms_range_0.6"):
+                        os.makedirs(f"ma_ipp_results/3 agents/partial_comms_trajectory/(8, 5)/comms_range_0.6")
+                    np.savez(f"ma_ipp_results/3 agents/partial_comms_trajectory/(8, 5)/comms_range_0.6/budget_4",
                              cov_trace_final_30)
                     print(f"save the result, cov is {cov_trace_final_30}")
                     for a in meta_agents:

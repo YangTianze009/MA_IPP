@@ -2,7 +2,7 @@ import numpy as np
 
 
 def analysis_cov_trace():
-    cov_trace = np.load("3 agents/partial_comms_trajectory/(8, 5)/comms_range_0.3/budget_4.npz")
+    cov_trace = np.load("3 agents/partial_comms_trajectory/(8, 5)/comms_range_0.6/budget_2.npz")
     # cov_trace = cov_trace["arr_0"]
     cov_trace = cov_trace["arr_0"]
     mean = np.mean(cov_trace)
@@ -28,7 +28,21 @@ def analysis_intent_difference_KL():
     print(f"max KL divergence is {max_KL_divergence}")
     print(f"min KL divergence is {min_KL_divergence}")
 
+def calculate_average(data_list):
+    averages = []
+    for i in range(0, len(data_list), 10):
+        sublist = data_list[i:i+10]
+        average = sum(sublist) / len(sublist)
+        averages.append(average)
+    return averages
+
 
 if __name__ == "__main__":
     # analysis_intent_difference_KL()
     analysis_cov_trace()
+    # cov_trace = np.load("3 agents/partial_comms_trajectory/(8, 5)/comms_range_0.3/budget_3.npz")
+    # cov_trace = cov_trace["arr_0"]
+    # average = calculate_average(cov_trace)
+    # np.savez(f"3 agents/partial_comms_trajectory/(8, 5)/comms_range_0.3/budget_3_new",
+    #          average)
+    # print(f"average is {average}")

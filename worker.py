@@ -538,15 +538,15 @@ class Worker:
             sampling_finish[self.agent_ID] = False
             agent_step += 1
             self.curren_step += 1
-            print("\n",all_samples)
+            # print("\n",all_samples)
             # add communication range
             for index in range(1, NUM_THREADS + 1):
                 if index != self.agent_ID:
                     agent_distance = cal_distance(agent_position[f"{index}"][0], agent_position[f"{self.agent_ID}"][0])
-                    print(f"agent distance is {agent_distance}, index is {index}, self.agent_ID is {self.agent_ID}")
+                    # print(f"agent distance is {agent_distance}, index is {index}, self.agent_ID is {self.agent_ID}")
                     if  agent_distance< COMMS_RANGE:
                         all_samples = merge_dict_values(all_samples, f"{index}", f"{self.agent_ID}")
-                        print(all_samples)
+                        # print(all_samples)
                     else:
                         gaussian_mean[f"{index}"] = []
                         gaussian_cov[f"{index}"] = []
