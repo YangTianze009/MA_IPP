@@ -2,7 +2,7 @@ import numpy as np
 
 
 def analysis_cov_trace():
-    cov_trace = np.load("3 agents/partial_comms_destination/(8, 3)/comms_range_0.3/budget_2.npz")
+    cov_trace = np.load("3 agents/partial_comms_trajectory/(8, 5)/comms_range_0.6/budget_2.npz")
     # cov_trace = cov_trace["arr_0"]
     cov_trace = cov_trace["arr_0"]
     mean = np.mean(cov_trace)

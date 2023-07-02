@@ -260,7 +260,7 @@ def main():
 
             if save_intent_difference:
                 trainingData = []
-                if curr_episode > 99:
+                if curr_episode > 299:
                     if not os.path.exists("ma_ipp_results/3 agents/intent_end_nodes/intent_difference_KL"):
                         os.makedirs(f"ma_ipp_results/3 agents/intent_end_nodes/intent_difference_KL")
                     np.savez(f"ma_ipp_results/3 agents/intent_end_nodes/intent_difference_KL/end_nodes(8, 6)_budget3",
@@ -272,9 +272,9 @@ def main():
             if save_cov_results:
                 trainingData = []
                 if curr_episode > 299:
-                    if not os.path.exists("ma_ipp_results/3 agents/partial_comms_destination/(8, 3)/comms_range_0.3"):
-                        os.makedirs(f"ma_ipp_results/3 agents/partial_comms_destination/(8, 3)/comms_range_0.3")
-                    np.savez(f"ma_ipp_results/3 agents/partial_comms_destination/(8, 3)/comms_range_0.3/budget_2",
+                    if not os.path.exists("ma_ipp_results/3 agents/partial_comms_no_intent/comms_range_0.6"):
+                        os.makedirs(f"ma_ipp_results/3 agents/partial_comms_no_intent/comms_range_0.6")
+                    np.savez(f"ma_ipp_results/3 agents/partial_comms_no_intent/comms_range_0.6/budget_2",
                              cov_trace_final_30)
                     print(f"save the result, cov is {cov_trace_final_30}")
                     for a in meta_agents:
