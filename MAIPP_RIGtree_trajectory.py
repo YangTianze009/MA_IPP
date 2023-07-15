@@ -32,11 +32,25 @@ from RIG_parameter import *
 
 import traceback
 
+
+def merge_dict_values(dict_obj, index1, index2):
+    values1 = dict_obj.get(index1, [])
+    values2 = dict_obj.get(index2, [])
+    new_merged_value = []
+    merged_values = list(set(tuple(arr) for arr in values1 + values2))
+    for item in merged_values:
+        new_merged_value.append(np.array(item))
+    dict_obj[index1] = new_merged_value
+    dict_obj[index2] = new_merged_value
+    return dict_obj
+
+
 def cal_distance(p1, p2):
     return math.sqrt(math.pow((p2[0] - p1[0]), 2) + math.pow((p2[1] - p1[1]), 2))
 
 class RIG_planner:
     def __init__(self, i):
+        self.partial_measurements = None
         self.path = f'RRT_s_IPP/'
         if not os.path.exists(self.path):
             os.makedirs(self.path)
@@ -107,18 +121,26 @@ class RIG_planner:
         self.node_coords = np.array([[]])
         distance = BUDGET_SIZE - self.agent_budget[f"{agent_ID}"]
         sample_number = distance // self.step_sample
+        self.partial_measurements = copy.deepcopy(self.measurement_points)
+
+        for index in range(0, NUM_THREADS):
+            if index != agent_ID:
+                agent_distance = cal_distance(self.start[f"{index}"], self.start[f"{agent_ID}"])
+                # print(f"agent distance is {agent_distance}, index is {index}, self.agent_ID is {self.agent_ID}")
+                if agent_distance < COMMS_RANGE:
+                    self.partial_measurements = merge_dict_values(self.partial_measurements, f"{index}", f"{agent_ID}")
+                    # print(all_samples)
 
         gp_rrt = GaussianProcessForIPP()
-        for agent_i in range(NUM_AGENTS):
-            if self.measurement_points[f"{agent_i}"] != []:
-                for j, sample in enumerate(self.measurement_points[f"{agent_i}"]):
-                    if j < sample_number:
-                        observed_value = self.underlying_distribution.distribution_function(
-                            sample.reshape(-1, 2)) + np.random.normal(0, 1e-10)
-                    else:
-                        observed_value = np.array([0])
+        if self.partial_measurements[f"{agent_ID}"] != []:
+            for j, sample in enumerate(self.partial_measurements[f"{agent_ID}"]):
+                if j < sample_number:
+                    observed_value = self.underlying_distribution.distribution_function(
+                        sample.reshape(-1, 2)) + np.random.normal(0, 1e-10)
+                else:
+                    observed_value = np.array([0])
 
-                    gp_rrt.add_observed_point(sample, observed_value)
+                gp_rrt.add_observed_point(sample, observed_value)
 
         gp_rrt.update_gp()
         high_info_area = gp_rrt.get_high_info_area()
@@ -145,11 +167,14 @@ class RIG_planner:
         # print(f"agent ID is {type(agent_ID)}")
         for i in range(NUM_AGENTS):
             if i != int(agent_ID):
-                for measurement in self.predict_measurements[f"{i}"]:
-                    virtual_measurements.append(measurement)
+                agent_distance = cal_distance(self.start[f"{i}"], self.start[f"{agent_ID}"])
+                # print(f"agent distance is {agent_distance}, index is {index}, self.agent_ID is {self.agent_ID}")
+                if agent_distance < COMMS_RANGE:
+                    for measurement in self.predict_measurements[f"{i}"]:
+                        virtual_measurements.append(measurement)
 
         # print(f"self.measurement points are {self.measurement_points}")
-        Predictor = predictor(self.node_coords, self.step_sample, self.gaussian, self.gp, self.measurement_points,
+        Predictor = predictor(self.node_coords, self.step_sample, self.gaussian, self.gp, self.partial_measurements,
                               agent_ID, sample_number, virtual_measurements)
         # graph = self.generator.create_graph(self.node_coords)
 
@@ -373,7 +398,10 @@ class RIG_planner:
         self.gp.update_gp()
         self.high_info_area = self.gp.get_high_info_area()  # if ADAPTIVE_AREA else None
         cov_trace = self.gp.evaluate_cov_trace(self.high_info_area)
-        self.cov_trace = cov_trace
+        if cov_trace != 900:
+            self.cov_trace = cov_trace
+
+        # print(f"cov_trace is {self.cov_trace}")
 
         self.dist_residual[f"{agent_ID}"] = self.dist_residual[
                                                 f"{agent_ID}"] + remain_length if no_sample else remain_length
@@ -383,7 +411,7 @@ class RIG_planner:
         self.step_used_budget = dist
 
         #        self.current_node_index = int(each_step)
-        return cov_trace  # done, self.node_info, self.node_std, self.budget #reward, done, self.node_info, self.node_std, self.budget
+        return self.cov_trace  # done, self.node_info, self.node_std, self.budget #reward, done, self.node_info, self.node_std, self.budget
 
     def get_ground_truth(self):
         x1 = np.linspace(0, 1, 30)
@@ -467,8 +495,8 @@ if __name__ == '__main__':
 
             cov_trace, time_used, RRT_difference = rig.agent_planner()
             RRT_difference = np.mean(RRT_difference)
-            # print(f"total usedtime is {time_used}", f"cov trace is {cov_trace}")
-            print(f"RRT_difference is {RRT_difference}")
+            print(f"total usedtime is {time_used}", f"cov trace is {cov_trace}")
+            # print(f"RRT_difference is {RRT_difference}")
 
             results_10.append(cov_trace)
             time_10.append(time_used)
@@ -480,11 +508,11 @@ if __name__ == '__main__':
         time_10 = []
         destination_diff_10 = []
 
-    if not os.path.exists("ma_ipp_results/3 agents/RRT/trajectory_intent/400_(0.3, 0.4)_0.2"):
-        os.makedirs(f"ma_ipp_results/3 agents/RRT/trajectory_intent/400_(0.3, 0.4)_0.2")
-    # np.savez(f"ma_ipp_results/10 agents/RRT/400_(0.3, 0.4)_0.2/cov_budget_3", results_30)
+    if not os.path.exists("ma_ipp_results/3 agents/partial_comms_RRT/comms_range_0.6"):
+        os.makedirs(f"ma_ipp_results/3 agents/partial_comms_RRT/comms_range_0.6")
+    np.savez(f"ma_ipp_results/3 agents/partial_comms_RRT/comms_range_0.3/cov_budget_4", results_30)
     # np.savez(f"ma_ipp_results/10 agents/RRT/400_(0.3, 0.4)_0.2/time_budget_3", time_30)
-    np.savez(f"ma_ipp_results/3 agents/RRT/trajectory_intent/400_(0.9, 1.0)_0.2/difference_3", destination_diff_30)
+    # np.savez(f"ma_ipp_results/3 agents/RRT/trajectory_intent/400_(0.9, 1.0)_0.2/difference_3", destination_diff_30)
     # print(f"save the result, cov is {results_30}")
     # budget_history = np.array(rig.budget_history)
     # obj_history = np.array(rig.obj_history)

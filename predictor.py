@@ -28,16 +28,15 @@ class predictor:
         # high_info_area = self.gp.get_high_info_area()
         # self.cov_trace = self.gp.evaluate_cov_trace(high_info_area)
 
-        for agent_i in range(NUM_AGENTS):
-            if measurement_points[f"{agent_i}"] != []:
-                for j, sample in enumerate(measurement_points[f"{agent_i}"]):
-                    if j < sample_number:
-                        observed_value = self.underlying_distribution.distribution_function(
-                            sample.reshape(-1, 2)) + np.random.normal(0, 1e-10)
-                    else:
-                        observed_value = np.array([0])
+        if measurement_points[f"{self.agent_ID}"] != []:
+            for j, sample in enumerate(measurement_points[f"{self.agent_ID}"]):
+                if j < sample_number:
+                    observed_value = self.underlying_distribution.distribution_function(
+                        sample.reshape(-1, 2)) + np.random.normal(0, 1e-10)
+                else:
+                    observed_value = np.array([0])
 
-                    self.gp.add_observed_point(sample, observed_value)
+                self.gp.add_observed_point(sample, observed_value)
 
         for i in virtual_measurements:
             observed_value = np.array([0])
